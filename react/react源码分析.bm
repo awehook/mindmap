@@ -6,11 +6,28 @@
       "parentKey": "9752c402-4058-4e76-91b7-d10aa7390338",
       "subKeys": [],
       "collapse": false,
-      "style": null,
+      "style": "{\"background\":\"#b8e986\"}",
       "blocks": [
         {
           "type": "CONTENT",
           "data": "这个对象的type是React.forwardRef函数生成的对象\n也就是\n\n{\n    $$typeof: REACT_FORWARD_REF_TYPE,\n    render,\n  };"
+        }
+      ]
+    },
+    {
+      "key": "f47cf03a-bb08-4f8d-9e62-78518d7c2729",
+      "parentKey": "3de11b2b-8a45-4976-92c5-31b2900b46ad",
+      "subKeys": [],
+      "collapse": false,
+      "style": null,
+      "blocks": [
+        {
+          "type": "CONTENT",
+          "data": "code"
+        },
+        {
+          "type": "DESC",
+          "data": "code\n```\nimport {REACT_PROVIDER_TYPE, REACT_CONTEXT_TYPE} from 'shared/ReactSymbols';\n\nimport type {ReactContext} from 'shared/ReactTypes';\n\nimport warningWithoutStack from 'shared/warningWithoutStack';\nimport warning from 'shared/warning';\n\nexport function createContext<T>(\n  defaultValue: T,\n  calculateChangedBits: ?(a: T, b: T) => number,\n): ReactContext<T> {\n  if (calculateChangedBits === undefined) {\n    calculateChangedBits = null;\n  } else {\n    if (__DEV__) {\n      warningWithoutStack(\n        calculateChangedBits === null ||\n          typeof calculateChangedBits === 'function',\n        'createContext: Expected the optional second argument to be a ' +\n          'function. Instead received: %s',\n        calculateChangedBits,\n      );\n    }\n  }\n\n  const context: ReactContext<T> = {\n    $$typeof: REACT_CONTEXT_TYPE,\n    _calculateChangedBits: calculateChangedBits,\n    // As a workaround to support multiple concurrent renderers, we categorize\n    // some renderers as primary and others as secondary. We only expect\n    // there to be two concurrent renderers at most: React Native (primary) and\n    // Fabric (secondary); React DOM (primary) and React ART (secondary).\n    // Secondary renderers store their context values on separate fields.\n    _currentValue: defaultValue,\n    _currentValue2: defaultValue,\n    // Used to track how many concurrent renderers this context currently\n    // supports within in a single renderer. Such as parallel server rendering.\n    _threadCount: 0,\n    // These are circular\n    Provider: (null: any),\n    Consumer: (null: any),\n  };\n\n  context.Provider = {\n    $$typeof: REACT_PROVIDER_TYPE,\n    _context: context,\n  };\n\n  let hasWarnedAboutUsingNestedContextConsumers = false;\n  let hasWarnedAboutUsingConsumerProvider = false;\n\n  if (__DEV__) {\n    // A separate object, but proxies back to the original context object for\n    // backwards compatibility. It has a different $$typeof, so we can properly\n    // warn for the incorrect usage of Context as a Consumer.\n    const Consumer = {\n      $$typeof: REACT_CONTEXT_TYPE,\n      _context: context,\n      _calculateChangedBits: context._calculateChangedBits,\n    };\n    // $FlowFixMe: Flow complains about not setting a value, which is intentional here\n    Object.defineProperties(Consumer, {\n      Provider: {\n        get() {\n          if (!hasWarnedAboutUsingConsumerProvider) {\n            hasWarnedAboutUsingConsumerProvider = true;\n            warning(\n              false,\n              'Rendering <Context.Consumer.Provider> is not supported and will be removed in ' +\n                'a future major release. Did you mean to render <Context.Provider> instead?',\n            );\n          }\n          return context.Provider;\n        },\n        set(_Provider) {\n          context.Provider = _Provider;\n        },\n      },\n      _currentValue: {\n        get() {\n          return context._currentValue;\n        },\n        set(_currentValue) {\n          context._currentValue = _currentValue;\n        },\n      },\n      _currentValue2: {\n        get() {\n          return context._currentValue2;\n        },\n        set(_currentValue2) {\n          context._currentValue2 = _currentValue2;\n        },\n      },\n      _threadCount: {\n        get() {\n          return context._threadCount;\n        },\n        set(_threadCount) {\n          context._threadCount = _threadCount;\n        },\n      },\n      Consumer: {\n        get() {\n          if (!hasWarnedAboutUsingNestedContextConsumers) {\n            hasWarnedAboutUsingNestedContextConsumers = true;\n            warning(\n              false,\n              'Rendering <Context.Consumer.Consumer> is not supported and will be removed in ' +\n                'a future major release. Did you mean to render <Context.Consumer> instead?',\n            );\n          }\n          return context.Consumer;\n        },\n      },\n    });\n    // $FlowFixMe: Flow complains about missing properties because it doesn't understand defineProperty\n    context.Consumer = Consumer;\n  } else {\n    context.Consumer = context;\n  }\n\n  if (__DEV__) {\n    context._currentRenderer = null;\n    context._currentRenderer2 = null;\n  }\n\n  return context;\n}\n\n```\n"
         }
       ]
     },
@@ -21,7 +38,7 @@
         "1599ad15-c98d-4d51-8a3d-f10afa4750fe",
         "ab5ea53e-96fa-4844-ba11-bb8fd00dae4d"
       ],
-      "collapse": false,
+      "collapse": true,
       "style": null,
       "blocks": [
         {
@@ -109,7 +126,8 @@
       "parentKey": "root",
       "subKeys": [
         "e87a14f7-89df-4636-a5d8-fd7b960e58b4",
-        "faf4606e-d14a-4326-bd98-6124946fa457"
+        "faf4606e-d14a-4326-bd98-6124946fa457",
+        "3de11b2b-8a45-4976-92c5-31b2900b46ad"
       ],
       "collapse": false,
       "style": null,
@@ -179,6 +197,19 @@
       ]
     },
     {
+      "key": "0dd597a9-6bf7-4417-b359-a3efd96c1ba4",
+      "parentKey": "36769b8c-3aaf-4d05-8a2b-b05eb4ce5995",
+      "subKeys": [],
+      "collapse": false,
+      "style": null,
+      "blocks": [
+        {
+          "type": "CONTENT",
+          "data": "方便在组件间传递数据"
+        }
+      ]
+    },
+    {
       "key": "dffe006e-64bf-4aec-87cb-ba419f5ae1f2",
       "parentKey": "faf4606e-d14a-4326-bd98-6124946fa457",
       "subKeys": [
@@ -192,6 +223,22 @@
         {
           "type": "CONTENT",
           "data": "forwardRef"
+        }
+      ]
+    },
+    {
+      "key": "0d825785-e958-44de-8c24-006c48c7282f",
+      "parentKey": "3de11b2b-8a45-4976-92c5-31b2900b46ad",
+      "subKeys": [
+        "30153434-508e-4c54-b679-6327274886ee",
+        "ebc6473a-a9f4-43fc-b1c2-d3df3fab894a"
+      ],
+      "collapse": false,
+      "style": null,
+      "blocks": [
+        {
+          "type": "CONTENT",
+          "data": "两种实现方式"
         }
       ]
     },
@@ -215,6 +262,49 @@
       ]
     },
     {
+      "key": "3de11b2b-8a45-4976-92c5-31b2900b46ad",
+      "parentKey": "74bd8420-a4b6-40e0-94b5-8eecd0c254d9",
+      "subKeys": [
+        "36769b8c-3aaf-4d05-8a2b-b05eb4ce5995",
+        "0d825785-e958-44de-8c24-006c48c7282f",
+        "f47cf03a-bb08-4f8d-9e62-78518d7c2729"
+      ],
+      "collapse": false,
+      "style": null,
+      "blocks": [
+        {
+          "type": "CONTENT",
+          "data": "Context"
+        }
+      ]
+    },
+    {
+      "key": "ebc6473a-a9f4-43fc-b1c2-d3df3fab894a",
+      "parentKey": "0d825785-e958-44de-8c24-006c48c7282f",
+      "subKeys": [],
+      "collapse": false,
+      "style": null,
+      "blocks": [
+        {
+          "type": "CONTENT",
+          "data": "React 16之后：createContext"
+        }
+      ]
+    },
+    {
+      "key": "6e9a6997-af84-4a72-8f9c-76e703ce006f",
+      "parentKey": "36769b8c-3aaf-4d05-8a2b-b05eb4ce5995",
+      "subKeys": [],
+      "collapse": false,
+      "style": null,
+      "blocks": [
+        {
+          "type": "CONTENT",
+          "data": "跨越多层组件传递信息"
+        }
+      ]
+    },
+    {
       "key": "b6d23e74-780a-435f-a8ab-6fabf2f293c6",
       "parentKey": "faf4606e-d14a-4326-bd98-6124946fa457",
       "subKeys": [
@@ -222,7 +312,7 @@
         "aa0d448d-2dcd-407d-ae45-75d87c12176d",
         "dc01f459-7e89-49a7-9c37-d3fac29c243a"
       ],
-      "collapse": false,
+      "collapse": true,
       "style": null,
       "blocks": [
         {
@@ -245,6 +335,22 @@
       ]
     },
     {
+      "key": "36769b8c-3aaf-4d05-8a2b-b05eb4ce5995",
+      "parentKey": "3de11b2b-8a45-4976-92c5-31b2900b46ad",
+      "subKeys": [
+        "0dd597a9-6bf7-4417-b359-a3efd96c1ba4",
+        "6e9a6997-af84-4a72-8f9c-76e703ce006f"
+      ],
+      "collapse": false,
+      "style": null,
+      "blocks": [
+        {
+          "type": "CONTENT",
+          "data": "why"
+        }
+      ]
+    },
+    {
       "key": "cecb2edf-11bb-4ec8-8065-5108a86cd40e",
       "parentKey": "8c2effde-bce0-42e4-9dbf-ca02a39a4c4c",
       "subKeys": [
@@ -260,6 +366,19 @@
       ]
     },
     {
+      "key": "b6673ee0-ce79-4453-a3b3-603aa0719db0",
+      "parentKey": "30153434-508e-4c54-b679-6327274886ee",
+      "subKeys": [],
+      "collapse": false,
+      "style": null,
+      "blocks": [
+        {
+          "type": "CONTENT",
+          "data": "为什么要弃用老的api:\n因为老的api,对于Context的提供方下层的所有组件的影响太大了，\n会导致下层的所有组件即便是在没有任何更新的情况下，\n每一次更新的过程中依然要进行完整的渲染"
+        }
+      ]
+    },
+    {
       "key": "9752c402-4058-4e76-91b7-d10aa7390338",
       "parentKey": "cecb2edf-11bb-4ec8-8065-5108a86cd40e",
       "subKeys": [
@@ -267,7 +386,7 @@
         "037dea20-886d-48dd-b6d5-b27b84f1d64e"
       ],
       "collapse": false,
-      "style": null,
+      "style": "{\"background\":\"#f3c7a8\"}",
       "blocks": [
         {
           "type": "CONTENT",
@@ -371,11 +490,26 @@
       ]
     },
     {
+      "key": "30153434-508e-4c54-b679-6327274886ee",
+      "parentKey": "0d825785-e958-44de-8c24-006c48c7282f",
+      "subKeys": [
+        "b6673ee0-ce79-4453-a3b3-603aa0719db0"
+      ],
+      "collapse": false,
+      "style": null,
+      "blocks": [
+        {
+          "type": "CONTENT",
+          "data": "老的： childContextType"
+        }
+      ]
+    },
+    {
       "key": "5e08fcae-aca5-44fe-a905-f7fc13af4f6f",
       "parentKey": "9752c402-4058-4e76-91b7-d10aa7390338",
       "subKeys": [],
       "collapse": false,
-      "style": null,
+      "style": "{\"background\":\"#50e3c2\"}",
       "blocks": [
         {
           "type": "CONTENT",
@@ -423,7 +557,7 @@
       "parentKey": "0dd2af76-9ca1-4fe2-92b4-46f0e2796af9",
       "subKeys": [],
       "collapse": false,
-      "style": null,
+      "style": "{\"borderStyle\":\"dashed\",\"background\":\"#f8e71c\"}",
       "blocks": [
         {
           "type": "CONTENT",
