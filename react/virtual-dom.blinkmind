@@ -2,9 +2,37 @@
   "rootTopicKey": "root",
   "topics": [
     {
+      "key": "076656cc-04aa-4ed7-a117-520ddb7d3b36",
+      "parentKey": "6c040847-91f7-476e-939b-87dbc941f6d3",
+      "subKeys": [],
+      "collapse": false,
+      "style": null,
+      "blocks": [
+        {
+          "type": "CONTENT",
+          "data": "如果是首次渲染，VitrualDom不具有任何优势，甚至它要进行更多的计算，消耗更多的内存。"
+        }
+      ]
+    },
+    {
+      "key": "4aec8c18-5e32-4b83-8cd6-d10776af8b48",
+      "parentKey": "a0435bba-20b4-4ff9-9f0d-09943fa1f983",
+      "subKeys": [],
+      "collapse": false,
+      "style": null,
+      "blocks": [
+        {
+          "type": "CONTENT",
+          "data": "在原生的JavaScript程序中，我们直接对DOM进行创建和更改，\n而DOM元素通过我们监听的事件和我们的应用程序进行通讯。\n而React会先将你的代码转换成一个JavaScript对象，\n然后这个JavaScript对象再转换成真实DOM。这个JavaScript对象就是所谓的虚拟DOM。"
+        }
+      ]
+    },
+    {
       "key": "root",
       "parentKey": null,
-      "subKeys": [],
+      "subKeys": [
+        "20697dc4-1d6f-4c2b-9ced-d6a042e9b9b4"
+      ],
       "collapse": false,
       "style": null,
       "blocks": [
@@ -13,12 +41,307 @@
           "data": "virtual-dom"
         }
       ]
+    },
+    {
+      "key": "5da2a734-e19a-4a23-9b18-2a5d839f9301",
+      "parentKey": "39e4b835-394f-4836-86cd-8e92605b9ffc",
+      "subKeys": [],
+      "collapse": false,
+      "style": null,
+      "blocks": [
+        {
+          "type": "CONTENT",
+          "data": "VitrualDom为React带来了跨平台渲染的能力。\n以React Native为例子。\nReact根据VitrualDom画出相应平台的ui层，只不过不同平台画的姿势不同而已。"
+        }
+      ]
+    },
+    {
+      "key": "a0435bba-20b4-4ff9-9f0d-09943fa1f983",
+      "parentKey": "610164be-a8d7-42ca-a507-90d5415d65fd",
+      "subKeys": [
+        "4aec8c18-5e32-4b83-8cd6-d10776af8b48",
+        "5848fc84-51ea-4c72-8574-a2455cb56ce5",
+        "3be69dd7-8532-48f4-aa9c-b8d8c16c7777"
+      ],
+      "collapse": false,
+      "style": null,
+      "blocks": [
+        {
+          "type": "CONTENT",
+          "data": "intro"
+        }
+      ]
+    },
+    {
+      "key": "ef1265b2-4579-435a-8c2a-ac422a3f0ff4",
+      "parentKey": "6c040847-91f7-476e-939b-87dbc941f6d3",
+      "subKeys": [],
+      "collapse": false,
+      "style": null,
+      "blocks": [
+        {
+          "type": "CONTENT",
+          "data": "所以，更倾向于说，VitrualDom帮助我们提高了开发效率，\n在重复渲染时它帮助我们计算如何更高效的更新，而不是它比DOM操作更快。"
+        }
+      ]
+    },
+    {
+      "key": "610164be-a8d7-42ca-a507-90d5415d65fd",
+      "parentKey": "20697dc4-1d6f-4c2b-9ced-d6a042e9b9b4",
+      "subKeys": [
+        "a0435bba-20b4-4ff9-9f0d-09943fa1f983",
+        "f6586b36-584d-4cb3-b4fe-7863523b661d",
+        "c3dfb81a-7f0c-4a62-926c-506a88f664f0"
+      ],
+      "collapse": false,
+      "style": null,
+      "blocks": [
+        {
+          "type": "CONTENT",
+          "data": "https://juejin.im/post/5cb66fdaf265da0384128445"
+        }
+      ]
+    },
+    {
+      "key": "5848fc84-51ea-4c72-8574-a2455cb56ce5",
+      "parentKey": "a0435bba-20b4-4ff9-9f0d-09943fa1f983",
+      "subKeys": [],
+      "collapse": false,
+      "style": null,
+      "blocks": [
+        {
+          "type": "CONTENT",
+          "data": "当我们需要创建或更新元素时，React首先会让这个VitrualDom对象进行创建和更改，然后再将VitrualDom对象渲染成真实DOM；"
+        }
+      ]
+    },
+    {
+      "key": "67e59d8e-4570-47c7-a93b-051a9c9bac98",
+      "parentKey": "b34d7445-9756-4b7f-b739-dbed31a0cedc",
+      "subKeys": [],
+      "collapse": false,
+      "style": null,
+      "blocks": [
+        {
+          "type": "CONTENT",
+          "data": "需要变成下面的写法：\nfunction Story(props) {\n  // Correct! JSX type can be a capitalized variable.\n  const SpecificStory = components[props.storyType];\n  return <SpecificStory story={props.story} />;\n}"
+        }
+      ]
+    },
+    {
+      "key": "4b888b92-9d66-4c18-81ee-ed4f819b374c",
+      "parentKey": "f6586b36-584d-4cb3-b4fe-7863523b661d",
+      "subKeys": [
+        "055f91cc-cde1-4e63-892a-4872fe48b087"
+      ],
+      "collapse": false,
+      "style": null,
+      "blocks": [
+        {
+          "type": "CONTENT",
+          "data": "跨浏览器兼容"
+        }
+      ]
+    },
+    {
+      "key": "b34d7445-9756-4b7f-b739-dbed31a0cedc",
+      "parentKey": "c3dfb81a-7f0c-4a62-926c-506a88f664f0",
+      "subKeys": [
+        "105080b7-8335-4428-8cac-995f9f136fac",
+        "67e59d8e-4570-47c7-a93b-051a9c9bac98"
+      ],
+      "collapse": false,
+      "style": null,
+      "blocks": [
+        {
+          "type": "CONTENT",
+          "data": "jsx转译"
+        }
+      ]
+    },
+    {
+      "key": "20697dc4-1d6f-4c2b-9ced-d6a042e9b9b4",
+      "parentKey": "root",
+      "subKeys": [
+        "610164be-a8d7-42ca-a507-90d5415d65fd"
+      ],
+      "collapse": false,
+      "style": null,
+      "blocks": [
+        {
+          "type": "CONTENT",
+          "data": "学习笔记"
+        }
+      ]
+    },
+    {
+      "key": "055f91cc-cde1-4e63-892a-4872fe48b087",
+      "parentKey": "4b888b92-9d66-4c18-81ee-ed4f819b374c",
+      "subKeys": [],
+      "collapse": false,
+      "style": null,
+      "blocks": [
+        {
+          "type": "CONTENT",
+          "data": "React基于VitrualDom自己实现了一套自己的事件机制，\n自己模拟了事件冒泡和捕获的过程，\n采用了事件代理，批量更新等方法，抹平了各个浏览器的事件兼容性问题。"
+        }
+      ]
+    },
+    {
+      "key": "3be69dd7-8532-48f4-aa9c-b8d8c16c7777",
+      "parentKey": "a0435bba-20b4-4ff9-9f0d-09943fa1f983",
+      "subKeys": [],
+      "collapse": false,
+      "style": null,
+      "blocks": [
+        {
+          "type": "CONTENT",
+          "data": "当我们需要对DOM进行事件监听时，首先对VitrualDom进行事件监听，VitrualDom会代理原生的DOM事件从而做出响应。"
+        }
+      ]
+    },
+    {
+      "key": "c4f4d104-e5cf-4ac5-9ee7-4a15f8c0a85a",
+      "parentKey": "f6586b36-584d-4cb3-b4fe-7863523b661d",
+      "subKeys": [
+        "9c62778f-5a32-494a-a43a-48d123e7ab53"
+      ],
+      "collapse": false,
+      "style": null,
+      "blocks": [
+        {
+          "type": "CONTENT",
+          "data": "提高开发效率"
+        },
+        {
+          "type": "DESC",
+          "data": ""
+        }
+      ]
+    },
+    {
+      "key": "6c040847-91f7-476e-939b-87dbc941f6d3",
+      "parentKey": "f6586b36-584d-4cb3-b4fe-7863523b661d",
+      "subKeys": [
+        "076656cc-04aa-4ed7-a117-520ddb7d3b36",
+        "b44115c7-b532-4749-93ed-6599837dc4be",
+        "ef1265b2-4579-435a-8c2a-ac422a3f0ff4"
+      ],
+      "collapse": false,
+      "style": null,
+      "blocks": [
+        {
+          "type": "CONTENT",
+          "data": "关于提升性能"
+        }
+      ]
+    },
+    {
+      "key": "39e4b835-394f-4836-86cd-8e92605b9ffc",
+      "parentKey": "f6586b36-584d-4cb3-b4fe-7863523b661d",
+      "subKeys": [
+        "5da2a734-e19a-4a23-9b18-2a5d839f9301"
+      ],
+      "collapse": false,
+      "style": null,
+      "blocks": [
+        {
+          "type": "CONTENT",
+          "data": "跨平台兼容"
+        }
+      ]
+    },
+    {
+      "key": "105080b7-8335-4428-8cac-995f9f136fac",
+      "parentKey": "b34d7445-9756-4b7f-b739-dbed31a0cedc",
+      "subKeys": [],
+      "collapse": false,
+      "style": null,
+      "blocks": [
+        {
+          "type": "CONTENT",
+          "data": "另外，由于JSX提前要被Babel编译，所以JSX是不能在运行时动态选择类型的，比如下面的代码：\nfunction Story(props) {\n  // Wrong! JSX type can't be an expression.\n  return <components[props.storyType] story={props.story} />;\n}"
+        }
+      ]
+    },
+    {
+      "key": "c3dfb81a-7f0c-4a62-926c-506a88f664f0",
+      "parentKey": "610164be-a8d7-42ca-a507-90d5415d65fd",
+      "subKeys": [
+        "b34d7445-9756-4b7f-b739-dbed31a0cedc",
+        "d60e3be8-71a0-4ae1-8d5d-0dc26edcdab1"
+      ],
+      "collapse": false,
+      "style": null,
+      "blocks": [
+        {
+          "type": "CONTENT",
+          "data": "实现原理"
+        }
+      ]
+    },
+    {
+      "key": "d60e3be8-71a0-4ae1-8d5d-0dc26edcdab1",
+      "parentKey": "c3dfb81a-7f0c-4a62-926c-506a88f664f0",
+      "subKeys": [],
+      "collapse": false,
+      "style": null,
+      "blocks": [
+        {
+          "type": "CONTENT",
+          "data": "创建虚拟DOM"
+        }
+      ]
+    },
+    {
+      "key": "f6586b36-584d-4cb3-b4fe-7863523b661d",
+      "parentKey": "610164be-a8d7-42ca-a507-90d5415d65fd",
+      "subKeys": [
+        "c4f4d104-e5cf-4ac5-9ee7-4a15f8c0a85a",
+        "6c040847-91f7-476e-939b-87dbc941f6d3",
+        "4b888b92-9d66-4c18-81ee-ed4f819b374c",
+        "39e4b835-394f-4836-86cd-8e92605b9ffc"
+      ],
+      "collapse": true,
+      "style": null,
+      "blocks": [
+        {
+          "type": "CONTENT",
+          "data": "why"
+        }
+      ]
+    },
+    {
+      "key": "9c62778f-5a32-494a-a43a-48d123e7ab53",
+      "parentKey": "c4f4d104-e5cf-4ac5-9ee7-4a15f8c0a85a",
+      "subKeys": [],
+      "collapse": false,
+      "style": null,
+      "blocks": [
+        {
+          "type": "CONTENT",
+          "data": "使用JavaScript，我们在编写应用程序时的关注点在于如何更新DOM。\n使用React，你只需要告诉React你想让视图处于什么状态，React则通过VitrualDom确保DOM与该状态相匹配。\n你不必自己去完成属性操作、事件处理、DOM更新，React会替你完成这一切。\n这让我们更关注我们的业务逻辑而非DOM操作，这一点即可大大提升我们的开发效率。"
+        }
+      ]
+    },
+    {
+      "key": "b44115c7-b532-4749-93ed-6599837dc4be",
+      "parentKey": "6c040847-91f7-476e-939b-87dbc941f6d3",
+      "subKeys": [],
+      "collapse": false,
+      "style": null,
+      "blocks": [
+        {
+          "type": "CONTENT",
+          "data": "VitrualDom的优势在于React的Diff算法和批处理策略，\nReact在页面更新之前，提前计算好了如何进行更新和渲染DOM。\n实际上，这个计算过程我们在直接操作DOM时，也是可以自己判断和实现的，\n但是一定会耗费非常多的精力和时间，而且往往我们自己做的是不如React好的。\n所以，在这个过程中React帮助我们\"提升了性能\"。"
+        }
+      ]
     }
   ],
   "config": {
     "readOnly": false,
     "allowUndo": true,
-    "layoutDir": 2,
+    "layoutDir": 0,
     "theme": {
       "name": "default",
       "randomColor": true,
