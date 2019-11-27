@@ -2,6 +2,35 @@
   "rootTopicKey": "root",
   "topics": [
     {
+      "key": "037dea20-886d-48dd-b6d5-b27b84f1d64e",
+      "parentKey": "9752c402-4058-4e76-91b7-d10aa7390338",
+      "subKeys": [],
+      "collapse": false,
+      "style": null,
+      "blocks": [
+        {
+          "type": "CONTENT",
+          "data": "这个对象的type是React.forwardRef函数生成的对象\n也就是\n\n{\n    $$typeof: REACT_FORWARD_REF_TYPE,\n    render,\n  };"
+        }
+      ]
+    },
+    {
+      "key": "a63e09e6-e03b-466c-9f47-326288ca7933",
+      "parentKey": "dffe006e-64bf-4aec-87cb-ba419f5ae1f2",
+      "subKeys": [
+        "1599ad15-c98d-4d51-8a3d-f10afa4750fe",
+        "ab5ea53e-96fa-4844-ba11-bb8fd00dae4d"
+      ],
+      "collapse": false,
+      "style": null,
+      "blocks": [
+        {
+          "type": "CONTENT",
+          "data": "why"
+        }
+      ]
+    },
+    {
       "key": "root",
       "parentKey": null,
       "subKeys": [
@@ -18,44 +47,34 @@
       ]
     },
     {
-      "key": "74bd8420-a4b6-40e0-94b5-8eecd0c254d9",
-      "parentKey": "root",
+      "key": "7f923598-27eb-4277-ade3-c062c395e0a0",
+      "parentKey": "0dd2af76-9ca1-4fe2-92b4-46f0e2796af9",
+      "subKeys": [],
+      "collapse": false,
+      "style": null,
+      "blocks": [
+        {
+          "type": "CONTENT",
+          "data": "code"
+        },
+        {
+          "type": "DESC",
+          "data": "可以认为PureComponent 继承 Component,\n代码中通过如下方式去实现\n```\nObject.assign(pureComponentPrototype, Component.prototype);\n\n```\n\n\n```\nfunction ComponentDummy() {}\nComponentDummy.prototype = Component.prototype;\n\n/**\n * Convenience component with default shallow equality check for sCU.\n */\nfunction PureComponent(props, context, updater) {\n  this.props = props;\n  this.context = context;\n  // If a component has string refs, we will assign a different object later.\n  this.refs = emptyObject;\n  this.updater = updater || ReactNoopUpdateQueue;\n}\n\nconst pureComponentPrototype = (PureComponent.prototype = new ComponentDummy());\npureComponentPrototype.constructor = PureComponent;\n// Avoid an extra prototype jump for these methods.\nObject.assign(pureComponentPrototype, Component.prototype);\npureComponentPrototype.isPureReactComponent = true;\n\n```\n"
+        }
+      ]
+    },
+    {
+      "key": "dc01f459-7e89-49a7-9c37-d3fac29c243a",
+      "parentKey": "b6d23e74-780a-435f-a8ab-6fabf2f293c6",
       "subKeys": [
-        "b6943029-249f-4898-9262-6cc34cab650c",
-        "a7a2c238-861c-4f85-ad25-8a49f6e243c1"
+        "4c70a702-63c8-4f35-a4b6-6c926d8a0278"
       ],
       "collapse": false,
       "style": null,
       "blocks": [
         {
           "type": "CONTENT",
-          "data": "react"
-        }
-      ]
-    },
-    {
-      "key": "b6943029-249f-4898-9262-6cc34cab650c",
-      "parentKey": "74bd8420-a4b6-40e0-94b5-8eecd0c254d9",
-      "subKeys": [],
-      "collapse": false,
-      "style": null,
-      "blocks": [
-        {
-          "type": "CONTENT",
-          "data": "fiber"
-        }
-      ]
-    },
-    {
-      "key": "a7a2c238-861c-4f85-ad25-8a49f6e243c1",
-      "parentKey": "74bd8420-a4b6-40e0-94b5-8eecd0c254d9",
-      "subKeys": [],
-      "collapse": false,
-      "style": null,
-      "blocks": [
-        {
-          "type": "CONTENT",
-          "data": "dear"
+          "data": "createRef"
         }
       ]
     },
@@ -69,6 +88,346 @@
         {
           "type": "CONTENT",
           "data": "react-dom"
+        }
+      ]
+    },
+    {
+      "key": "aa0d448d-2dcd-407d-ae45-75d87c12176d",
+      "parentKey": "b6d23e74-780a-435f-a8ab-6fabf2f293c6",
+      "subKeys": [],
+      "collapse": false,
+      "style": null,
+      "blocks": [
+        {
+          "type": "CONTENT",
+          "data": "function"
+        }
+      ]
+    },
+    {
+      "key": "74bd8420-a4b6-40e0-94b5-8eecd0c254d9",
+      "parentKey": "root",
+      "subKeys": [
+        "e87a14f7-89df-4636-a5d8-fd7b960e58b4",
+        "faf4606e-d14a-4326-bd98-6124946fa457"
+      ],
+      "collapse": false,
+      "style": null,
+      "blocks": [
+        {
+          "type": "CONTENT",
+          "data": "react"
+        }
+      ]
+    },
+    {
+      "key": "ab5ea53e-96fa-4844-ba11-bb8fd00dae4d",
+      "parentKey": "a63e09e6-e03b-466c-9f47-326288ca7933",
+      "subKeys": [],
+      "collapse": false,
+      "style": null,
+      "blocks": [
+        {
+          "type": "CONTENT",
+          "data": "高阶组件（HOC）中我们想获取被包装的组件的引用"
+        }
+      ]
+    },
+    {
+      "key": "201fb0fe-047a-4d77-890b-0ba871c679ba",
+      "parentKey": "5f68f911-c965-4469-b100-14ab9632a21c",
+      "subKeys": [],
+      "collapse": false,
+      "style": null,
+      "blocks": [
+        {
+          "type": "CONTENT",
+          "data": "最不被推荐，后面会废弃"
+        }
+      ]
+    },
+    {
+      "key": "56f8badf-2fa8-4291-a141-e8843cce0d99",
+      "parentKey": "dffe006e-64bf-4aec-87cb-ba419f5ae1f2",
+      "subKeys": [],
+      "collapse": false,
+      "style": null,
+      "blocks": [
+        {
+          "type": "CONTENT",
+          "data": "code"
+        },
+        {
+          "type": "DESC",
+          "data": "code\n```\nexport default function forwardRef<Props, ElementType: React$ElementType>(\n  render: (props: Props, ref: React$Ref<ElementType>) => React$Node,\n) {\n  // 忽略 if (__DEV__) \n  return {\n    $$typeof: REACT_FORWARD_REF_TYPE,\n    render,\n  };\n}\n\n```\n"
+        }
+      ]
+    },
+    {
+      "key": "5f68f911-c965-4469-b100-14ab9632a21c",
+      "parentKey": "b6d23e74-780a-435f-a8ab-6fabf2f293c6",
+      "subKeys": [
+        "201fb0fe-047a-4d77-890b-0ba871c679ba"
+      ],
+      "collapse": false,
+      "style": null,
+      "blocks": [
+        {
+          "type": "CONTENT",
+          "data": "string ref"
+        }
+      ]
+    },
+    {
+      "key": "dffe006e-64bf-4aec-87cb-ba419f5ae1f2",
+      "parentKey": "faf4606e-d14a-4326-bd98-6124946fa457",
+      "subKeys": [
+        "a63e09e6-e03b-466c-9f47-326288ca7933",
+        "8c2effde-bce0-42e4-9dbf-ca02a39a4c4c",
+        "56f8badf-2fa8-4291-a141-e8843cce0d99"
+      ],
+      "collapse": false,
+      "style": null,
+      "blocks": [
+        {
+          "type": "CONTENT",
+          "data": "forwardRef"
+        }
+      ]
+    },
+    {
+      "key": "8c2effde-bce0-42e4-9dbf-ca02a39a4c4c",
+      "parentKey": "dffe006e-64bf-4aec-87cb-ba419f5ae1f2",
+      "subKeys": [
+        "cecb2edf-11bb-4ec8-8065-5108a86cd40e"
+      ],
+      "collapse": false,
+      "style": null,
+      "blocks": [
+        {
+          "type": "CONTENT",
+          "data": "demo"
+        },
+        {
+          "type": "DESC",
+          "data": "demo:\n\n```\nconst FancyButton = React.forwardRef((props, ref) => (\n  <button ref={ref} className=\"FancyButton\">\n    {props.children}\n  </button>\n));\n\n// 你可以直接获取 DOM button 的 ref：\nconst ref = React.createRef();\n<FancyButton ref={ref}>Click me!</FancyButton>;\n\n```\n"
+        }
+      ]
+    },
+    {
+      "key": "b6d23e74-780a-435f-a8ab-6fabf2f293c6",
+      "parentKey": "faf4606e-d14a-4326-bd98-6124946fa457",
+      "subKeys": [
+        "5f68f911-c965-4469-b100-14ab9632a21c",
+        "aa0d448d-2dcd-407d-ae45-75d87c12176d",
+        "dc01f459-7e89-49a7-9c37-d3fac29c243a"
+      ],
+      "collapse": false,
+      "style": null,
+      "blocks": [
+        {
+          "type": "CONTENT",
+          "data": "三种类型"
+        }
+      ]
+    },
+    {
+      "key": "1599ad15-c98d-4d51-8a3d-f10afa4750fe",
+      "parentKey": "a63e09e6-e03b-466c-9f47-326288ca7933",
+      "subKeys": [],
+      "collapse": false,
+      "style": null,
+      "blocks": [
+        {
+          "type": "CONTENT",
+          "data": "普通的ref无法获取FunctionalComponent的实例"
+        }
+      ]
+    },
+    {
+      "key": "cecb2edf-11bb-4ec8-8065-5108a86cd40e",
+      "parentKey": "8c2effde-bce0-42e4-9dbf-ca02a39a4c4c",
+      "subKeys": [
+        "9752c402-4058-4e76-91b7-d10aa7390338"
+      ],
+      "collapse": false,
+      "style": null,
+      "blocks": [
+        {
+          "type": "CONTENT",
+          "data": "要点"
+        }
+      ]
+    },
+    {
+      "key": "9752c402-4058-4e76-91b7-d10aa7390338",
+      "parentKey": "cecb2edf-11bb-4ec8-8065-5108a86cd40e",
+      "subKeys": [
+        "5e08fcae-aca5-44fe-a905-f7fc13af4f6f",
+        "037dea20-886d-48dd-b6d5-b27b84f1d64e"
+      ],
+      "collapse": false,
+      "style": null,
+      "blocks": [
+        {
+          "type": "CONTENT",
+          "data": "<FancyButton ref={ref}>Click me!</FancyButton>\n这个对象最终转译成js的代码是\nReact.createElement 生成的对象"
+        }
+      ]
+    },
+    {
+      "key": "faf4606e-d14a-4326-bd98-6124946fa457",
+      "parentKey": "74bd8420-a4b6-40e0-94b5-8eecd0c254d9",
+      "subKeys": [
+        "b6d23e74-780a-435f-a8ab-6fabf2f293c6",
+        "dffe006e-64bf-4aec-87cb-ba419f5ae1f2"
+      ],
+      "collapse": false,
+      "style": null,
+      "blocks": [
+        {
+          "type": "CONTENT",
+          "data": "Ref"
+        }
+      ]
+    },
+    {
+      "key": "0dd2af76-9ca1-4fe2-92b4-46f0e2796af9",
+      "parentKey": "e87a14f7-89df-4636-a5d8-fd7b960e58b4",
+      "subKeys": [
+        "7f923598-27eb-4277-ade3-c062c395e0a0",
+        "47d3713d-edb1-4df0-b3ce-21cc592e157e"
+      ],
+      "collapse": false,
+      "style": null,
+      "blocks": [
+        {
+          "type": "CONTENT",
+          "data": "PureComponent"
+        }
+      ]
+    },
+    {
+      "key": "0c94d4df-1923-4cc5-9a69-e87660b4d4bb",
+      "parentKey": "76a27722-368e-4c81-a341-a2f370265618",
+      "subKeys": [],
+      "collapse": false,
+      "style": null,
+      "blocks": [
+        {
+          "type": "CONTENT",
+          "data": "这个Component的定义很简单，\n里面没有任何关于生命周期的代码"
+        }
+      ]
+    },
+    {
+      "key": "e87a14f7-89df-4636-a5d8-fd7b960e58b4",
+      "parentKey": "74bd8420-a4b6-40e0-94b5-8eecd0c254d9",
+      "subKeys": [
+        "76a27722-368e-4c81-a341-a2f370265618",
+        "0dd2af76-9ca1-4fe2-92b4-46f0e2796af9"
+      ],
+      "collapse": false,
+      "style": null,
+      "blocks": [
+        {
+          "type": "CONTENT",
+          "data": "Component"
+        }
+      ]
+    },
+    {
+      "key": "2929ea22-866a-418f-bc52-4ce7b41f4e0d",
+      "parentKey": "a68f04d6-1d14-4634-8717-0bfb6fc15e11",
+      "subKeys": [],
+      "collapse": false,
+      "style": null,
+      "blocks": [
+        {
+          "type": "CONTENT",
+          "data": "setState"
+        },
+        {
+          "type": "DESC",
+          "data": "```\nComponent.prototype.setState = function(partialState, callback) {\n  invariant(\n    typeof partialState === 'object' ||\n      typeof partialState === 'function' ||\n      partialState == null,\n    'setState(...): takes an object of state variables to update or a ' +\n      'function which returns an object of state variables.',\n  );\n  // 在ReactDom 中实现，和平台相关，ReactDom和ReactNative中实现不同\n  this.updater.enqueueSetState(this, partialState, callback, 'setState');\n};\n\n```\n"
+        }
+      ]
+    },
+    {
+      "key": "4c70a702-63c8-4f35-a4b6-6c926d8a0278",
+      "parentKey": "dc01f459-7e89-49a7-9c37-d3fac29c243a",
+      "subKeys": [],
+      "collapse": false,
+      "style": null,
+      "blocks": [
+        {
+          "type": "CONTENT",
+          "data": "code"
+        },
+        {
+          "type": "DESC",
+          "data": "code\n```\nexport type RefObject = {|\n  current: any,\n|};\n\n```\n\n```\nexport function createRef(): RefObject {\n  const refObject = {\n    current: null,\n  };\n  if (__DEV__) {\n    Object.seal(refObject);\n  }\n  return refObject;\n}\n\n```\n"
+        }
+      ]
+    },
+    {
+      "key": "5e08fcae-aca5-44fe-a905-f7fc13af4f6f",
+      "parentKey": "9752c402-4058-4e76-91b7-d10aa7390338",
+      "subKeys": [],
+      "collapse": false,
+      "style": null,
+      "blocks": [
+        {
+          "type": "CONTENT",
+          "data": "这个对象的$$type是REACT_ELEMENT_TYPE"
+        }
+      ]
+    },
+    {
+      "key": "76a27722-368e-4c81-a341-a2f370265618",
+      "parentKey": "e87a14f7-89df-4636-a5d8-fd7b960e58b4",
+      "subKeys": [
+        "a68f04d6-1d14-4634-8717-0bfb6fc15e11",
+        "0c94d4df-1923-4cc5-9a69-e87660b4d4bb"
+      ],
+      "collapse": false,
+      "style": null,
+      "blocks": [
+        {
+          "type": "CONTENT",
+          "data": "Component"
+        }
+      ]
+    },
+    {
+      "key": "a68f04d6-1d14-4634-8717-0bfb6fc15e11",
+      "parentKey": "76a27722-368e-4c81-a341-a2f370265618",
+      "subKeys": [
+        "2929ea22-866a-418f-bc52-4ce7b41f4e0d"
+      ],
+      "collapse": false,
+      "style": null,
+      "blocks": [
+        {
+          "type": "CONTENT",
+          "data": "function Component(props, context, updater) "
+        },
+        {
+          "type": "DESC",
+          "data": "```\nfunction Component(props, context, updater) {\n  this.props = props;\n  this.context = context;\n  // If a component has string refs, we will assign a different object later.\n  // string ref 的key 会挂载在这上面\n  this.refs = emptyObject;\n  // We initialize the default updater but the real one gets injected by the\n  // renderer.\n  this.updater = updater || ReactNoopUpdateQueue;\n}\n\n```\n"
+        }
+      ]
+    },
+    {
+      "key": "47d3713d-edb1-4df0-b3ce-21cc592e157e",
+      "parentKey": "0dd2af76-9ca1-4fe2-92b4-46f0e2796af9",
+      "subKeys": [],
+      "collapse": false,
+      "style": null,
+      "blocks": [
+        {
+          "type": "CONTENT",
+          "data": "通过pureComponentPrototype.isPureReactComponent = true;\n来标识它是一个PureComponent"
         }
       ]
     }
