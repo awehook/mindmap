@@ -15,6 +15,19 @@
       ]
     },
     {
+      "key": "a7ec7454-9936-4ab1-af92-3bb1d119de67",
+      "parentKey": "7853a759-d370-49ff-ab75-85d67885ed01",
+      "subKeys": [],
+      "collapse": false,
+      "style": null,
+      "blocks": [
+        {
+          "type": "CONTENT",
+          "data": "suspense and lazy"
+        }
+      ]
+    },
+    {
       "key": "f47cf03a-bb08-4f8d-9e62-78518d7c2729",
       "parentKey": "3de11b2b-8a45-4976-92c5-31b2900b46ad",
       "subKeys": [],
@@ -109,6 +122,25 @@
       ]
     },
     {
+      "key": "7853a759-d370-49ff-ab75-85d67885ed01",
+      "parentKey": "74bd8420-a4b6-40e0-94b5-8eecd0c254d9",
+      "subKeys": [
+        "e87a14f7-89df-4636-a5d8-fd7b960e58b4",
+        "faf4606e-d14a-4326-bd98-6124946fa457",
+        "3de11b2b-8a45-4976-92c5-31b2900b46ad",
+        "0b388ac3-edf9-47bd-95db-0e5262d37181",
+        "a7ec7454-9936-4ab1-af92-3bb1d119de67"
+      ],
+      "collapse": true,
+      "style": null,
+      "blocks": [
+        {
+          "type": "CONTENT",
+          "data": "API"
+        }
+      ]
+    },
+    {
       "key": "aa0d448d-2dcd-407d-ae45-75d87c12176d",
       "parentKey": "b6d23e74-780a-435f-a8ab-6fabf2f293c6",
       "subKeys": [],
@@ -125,9 +157,8 @@
       "key": "74bd8420-a4b6-40e0-94b5-8eecd0c254d9",
       "parentKey": "root",
       "subKeys": [
-        "e87a14f7-89df-4636-a5d8-fd7b960e58b4",
-        "faf4606e-d14a-4326-bd98-6124946fa457",
-        "3de11b2b-8a45-4976-92c5-31b2900b46ad"
+        "7853a759-d370-49ff-ab75-85d67885ed01",
+        "dfbc8cca-f29d-4529-9001-2682349bd26c"
       ],
       "collapse": false,
       "style": null,
@@ -227,6 +258,19 @@
       ]
     },
     {
+      "key": "dfbc8cca-f29d-4529-9001-2682349bd26c",
+      "parentKey": "74bd8420-a4b6-40e0-94b5-8eecd0c254d9",
+      "subKeys": [],
+      "collapse": false,
+      "style": null,
+      "blocks": [
+        {
+          "type": "CONTENT",
+          "data": "更新流程"
+        }
+      ]
+    },
+    {
       "key": "0d825785-e958-44de-8c24-006c48c7282f",
       "parentKey": "3de11b2b-8a45-4976-92c5-31b2900b46ad",
       "subKeys": [
@@ -248,7 +292,7 @@
       "subKeys": [
         "cecb2edf-11bb-4ec8-8065-5108a86cd40e"
       ],
-      "collapse": false,
+      "collapse": true,
       "style": null,
       "blocks": [
         {
@@ -263,7 +307,7 @@
     },
     {
       "key": "3de11b2b-8a45-4976-92c5-31b2900b46ad",
-      "parentKey": "74bd8420-a4b6-40e0-94b5-8eecd0c254d9",
+      "parentKey": "7853a759-d370-49ff-ab75-85d67885ed01",
       "subKeys": [
         "36769b8c-3aaf-4d05-8a2b-b05eb4ce5995",
         "0d825785-e958-44de-8c24-006c48c7282f",
@@ -275,6 +319,34 @@
         {
           "type": "CONTENT",
           "data": "Context"
+        }
+      ]
+    },
+    {
+      "key": "791b8198-06d8-404e-938a-e781623f143e",
+      "parentKey": "d04c7552-ba75-41cb-b9e2-f28ce1d71e1a",
+      "subKeys": [],
+      "collapse": false,
+      "style": null,
+      "blocks": [
+        {
+          "type": "CONTENT",
+          "data": "让react的渲染过程能够进行优先级排序，\n并且能够让整体的渲染过程能够中断，\n可以进行任务的调度"
+        }
+      ]
+    },
+    {
+      "key": "d04c7552-ba75-41cb-b9e2-f28ce1d71e1a",
+      "parentKey": "0b388ac3-edf9-47bd-95db-0e5262d37181",
+      "subKeys": [
+        "791b8198-06d8-404e-938a-e781623f143e"
+      ],
+      "collapse": false,
+      "style": null,
+      "blocks": [
+        {
+          "type": "CONTENT",
+          "data": "目标"
         }
       ]
     },
@@ -318,6 +390,23 @@
         {
           "type": "CONTENT",
           "data": "三种类型"
+        }
+      ]
+    },
+    {
+      "key": "fbf45a81-17e9-40ae-8153-1b30e52213e4",
+      "parentKey": "0b388ac3-edf9-47bd-95db-0e5262d37181",
+      "subKeys": [],
+      "collapse": false,
+      "style": null,
+      "blocks": [
+        {
+          "type": "CONTENT",
+          "data": "demo"
+        },
+        {
+          "type": "DESC",
+          "data": "code\n```\nimport React, { ConcurrentMode } from 'react'\nimport { flushSync } from 'react-dom'\n\nimport './index.css'\n\nclass Parent extends React.Component {\n  state = {\n    async: true,\n    num: 1,\n    length: 2000,\n  }\n\n  componentDidMount() {\n    this.interval = setInterval(() => {\n      this.updateNum()\n    }, 200)\n  }\n\n  componentWillUnmount() {\n    // 别忘了清除interval\n    if (this.interval) {\n      clearInterval(this.interval)\n    }\n  }\n\n  updateNum() {\n    const newNum = this.state.num === 3 ? 0 : this.state.num + 1\n    if (this.state.async) {\n      this.setState({\n        num: newNum,\n      })\n    } else {\n      flushSync(() => {\n        this.setState({\n          num: newNum,\n        })\n      })\n    }\n  }\n\n  render() {\n    const children = []\n\n    const { length, num, async } = this.state\n\n    for (let i = 0; i < length; i++) {\n      children.push(\n        <div className=\"item\" key={i}>\n          {num}\n        </div>,\n      )\n    }\n\n    return (\n      <div className=\"main\">\n        async:{' '}\n        <input\n          type=\"checkbox\"\n          checked={async}\n          onChange={() => flushSync(() => this.setState({ async: !async }))}\n        />\n        <div className=\"wrapper\">{children}</div>\n      </div>\n    )\n  }\n}\n\n// class Child extends React.Component {\n//   state = {\n//     num: 1\n//   }\n\n//   render () {\n//     return (\n//       <div>\n\n//       </div>\n//     )\n//   }\n// }\n\nexport default () => (\n  <ConcurrentMode>\n    <Parent />\n  </ConcurrentMode>\n)\n\n\n```\n"
         }
       ]
     },
@@ -396,17 +485,33 @@
     },
     {
       "key": "faf4606e-d14a-4326-bd98-6124946fa457",
-      "parentKey": "74bd8420-a4b6-40e0-94b5-8eecd0c254d9",
+      "parentKey": "7853a759-d370-49ff-ab75-85d67885ed01",
       "subKeys": [
         "b6d23e74-780a-435f-a8ab-6fabf2f293c6",
         "dffe006e-64bf-4aec-87cb-ba419f5ae1f2"
+      ],
+      "collapse": true,
+      "style": null,
+      "blocks": [
+        {
+          "type": "CONTENT",
+          "data": "Ref"
+        }
+      ]
+    },
+    {
+      "key": "0b388ac3-edf9-47bd-95db-0e5262d37181",
+      "parentKey": "7853a759-d370-49ff-ab75-85d67885ed01",
+      "subKeys": [
+        "d04c7552-ba75-41cb-b9e2-f28ce1d71e1a",
+        "fbf45a81-17e9-40ae-8153-1b30e52213e4"
       ],
       "collapse": false,
       "style": null,
       "blocks": [
         {
           "type": "CONTENT",
-          "data": "Ref"
+          "data": "ConcurrentMode"
         }
       ]
     },
@@ -441,12 +546,12 @@
     },
     {
       "key": "e87a14f7-89df-4636-a5d8-fd7b960e58b4",
-      "parentKey": "74bd8420-a4b6-40e0-94b5-8eecd0c254d9",
+      "parentKey": "7853a759-d370-49ff-ab75-85d67885ed01",
       "subKeys": [
         "76a27722-368e-4c81-a341-a2f370265618",
         "0dd2af76-9ca1-4fe2-92b4-46f0e2796af9"
       ],
-      "collapse": false,
+      "collapse": true,
       "style": null,
       "blocks": [
         {
