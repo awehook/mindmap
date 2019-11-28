@@ -361,6 +361,21 @@
       ]
     },
     {
+      "key": "814475e8-b0f9-402b-86ef-f31ff8e4974f",
+      "parentKey": "2bc66c66-51f5-41ac-935d-855ba29c82cd",
+      "subKeys": [
+        "dba5dd82-b4c5-4cf0-92fb-614fef637d3b"
+      ],
+      "collapse": false,
+      "style": null,
+      "blocks": [
+        {
+          "type": "CONTENT",
+          "data": "code"
+        }
+      ]
+    },
+    {
       "key": "8c2effde-bce0-42e4-9dbf-ca02a39a4c4c",
       "parentKey": "dffe006e-64bf-4aec-87cb-ba419f5ae1f2",
       "subKeys": [
@@ -608,6 +623,19 @@
       ]
     },
     {
+      "key": "dba5dd82-b4c5-4cf0-92fb-614fef637d3b",
+      "parentKey": "814475e8-b0f9-402b-86ef-f31ff8e4974f",
+      "subKeys": [],
+      "collapse": false,
+      "style": null,
+      "blocks": [
+        {
+          "type": "CONTENT",
+          "data": "export function render(\n  element: React$Element<any>,\n  container: DOMContainer,\n  callback: ?Function,\n) {\n  return legacyRenderSubtreeIntoContainer(\n    null,\n    element,\n    container,\n    false,\n    callback,\n  );\n}"
+        }
+      ]
+    },
+    {
       "key": "9752c402-4058-4e76-91b7-d10aa7390338",
       "parentKey": "cecb2edf-11bb-4ec8-8065-5108a86cd40e",
       "subKeys": [
@@ -751,7 +779,8 @@
       "key": "2bc66c66-51f5-41ac-935d-855ba29c82cd",
       "parentKey": "1e67dae5-fa6a-4369-ae42-68b2b6f03995",
       "subKeys": [
-        "f452b17d-41dc-45c7-9fe9-cc73fb1d6b61"
+        "f452b17d-41dc-45c7-9fe9-cc73fb1d6b61",
+        "814475e8-b0f9-402b-86ef-f31ff8e4974f"
       ],
       "collapse": false,
       "style": null,
