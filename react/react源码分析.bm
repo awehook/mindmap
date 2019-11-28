@@ -17,7 +17,10 @@
     {
       "key": "a7ec7454-9936-4ab1-af92-3bb1d119de67",
       "parentKey": "7853a759-d370-49ff-ab75-85d67885ed01",
-      "subKeys": [],
+      "subKeys": [
+        "8bd666d3-4712-40d4-9c09-84931f3e55c9",
+        "f274f3bd-2cbb-4b65-ab4d-2e9939c099c8"
+      ],
       "collapse": false,
       "style": null,
       "blocks": [
@@ -94,6 +97,19 @@
       ]
     },
     {
+      "key": "60627455-24a7-4d69-8c43-f4d7aec3d262",
+      "parentKey": "f452b17d-41dc-45c7-9fe9-cc73fb1d6b61",
+      "subKeys": [],
+      "collapse": false,
+      "style": null,
+      "blocks": [
+        {
+          "type": "CONTENT",
+          "data": "创建ReactRoot"
+        }
+      ]
+    },
+    {
       "key": "dc01f459-7e89-49a7-9c37-d3fac29c243a",
       "parentKey": "b6d23e74-780a-435f-a8ab-6fabf2f293c6",
       "subKeys": [
@@ -150,6 +166,19 @@
         {
           "type": "CONTENT",
           "data": "function"
+        }
+      ]
+    },
+    {
+      "key": "ee5d6464-a001-46ed-9825-13a5e4417cda",
+      "parentKey": "f274f3bd-2cbb-4b65-ab4d-2e9939c099c8",
+      "subKeys": [],
+      "collapse": false,
+      "style": null,
+      "blocks": [
+        {
+          "type": "CONTENT",
+          "data": "一般放在suspence组件内部"
         }
       ]
     },
@@ -228,6 +257,36 @@
       ]
     },
     {
+      "key": "cebbef61-0d48-4f0a-a70f-073552b725f3",
+      "parentKey": "f452b17d-41dc-45c7-9fe9-cc73fb1d6b61",
+      "subKeys": [],
+      "collapse": false,
+      "style": null,
+      "blocks": [
+        {
+          "type": "CONTENT",
+          "data": "创建FiberRoot和RootFiber"
+        }
+      ]
+    },
+    {
+      "key": "3f206992-bee4-47ca-9c7a-aff13a0a70a9",
+      "parentKey": "f274f3bd-2cbb-4b65-ab4d-2e9939c099c8",
+      "subKeys": [],
+      "collapse": false,
+      "style": null,
+      "blocks": [
+        {
+          "type": "CONTENT",
+          "data": "code"
+        },
+        {
+          "type": "DESC",
+          "data": "code\n```\nimport type {LazyComponent, Thenable} from 'shared/ReactLazyComponent';\n\nimport {REACT_LAZY_TYPE} from 'shared/ReactSymbols';\nimport warning from 'shared/warning';\n\nexport function lazy<T, R>(ctor: () => Thenable<T, R>): LazyComponent<T> {\n  let lazyType = {\n    $$typeof: REACT_LAZY_TYPE,\n    _ctor: ctor,\n    // React uses these fields to store the result.\n    _status: -1,\n    // 记录thenable 对象返回的值\n    _result: null,\n  };\n\n  return lazyType;\n}\n\n\n```\n"
+        }
+      ]
+    },
+    {
       "key": "0dd597a9-6bf7-4417-b359-a3efd96c1ba4",
       "parentKey": "36769b8c-3aaf-4d05-8a2b-b05eb4ce5995",
       "subKeys": [],
@@ -260,7 +319,9 @@
     {
       "key": "dfbc8cca-f29d-4529-9001-2682349bd26c",
       "parentKey": "74bd8420-a4b6-40e0-94b5-8eecd0c254d9",
-      "subKeys": [],
+      "subKeys": [
+        "1e67dae5-fa6a-4369-ae42-68b2b6f03995"
+      ],
       "collapse": false,
       "style": null,
       "blocks": [
@@ -283,6 +344,19 @@
         {
           "type": "CONTENT",
           "data": "两种实现方式"
+        }
+      ]
+    },
+    {
+      "key": "4936055c-d549-4552-93b2-a06b373325d2",
+      "parentKey": "1e67dae5-fa6a-4369-ae42-68b2b6f03995",
+      "subKeys": [],
+      "collapse": false,
+      "style": null,
+      "blocks": [
+        {
+          "type": "CONTENT",
+          "data": "forceUpdate 即将废弃"
         }
       ]
     },
@@ -377,6 +451,23 @@
       ]
     },
     {
+      "key": "0246e7ca-d3b5-44c5-969e-c97119aa76fa",
+      "parentKey": "8bd666d3-4712-40d4-9c09-84931f3e55c9",
+      "subKeys": [],
+      "collapse": false,
+      "style": null,
+      "blocks": [
+        {
+          "type": "CONTENT",
+          "data": "demo"
+        },
+        {
+          "type": "DESC",
+          "data": "code\n```\nimport React, { Suspense, lazy } from 'react'\n\nconst LazyComp = lazy(() => import('./lazy.js'))\n\nlet data = ''\nlet promise = ''\nfunction requestData() {\n  if (data) return data\n  if (promise) throw promise\n  promise = new Promise(resolve => {\n    setTimeout(() => {\n      data = 'Data resolved'\n      resolve()\n    }, 2000)\n  })\n  throw promise\n}\n\nfunction SuspenseComp() {\n  const data = requestData()\n\n  return <p>{data}</p>\n}\n\nexport default () => (\n  <Suspense fallback=\"loading data\">\n    <SuspenseComp />\n    <LazyComp />\n  </Suspense>\n)\n\n\n```\n"
+        }
+      ]
+    },
+    {
       "key": "b6d23e74-780a-435f-a8ab-6fabf2f293c6",
       "parentKey": "faf4606e-d14a-4326-bd98-6124946fa457",
       "subKeys": [
@@ -411,6 +502,23 @@
       ]
     },
     {
+      "key": "1e67dae5-fa6a-4369-ae42-68b2b6f03995",
+      "parentKey": "dfbc8cca-f29d-4529-9001-2682349bd26c",
+      "subKeys": [
+        "2bc66c66-51f5-41ac-935d-855ba29c82cd",
+        "1104de5d-c83b-48ef-ac0d-a6ab42fd3917",
+        "4936055c-d549-4552-93b2-a06b373325d2"
+      ],
+      "collapse": false,
+      "style": null,
+      "blocks": [
+        {
+          "type": "CONTENT",
+          "data": "创建更新的方式"
+        }
+      ]
+    },
+    {
       "key": "1599ad15-c98d-4d51-8a3d-f10afa4750fe",
       "parentKey": "a63e09e6-e03b-466c-9f47-326288ca7933",
       "subKeys": [],
@@ -420,6 +528,23 @@
         {
           "type": "CONTENT",
           "data": "普通的ref无法获取FunctionalComponent的实例"
+        }
+      ]
+    },
+    {
+      "key": "f452b17d-41dc-45c7-9fe9-cc73fb1d6b61",
+      "parentKey": "2bc66c66-51f5-41ac-935d-855ba29c82cd",
+      "subKeys": [
+        "60627455-24a7-4d69-8c43-f4d7aec3d262",
+        "cebbef61-0d48-4f0a-a70f-073552b725f3",
+        "e9606cb2-ff04-45a9-a779-84a7b175fab9"
+      ],
+      "collapse": false,
+      "style": null,
+      "blocks": [
+        {
+          "type": "CONTENT",
+          "data": "步骤"
         }
       ]
     },
@@ -455,11 +580,26 @@
       ]
     },
     {
+      "key": "8bd666d3-4712-40d4-9c09-84931f3e55c9",
+      "parentKey": "a7ec7454-9936-4ab1-af92-3bb1d119de67",
+      "subKeys": [
+        "0246e7ca-d3b5-44c5-969e-c97119aa76fa"
+      ],
+      "collapse": false,
+      "style": null,
+      "blocks": [
+        {
+          "type": "CONTENT",
+          "data": "suspense"
+        }
+      ]
+    },
+    {
       "key": "b6673ee0-ce79-4453-a3b3-603aa0719db0",
       "parentKey": "30153434-508e-4c54-b679-6327274886ee",
       "subKeys": [],
       "collapse": false,
-      "style": null,
+      "style": "{\"color\":\"#e44343\",\"lineHeight\":\"1.4\"}",
       "blocks": [
         {
           "type": "CONTENT",
@@ -532,6 +672,19 @@
       ]
     },
     {
+      "key": "e9606cb2-ff04-45a9-a779-84a7b175fab9",
+      "parentKey": "f452b17d-41dc-45c7-9fe9-cc73fb1d6b61",
+      "subKeys": [],
+      "collapse": false,
+      "style": null,
+      "blocks": [
+        {
+          "type": "CONTENT",
+          "data": "创建更新"
+        }
+      ]
+    },
+    {
       "key": "0c94d4df-1923-4cc5-9a69-e87660b4d4bb",
       "parentKey": "76a27722-368e-4c81-a341-a2f370265618",
       "subKeys": [],
@@ -591,6 +744,21 @@
         {
           "type": "DESC",
           "data": "code\n```\nexport type RefObject = {|\n  current: any,\n|};\n\n```\n\n```\nexport function createRef(): RefObject {\n  const refObject = {\n    current: null,\n  };\n  if (__DEV__) {\n    Object.seal(refObject);\n  }\n  return refObject;\n}\n\n```\n"
+        }
+      ]
+    },
+    {
+      "key": "2bc66c66-51f5-41ac-935d-855ba29c82cd",
+      "parentKey": "1e67dae5-fa6a-4369-ae42-68b2b6f03995",
+      "subKeys": [
+        "f452b17d-41dc-45c7-9fe9-cc73fb1d6b61"
+      ],
+      "collapse": false,
+      "style": null,
+      "blocks": [
+        {
+          "type": "CONTENT",
+          "data": "ReactDOM.render || hydrate"
         }
       ]
     },
@@ -658,6 +826,19 @@
       ]
     },
     {
+      "key": "1104de5d-c83b-48ef-ac0d-a6ab42fd3917",
+      "parentKey": "1e67dae5-fa6a-4369-ae42-68b2b6f03995",
+      "subKeys": [],
+      "collapse": false,
+      "style": null,
+      "blocks": [
+        {
+          "type": "CONTENT",
+          "data": "setState"
+        }
+      ]
+    },
+    {
       "key": "47d3713d-edb1-4df0-b3ce-21cc592e157e",
       "parentKey": "0dd2af76-9ca1-4fe2-92b4-46f0e2796af9",
       "subKeys": [],
@@ -667,6 +848,22 @@
         {
           "type": "CONTENT",
           "data": "通过pureComponentPrototype.isPureReactComponent = true;\n来标识它是一个PureComponent"
+        }
+      ]
+    },
+    {
+      "key": "f274f3bd-2cbb-4b65-ab4d-2e9939c099c8",
+      "parentKey": "a7ec7454-9936-4ab1-af92-3bb1d119de67",
+      "subKeys": [
+        "ee5d6464-a001-46ed-9825-13a5e4417cda",
+        "3f206992-bee4-47ca-9c7a-aff13a0a70a9"
+      ],
+      "collapse": false,
+      "style": null,
+      "blocks": [
+        {
+          "type": "CONTENT",
+          "data": "lazy"
         }
       ]
     }
