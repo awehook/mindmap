@@ -80,6 +80,56 @@
       ]
     },
     {
+      "key": "8c5a5208-7da2-43bc-a4d4-39a16b955c72",
+      "parentKey": "dba5dd82-b4c5-4cf0-92fb-614fef637d3b",
+      "subKeys": [
+        "a6bf849c-10df-43a5-96a3-4661d731e992",
+        "29424156-84fe-4633-9275-5dbb6322e53c"
+      ],
+      "collapse": false,
+      "style": null,
+      "blocks": [
+        {
+          "type": "CONTENT",
+          "data": "function legacyRenderSubtreeIntoContainer(\n  parentComponent: ?React$Component<any, any>,\n  children: ReactNodeList,\n  container: DOMContainer,\n  forceHydrate: boolean,\n  callback: ?Function,\n) "
+        },
+        {
+          "type": "DESC",
+          "data": "code\n```\nfunction legacyRenderSubtreeIntoContainer(\n  parentComponent: ?React$Component<any, any>,\n  children: ReactNodeList,\n  container: DOMContainer,\n  forceHydrate: boolean,\n  callback: ?Function,\n) {\n  if (__DEV__) {\n    topLevelUpdateWarnings(container);\n    warnOnInvalidCallback(callback === undefined ? null : callback, 'render');\n  }\n\n  // TODO: Without `any` type, Flow says \"Property cannot be accessed on any\n  // member of intersection type.\" Whyyyyyy.\n  let root: RootType = (container._reactRootContainer: any);\n  let fiberRoot;\n  if (!root) {\n    // Initial mount\n    root = container._reactRootContainer = legacyCreateRootFromDOMContainer(\n      container,\n      forceHydrate,\n    );\n    fiberRoot = root._internalRoot;\n    if (typeof callback === 'function') {\n      const originalCallback = callback;\n      callback = function() {\n        const instance = getPublicRootInstance(fiberRoot);\n        originalCallback.call(instance);\n      };\n    }\n    // Initial mount should not be batched.\n    unbatchedUpdates(() => {\n      updateContainer(children, fiberRoot, parentComponent, callback);\n    });\n  } else {\n    fiberRoot = root._internalRoot;\n    if (typeof callback === 'function') {\n      const originalCallback = callback;\n      callback = function() {\n        const instance = getPublicRootInstance(fiberRoot);\n        originalCallback.call(instance);\n      };\n    }\n    // Update\n    updateContainer(children, fiberRoot, parentComponent, callback);\n  }\n  return getPublicRootInstance(fiberRoot);\n}\n\n```\n"
+        }
+      ]
+    },
+    {
+      "key": "3336e836-0cc7-4616-a1c2-a61624db00b0",
+      "parentKey": "814475e8-b0f9-402b-86ef-f31ff8e4974f",
+      "subKeys": [
+        "dba5dd82-b4c5-4cf0-92fb-614fef637d3b"
+      ],
+      "collapse": false,
+      "style": null,
+      "blocks": [
+        {
+          "type": "CONTENT",
+          "data": "ReactDOM.render(<App />, document.getElementById('root'));"
+        }
+      ]
+    },
+    {
+      "key": "e9b956be-d2b3-4764-8682-3f083cc36cef",
+      "parentKey": "29424156-84fe-4633-9275-5dbb6322e53c",
+      "subKeys": [
+        "0f57d42e-8a2d-4a20-8931-4a214500df9d"
+      ],
+      "collapse": false,
+      "style": "{\"borderStyle\":\"dashed\"}",
+      "blocks": [
+        {
+          "type": "CONTENT",
+          "data": "export function createLegacyRoot(\n  container: DOMContainer,\n  options?: RootOptions,\n): RootType {\n  return new ReactDOMBlockingRoot(container, LegacyRoot, options);\n}"
+        }
+      ]
+    },
+    {
       "key": "7f923598-27eb-4277-ade3-c062c395e0a0",
       "parentKey": "0dd2af76-9ca1-4fe2-92b4-46f0e2796af9",
       "subKeys": [],
@@ -170,6 +220,19 @@
       ]
     },
     {
+      "key": "2c838cb2-03ea-472a-a672-bd92043ea4a8",
+      "parentKey": "a6bf849c-10df-43a5-96a3-4661d731e992",
+      "subKeys": [],
+      "collapse": false,
+      "style": null,
+      "blocks": [
+        {
+          "type": "CONTENT",
+          "data": "render调用时false"
+        }
+      ]
+    },
+    {
       "key": "ee5d6464-a001-46ed-9825-13a5e4417cda",
       "parentKey": "f274f3bd-2cbb-4b65-ab4d-2e9939c099c8",
       "subKeys": [],
@@ -195,6 +258,23 @@
         {
           "type": "CONTENT",
           "data": "react"
+        }
+      ]
+    },
+    {
+      "key": "0f57d42e-8a2d-4a20-8931-4a214500df9d",
+      "parentKey": "e9b956be-d2b3-4764-8682-3f083cc36cef",
+      "subKeys": [],
+      "collapse": false,
+      "style": null,
+      "blocks": [
+        {
+          "type": "CONTENT",
+          "data": "function ReactDOMBlockingRoot(\n  container: DOMContainer,\n  tag: RootTag,\n  options: void | RootOptions,\n) {\n  this._internalRoot = createRootImpl(container, tag, options);\n}"
+        },
+        {
+          "type": "DESC",
+          "data": "code\n```\nfunction createRootImpl(\n  container: DOMContainer,\n  tag: RootTag,\n  options: void | RootOptions,\n) {\n  // Tag is either LegacyRoot or Concurrent Root\n  const hydrate = options != null && options.hydrate === true;\n  const hydrationCallbacks =\n    (options != null && options.hydrationOptions) || null;\n  const root = createContainer(container, tag, hydrate, hydrationCallbacks);\n  markContainerAsRoot(root.current, container);\n  if (hydrate && tag !== LegacyRoot) {\n    const doc =\n      container.nodeType === DOCUMENT_NODE\n        ? container\n        : container.ownerDocument;\n    eagerlyTrapReplayableEvents(doc);\n  }\n  return root;\n}\n\n```\n"
         }
       ]
     },
@@ -364,7 +444,8 @@
       "key": "814475e8-b0f9-402b-86ef-f31ff8e4974f",
       "parentKey": "2bc66c66-51f5-41ac-935d-855ba29c82cd",
       "subKeys": [
-        "dba5dd82-b4c5-4cf0-92fb-614fef637d3b"
+        "3336e836-0cc7-4616-a1c2-a61624db00b0",
+        "09746a55-26cb-458b-b965-2405af486de6"
       ],
       "collapse": false,
       "style": null,
@@ -595,6 +676,19 @@
       ]
     },
     {
+      "key": "09746a55-26cb-458b-b965-2405af486de6",
+      "parentKey": "814475e8-b0f9-402b-86ef-f31ff8e4974f",
+      "subKeys": [],
+      "collapse": false,
+      "style": null,
+      "blocks": [
+        {
+          "type": "CONTENT",
+          "data": "分析首次渲染"
+        }
+      ]
+    },
+    {
       "key": "8bd666d3-4712-40d4-9c09-84931f3e55c9",
       "parentKey": "a7ec7454-9936-4ab1-af92-3bb1d119de67",
       "subKeys": [
@@ -624,8 +718,10 @@
     },
     {
       "key": "dba5dd82-b4c5-4cf0-92fb-614fef637d3b",
-      "parentKey": "814475e8-b0f9-402b-86ef-f31ff8e4974f",
-      "subKeys": [],
+      "parentKey": "3336e836-0cc7-4616-a1c2-a61624db00b0",
+      "subKeys": [
+        "8c5a5208-7da2-43bc-a4d4-39a16b955c72"
+      ],
       "collapse": false,
       "style": null,
       "blocks": [
@@ -648,6 +744,19 @@
         {
           "type": "CONTENT",
           "data": "<FancyButton ref={ref}>Click me!</FancyButton>\n这个对象最终转译成js的代码是\nReact.createElement 生成的对象"
+        }
+      ]
+    },
+    {
+      "key": "c18d69b2-cd9c-4ac1-949c-037ad9f27ead",
+      "parentKey": "a6bf849c-10df-43a5-96a3-4661d731e992",
+      "subKeys": [],
+      "collapse": false,
+      "style": null,
+      "blocks": [
+        {
+          "type": "CONTENT",
+          "data": "hydrate调用时true"
         }
       ]
     },
@@ -836,6 +945,23 @@
       ]
     },
     {
+      "key": "a6bf849c-10df-43a5-96a3-4661d731e992",
+      "parentKey": "8c5a5208-7da2-43bc-a4d4-39a16b955c72",
+      "subKeys": [
+        "2c838cb2-03ea-472a-a672-bd92043ea4a8",
+        "c18d69b2-cd9c-4ac1-949c-037ad9f27ead",
+        "851f3a71-0421-4f49-b904-d79493bfa28f"
+      ],
+      "collapse": false,
+      "style": null,
+      "blocks": [
+        {
+          "type": "CONTENT",
+          "data": "forceHydrate"
+        }
+      ]
+    },
+    {
       "key": "a68f04d6-1d14-4634-8717-0bfb6fc15e11",
       "parentKey": "76a27722-368e-4c81-a341-a2f370265618",
       "subKeys": [
@@ -893,6 +1019,38 @@
         {
           "type": "CONTENT",
           "data": "lazy"
+        }
+      ]
+    },
+    {
+      "key": "851f3a71-0421-4f49-b904-d79493bfa28f",
+      "parentKey": "a6bf849c-10df-43a5-96a3-4661d731e992",
+      "subKeys": [],
+      "collapse": false,
+      "style": "{\"background\":\"#f3c6d8\"}",
+      "blocks": [
+        {
+          "type": "CONTENT",
+          "data": "含义：是否会调和原来已经在container里面的节点"
+        }
+      ]
+    },
+    {
+      "key": "29424156-84fe-4633-9275-5dbb6322e53c",
+      "parentKey": "8c5a5208-7da2-43bc-a4d4-39a16b955c72",
+      "subKeys": [
+        "e9b956be-d2b3-4764-8682-3f083cc36cef"
+      ],
+      "collapse": false,
+      "style": "{\"borderStyle\":\"dashed\",\"lineHeight\":\"1.6\",\"background\":\"#fac7e0\"}",
+      "blocks": [
+        {
+          "type": "CONTENT",
+          "data": "function legacyCreateRootFromDOMContainer(\n  container: DOMContainer,\n  forceHydrate: boolean,\n): RootType "
+        },
+        {
+          "type": "DESC",
+          "data": "code\n```\nfunction legacyCreateRootFromDOMContainer(\n  container: DOMContainer,\n  forceHydrate: boolean,\n): RootType {\n  const shouldHydrate =\n    forceHydrate || shouldHydrateDueToLegacyHeuristic(container);\n  // First clear any existing content.\n  if (!shouldHydrate) {\n    let warned = false;\n    let rootSibling;\n    while ((rootSibling = container.lastChild)) {\n      container.removeChild(rootSibling);\n    }\n  }\n  return createLegacyRoot(\n    container,\n    shouldHydrate\n      ? {\n          hydrate: true,\n        }\n      : undefined,\n  );\n}\n\n```\n"
         }
       ]
     }
@@ -954,5 +1112,6 @@
         }
       }
     }
-  }
+  },
+  "version": "0.0"
 }
