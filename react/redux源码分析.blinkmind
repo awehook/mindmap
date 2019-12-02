@@ -1,0 +1,125 @@
+{
+  "rootTopicKey": "root",
+  "topics": [
+    {
+      "key": "root",
+      "parentKey": null,
+      "subKeys": [
+        "92721c16-36d9-40e2-af14-c051de815435",
+        "ecffe3f6-6415-4d4c-ab27-be2853afdc0e"
+      ],
+      "collapse": false,
+      "style": null,
+      "blocks": [
+        {
+          "type": "CONTENT",
+          "data": "redux源码分析"
+        }
+      ]
+    },
+    {
+      "key": "92721c16-36d9-40e2-af14-c051de815435",
+      "parentKey": "root",
+      "subKeys": [
+        "533bc303-81c9-42a7-ba8f-7f02d405e4b3"
+      ],
+      "collapse": false,
+      "style": null,
+      "blocks": [
+        {
+          "type": "CONTENT",
+          "data": "reducer"
+        }
+      ]
+    },
+    {
+      "key": "533bc303-81c9-42a7-ba8f-7f02d405e4b3",
+      "parentKey": "92721c16-36d9-40e2-af14-c051de815435",
+      "subKeys": [],
+      "collapse": false,
+      "style": "{\"borderStyle\":\"dashed\",\"lineHeight\":\"1.8\",\"background\":\"#cacde7\",\"color\":\"#db1717\",\"borderColor\":\"#b1a4f1\"}",
+      "blocks": [
+        {
+          "type": "CONTENT",
+          "data": "export type Reducer<S = any, A extends Action = AnyAction> = (\n  state: S | undefined,\n  action: A\n) => S"
+        }
+      ]
+    },
+    {
+      "key": "ecffe3f6-6415-4d4c-ab27-be2853afdc0e",
+      "parentKey": "root",
+      "subKeys": [],
+      "collapse": false,
+      "style": null,
+      "blocks": [
+        {
+          "type": "CONTENT",
+          "data": "combineReducer"
+        },
+        {
+          "type": "DESC",
+          "data": "code\n```\nexport default function combineReducers<S>(\n  reducers: ReducersMapObject<S, any>\n): Reducer<CombinedState<S>>\nexport default function combineReducers<S, A extends Action = AnyAction>(\n  reducers: ReducersMapObject<S, A>\n): Reducer<CombinedState<S>, A>\nexport default function combineReducers<M extends ReducersMapObject<any, any>>(\n  reducers: M\n): Reducer<\n  CombinedState<StateFromReducersMapObject<M>>,\n  ActionFromReducersMapObject<M>\n>\nexport default function combineReducers(reducers: ReducersMapObject) {\n  const reducerKeys = Object.keys(reducers)\n  const finalReducers: ReducersMapObject = {}\n  for (let i = 0; i < reducerKeys.length; i++) {\n    const key = reducerKeys[i]\n\n    if (process.env.NODE_ENV !== 'production') {\n      if (typeof reducers[key] === 'undefined') {\n        warning(`No reducer provided for key \"${key}\"`)\n      }\n    }\n\n    if (typeof reducers[key] === 'function') {\n      finalReducers[key] = reducers[key]\n    }\n  }\n  const finalReducerKeys = Object.keys(finalReducers)\n\n  // This is used to make sure we don't warn about the same\n  // keys multiple times.\n  let unexpectedKeyCache: { [key: string]: true }\n  if (process.env.NODE_ENV !== 'production') {\n    unexpectedKeyCache = {}\n  }\n\n  let shapeAssertionError: Error\n  try {\n    assertReducerShape(finalReducers)\n  } catch (e) {\n    shapeAssertionError = e\n  }\n\n  return function combination(\n    state: StateFromReducersMapObject<typeof reducers> = {},\n    action: AnyAction\n  ) {\n    if (shapeAssertionError) {\n      throw shapeAssertionError\n    }\n\n    if (process.env.NODE_ENV !== 'production') {\n      const warningMessage = getUnexpectedStateShapeWarningMessage(\n        state,\n        finalReducers,\n        action,\n        unexpectedKeyCache\n      )\n      if (warningMessage) {\n        warning(warningMessage)\n      }\n    }\n\n    let hasChanged = false\n    const nextState: StateFromReducersMapObject<typeof reducers> = {}\n    for (let i = 0; i < finalReducerKeys.length; i++) {\n      const key = finalReducerKeys[i]\n      const reducer = finalReducers[key]\n      const previousStateForKey = state[key]\n      const nextStateForKey = reducer(previousStateForKey, action)\n      if (typeof nextStateForKey === 'undefined') {\n        const errorMessage = getUndefinedStateErrorMessage(key, action)\n        throw new Error(errorMessage)\n      }\n      nextState[key] = nextStateForKey\n      hasChanged = hasChanged || nextStateForKey !== previousStateForKey\n    }\n    hasChanged =\n      hasChanged || finalReducerKeys.length !== Object.keys(state).length\n    return hasChanged ? nextState : state\n  }\n}\n\n```\n"
+        }
+      ]
+    }
+  ],
+  "config": {
+    "readOnly": false,
+    "allowUndo": true,
+    "layoutDir": 0,
+    "theme": {
+      "name": "theme3",
+      "randomColor": false,
+      "background": "#A9DEF9",
+      "highlightColor": "#50C9CE",
+      "marginH": 50,
+      "marginV": 20,
+      "fontFamily": "",
+      "bold": false,
+      "italic": false,
+      "textAlign": "left",
+      "rootTopic": {
+        "background": "#FF99C8",
+        "color": "#fff",
+        "fontSize": "34px",
+        "borderRadius": "5px",
+        "padding": "16px 18px 16px 18px",
+        "linkStyle": {
+          "lineType": "curve",
+          "lineWidth": 2,
+          "lineColor": "rgb(113, 203, 45)"
+        }
+      },
+      "primaryTopic": {
+        "background": "#FCF6BD",
+        "borderWidth": "1px",
+        "borderStyle": "solid",
+        "borderColor": "#E4C1F9",
+        "borderRadius": "5px",
+        "color": "rgb(103,103,103)",
+        "fontSize": "14px",
+        "padding": "6px 10px 5px 10px",
+        "linkStyle": {
+          "lineType": "curve",
+          "lineWidth": 2,
+          "lineColor": "#43a9ff"
+        }
+      },
+      "normalTopic": {
+        "background": "#E4FDE1",
+        "borderRadius": "5px",
+        "color": "rgb(103,103,103)",
+        "fontSize": "13px",
+        "padding": "3px 9px 4px",
+        "boxShadow": "1px 1px 1px #ccc",
+        "linkStyle": {
+          "lineType": "round",
+          "lineRadius": 5,
+          "lineWidth": 1,
+          "lineColor": "#43a9ff"
+        }
+      }
+    }
+  },
+  "version": "0.0"
+}
