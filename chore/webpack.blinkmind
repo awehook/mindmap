@@ -18,10 +18,26 @@
       ]
     },
     {
+      "key": "30b29c82-66a1-405e-b230-4afccbef57c9",
+      "parentKey": "a4762742-4e07-4524-9909-c8c5052beedf",
+      "subKeys": [],
+      "collapse": false,
+      "style": null,
+      "blocks": [
+        {
+          "type": "CONTENT",
+          "data": "AsyncSeries\n异步串行钩子"
+        }
+      ]
+    },
+    {
       "key": "root",
       "parentKey": null,
       "subKeys": [
-        "2321ade1-abe4-4509-bc79-a95a0cd8468e"
+        "2321ade1-abe4-4509-bc79-a95a0cd8468e",
+        "c4a9d6c5-2960-42ce-a040-e58caf5f9bb1",
+        "b98ead1c-d4a0-4481-adda-8071750c2565",
+        "9a2d5a77-9c84-4a10-a6b6-7731f187c65c"
       ],
       "collapse": false,
       "style": null,
@@ -29,6 +45,47 @@
         {
           "type": "CONTENT",
           "data": "webpack"
+        }
+      ]
+    },
+    {
+      "key": "9b595adf-4448-4a98-b0ac-9dd195f26f59",
+      "parentKey": "a4762742-4e07-4524-9909-c8c5052beedf",
+      "subKeys": [],
+      "collapse": false,
+      "style": null,
+      "blocks": [
+        {
+          "type": "CONTENT",
+          "data": "AsyncParallel\n异步并行执行钩子"
+        }
+      ]
+    },
+    {
+      "key": "6aedcbc6-d103-4ff2-8fe4-bee2236ea606",
+      "parentKey": "a4762742-4e07-4524-9909-c8c5052beedf",
+      "subKeys": [],
+      "collapse": false,
+      "style": null,
+      "blocks": [
+        {
+          "type": "CONTENT",
+          "data": "Bail\n熔断：当函数有任何返回值，就会在当前执行函数停止"
+        }
+      ]
+    },
+    {
+      "key": "c4a9d6c5-2960-42ce-a040-e58caf5f9bb1",
+      "parentKey": "root",
+      "subKeys": [
+        "55ee15d4-4fab-41ba-a28c-3885939bfbb6"
+      ],
+      "collapse": false,
+      "style": null,
+      "blocks": [
+        {
+          "type": "CONTENT",
+          "data": "Intro"
         }
       ]
     },
@@ -61,19 +118,49 @@
       ]
     },
     {
-      "key": "cd8c0e1e-356f-4c1e-adda-a49ff2fa4465",
-      "parentKey": "a6acb5f0-6916-410b-b688-6c95cd359c50",
+      "key": "9a2d5a77-9c84-4a10-a6b6-7731f187c65c",
+      "parentKey": "root",
       "subKeys": [
-        "756db21e-dc84-48a0-9cab-617740d71137",
-        "dacabdc0-a7a2-483d-b586-9cedab30d89e",
-        "3994647b-a0e4-45da-8f26-6479ff2529a6"
+        "3a3ffd58-5d52-4d65-b32e-8595858f6a36",
+        "743bdb1b-657b-4538-92dc-54d0225f7fc1"
       ],
       "collapse": false,
       "style": null,
       "blocks": [
         {
           "type": "CONTENT",
+          "data": "核心对象"
+        }
+      ]
+    },
+    {
+      "key": "cd8c0e1e-356f-4c1e-adda-a49ff2fa4465",
+      "parentKey": "a6acb5f0-6916-410b-b688-6c95cd359c50",
+      "subKeys": [
+        "756db21e-dc84-48a0-9cab-617740d71137",
+        "dacabdc0-a7a2-483d-b586-9cedab30d89e",
+        "3994647b-a0e4-45da-8f26-6479ff2529a6",
+        "a4762742-4e07-4524-9909-c8c5052beedf"
+      ],
+      "collapse": true,
+      "style": null,
+      "blocks": [
+        {
+          "type": "CONTENT",
           "data": "用法"
+        }
+      ]
+    },
+    {
+      "key": "6be8d293-7c94-4082-9379-7f8a0b9f8576",
+      "parentKey": "a4762742-4e07-4524-9909-c8c5052beedf",
+      "subKeys": [],
+      "collapse": false,
+      "style": null,
+      "blocks": [
+        {
+          "type": "CONTENT",
+          "data": "Sync\n同步方法"
         }
       ]
     },
@@ -87,6 +174,79 @@
         {
           "type": "CONTENT",
           "data": "使用 tap/tapAsync/tapPromise 绑定钩子"
+        }
+      ]
+    },
+    {
+      "key": "24b51beb-d52f-4dba-bc03-698a2616f5af",
+      "parentKey": "a4762742-4e07-4524-9909-c8c5052beedf",
+      "subKeys": [],
+      "collapse": false,
+      "style": null,
+      "blocks": [
+        {
+          "type": "CONTENT",
+          "data": "Waterfall\n同步方法，但是它会传值给下一个函数"
+        }
+      ]
+    },
+    {
+      "key": "3a3ffd58-5d52-4d65-b32e-8595858f6a36",
+      "parentKey": "9a2d5a77-9c84-4a10-a6b6-7731f187c65c",
+      "subKeys": [],
+      "collapse": false,
+      "style": null,
+      "blocks": [
+        {
+          "type": "CONTENT",
+          "data": "Compile 对象：\n负责文件监听和启动编译。Compiler 实例中包含了完整的 webpack 配置，全局只有一个 Compiler 实例。"
+        }
+      ]
+    },
+    {
+      "key": "a4762742-4e07-4524-9909-c8c5052beedf",
+      "parentKey": "cd8c0e1e-356f-4c1e-adda-a49ff2fa4465",
+      "subKeys": [
+        "bb22550f-1fb6-47fd-aa57-bf10fd39d84c",
+        "24b51beb-d52f-4dba-bc03-698a2616f5af",
+        "6aedcbc6-d103-4ff2-8fe4-bee2236ea606",
+        "2af835b4-d431-4076-86d5-01665dc81c0e",
+        "6be8d293-7c94-4082-9379-7f8a0b9f8576",
+        "30b29c82-66a1-405e-b230-4afccbef57c9",
+        "9b595adf-4448-4a98-b0ac-9dd195f26f59"
+      ],
+      "collapse": false,
+      "style": null,
+      "blocks": [
+        {
+          "type": "CONTENT",
+          "data": "其他"
+        }
+      ]
+    },
+    {
+      "key": "55ee15d4-4fab-41ba-a28c-3885939bfbb6",
+      "parentKey": "c4a9d6c5-2960-42ce-a040-e58caf5f9bb1",
+      "subKeys": [],
+      "collapse": false,
+      "style": null,
+      "blocks": [
+        {
+          "type": "CONTENT",
+          "data": "webpack 就像一条生产线，要经过一系列处理流程后才能将源文件转换成输出结果。 \n这条生产线上的每个处理流程的职责都是单一的，\n多个流程之间有存在依赖关系，只有完成当前处理后才能交给下一个流程去处理。\n 插件就像是一个插入到生产线中的一个功能，在特定的时机对生产线上的资源做处理。\nwebpack 通过 Tapable 来组织这条复杂的生产线。\n webpack 在运行过程中会广播事件，插件只需要监听它所关心的事件，\n就能加入到这条生产线中，去改变生产线的运作。\n webpack 的事件流机制保证了插件的有序性，使得整个系统扩展性很好。\n --吴浩麟《深入浅出webpack》"
+        }
+      ]
+    },
+    {
+      "key": "bb22550f-1fb6-47fd-aa57-bf10fd39d84c",
+      "parentKey": "a4762742-4e07-4524-9909-c8c5052beedf",
+      "subKeys": [],
+      "collapse": false,
+      "style": null,
+      "blocks": [
+        {
+          "type": "CONTENT",
+          "data": "Hook\n所有钩子的后缀"
         }
       ]
     },
@@ -132,6 +292,36 @@
       ]
     },
     {
+      "key": "743bdb1b-657b-4538-92dc-54d0225f7fc1",
+      "parentKey": "9a2d5a77-9c84-4a10-a6b6-7731f187c65c",
+      "subKeys": [],
+      "collapse": false,
+      "style": "{\"lineHeight\":\"1.5\"}",
+      "blocks": [
+        {
+          "type": "CONTENT",
+          "data": "compilation 对象：\n当 webpack 以开发模式运行时，每当检测到文件变化，一次新的 Compilation 将被创建。\n一个 Compilation 对象包含了当前的模块资源、编译生成资源、变化的文件等。\nCompilation 对象也提供了很多事件回调供插件做扩展。"
+        }
+      ]
+    },
+    {
+      "key": "b98ead1c-d4a0-4481-adda-8071750c2565",
+      "parentKey": "root",
+      "subKeys": [],
+      "collapse": false,
+      "style": null,
+      "blocks": [
+        {
+          "type": "CONTENT",
+          "data": "构建流程"
+        },
+        {
+          "type": "DESC",
+          "data": "初始化参数：从配置文件和 Shell 语句中读取与合并参数，得出最终的参数；\n\n开始编译：用上一步得到的参数初始化 Compiler 对象，加载所有配置的插件，执行对象的 run 方法开始执行编译；\n\n确定入口：根据配置中的 entry 找出所有的入口文件\n\n编译模块：从入口文件出发，调用所有配置的 Loader 对模块进行翻译，**再找出该模块依赖的模块**，**再递归本步骤直到所有入口依赖的文件都经过了本步骤的处理；**\n\n完成模块编译：在经过第4步使用 Loader 翻译完所有模块后，**得到了每个模块被翻译后的最终内容以及它们之间的依赖关系；**\n\n输出资源：根据入口和模块之间的依赖关系，**组装成一个个包含多个模块的 Chunk**，**再把每个 Chunk 转换成一个单独的文件加入到输出列表，这步是可以修改输出内容的最后机会；**\n\n输出完成：在确定好输出内容后，根据配置确定输出的路径和文件名，把文件内容写入到文件系统。\n\n在以上过程中，**webpack 会在特定的时间点广播出特定的事件，插件在监听到感兴趣的事件后会执行特定的逻辑**，并且插件可以调用 webpack 提供的 API 改变 webpack 的运行结果。"
+        }
+      ]
+    },
+    {
       "key": "20345a3b-cd7d-48e2-899e-75efebbbb440",
       "parentKey": "2321ade1-abe4-4509-bc79-a95a0cd8468e",
       "subKeys": [
@@ -145,12 +335,25 @@
           "data": "运行机制"
         }
       ]
+    },
+    {
+      "key": "2af835b4-d431-4076-86d5-01665dc81c0e",
+      "parentKey": "a4762742-4e07-4524-9909-c8c5052beedf",
+      "subKeys": [],
+      "collapse": false,
+      "style": null,
+      "blocks": [
+        {
+          "type": "CONTENT",
+          "data": "Loop\n监听函数返回true表示继续循环，返回undefine表示结束循环"
+        }
+      ]
     }
   ],
   "config": {
     "readOnly": false,
     "allowUndo": true,
-    "layoutDir": 2,
+    "layoutDir": 0,
     "theme": {
       "name": "default",
       "randomColor": true,
