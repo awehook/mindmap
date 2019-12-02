@@ -1,0 +1,107 @@
+{
+  "rootTopicKey": "root",
+  "topics": [
+    {
+      "key": "root",
+      "parentKey": null,
+      "subKeys": [
+        "75ecc354-a2b9-4de6-b797-ebf99546ae22"
+      ],
+      "collapse": false,
+      "style": null,
+      "blocks": [
+        {
+          "type": "CONTENT",
+          "data": "MainTopic"
+        }
+      ]
+    },
+    {
+      "key": "75ecc354-a2b9-4de6-b797-ebf99546ae22",
+      "parentKey": "root",
+      "subKeys": [
+        "48efc91f-dfe3-43f6-ab11-1bfe274849b9"
+      ],
+      "collapse": false,
+      "style": "{\"borderStyle\":\"dashed\",\"borderColor\":\"#d0021b\"}",
+      "blocks": [
+        {
+          "type": "CONTENT",
+          "data": ""
+        }
+      ]
+    },
+    {
+      "key": "48efc91f-dfe3-43f6-ab11-1bfe274849b9",
+      "parentKey": "75ecc354-a2b9-4de6-b797-ebf99546ae22",
+      "subKeys": [],
+      "collapse": false,
+      "style": "{\"borderWidth\":\"2px\",\"borderStyle\":\"dashed\",\"borderColor\":\"#000000\"}",
+      "blocks": [
+        {
+          "type": "CONTENT",
+          "data": ""
+        }
+      ]
+    }
+  ],
+  "config": {
+    "readOnly": false,
+    "allowUndo": true,
+    "layoutDir": 2,
+    "theme": {
+      "name": "theme2",
+      "randomColor": false,
+      "background": "#f8f8f8",
+      "highlightColor": "#50C9CE",
+      "marginH": 45,
+      "marginV": 10,
+      "linkStyle": {
+        "lineRadius": 5
+      },
+      "rootTopic": {
+        "background": "#50C18A",
+        "color": "#fff",
+        "fontSize": "34px",
+        "borderRadius": "5px",
+        "padding": "16px 18px 16px 18px",
+        "subLinkStyle": {
+          "lineType": "curve",
+          "lineWidth": 2,
+          "lineColor": "#43a9ff"
+        }
+      },
+      "primaryTopic": {
+        "background": "#ffffff",
+        "borderWidth": "1px",
+        "borderStyle": "solid",
+        "borderColor": "rgb(221, 170, 68)",
+        "borderRadius": "5px",
+        "color": "rgb(103,103,103)",
+        "fontSize": "14px",
+        "padding": "6px 10px 5px 10px",
+        "subLinkStyle": {
+          "lineType": "round",
+          "lineRadius": 5,
+          "lineWidth": 2,
+          "lineColor": "#43a9ff"
+        }
+      },
+      "normalTopic": {
+        "background": "#fff",
+        "borderRadius": "5px",
+        "color": "rgb(103,103,103)",
+        "fontSize": "13px",
+        "padding": "3px 9px 4px",
+        "boxShadow": "1px 1px 1px #ccc",
+        "subLinkStyle": {
+          "lineType": "round",
+          "lineRadius": 5,
+          "lineWidth": 1,
+          "lineColor": "#43a9ff"
+        }
+      }
+    }
+  },
+  "version": "0.0"
+}
