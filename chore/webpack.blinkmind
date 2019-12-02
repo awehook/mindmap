@@ -1,0 +1,208 @@
+{
+  "rootTopicKey": "root",
+  "topics": [
+    {
+      "key": "2321ade1-abe4-4509-bc79-a95a0cd8468e",
+      "parentKey": "root",
+      "subKeys": [
+        "20345a3b-cd7d-48e2-899e-75efebbbb440",
+        "0fb2dda8-036e-4619-af2c-83d0611db901"
+      ],
+      "collapse": false,
+      "style": null,
+      "blocks": [
+        {
+          "type": "CONTENT",
+          "data": "plugins"
+        }
+      ]
+    },
+    {
+      "key": "root",
+      "parentKey": null,
+      "subKeys": [
+        "2321ade1-abe4-4509-bc79-a95a0cd8468e"
+      ],
+      "collapse": false,
+      "style": null,
+      "blocks": [
+        {
+          "type": "CONTENT",
+          "data": "webpack"
+        }
+      ]
+    },
+    {
+      "key": "756db21e-dc84-48a0-9cab-617740d71137",
+      "parentKey": "cd8c0e1e-356f-4c1e-adda-a49ff2fa4465",
+      "subKeys": [],
+      "collapse": false,
+      "style": null,
+      "blocks": [
+        {
+          "type": "CONTENT",
+          "data": "new Hook新建钩子"
+        }
+      ]
+    },
+    {
+      "key": "0fb2dda8-036e-4619-af2c-83d0611db901",
+      "parentKey": "2321ade1-abe4-4509-bc79-a95a0cd8468e",
+      "subKeys": [
+        "7b9019db-6d26-4da0-bf58-b1d5dacbb032"
+      ],
+      "collapse": false,
+      "style": null,
+      "blocks": [
+        {
+          "type": "CONTENT",
+          "data": "怎么编写插件"
+        }
+      ]
+    },
+    {
+      "key": "cd8c0e1e-356f-4c1e-adda-a49ff2fa4465",
+      "parentKey": "a6acb5f0-6916-410b-b688-6c95cd359c50",
+      "subKeys": [
+        "756db21e-dc84-48a0-9cab-617740d71137",
+        "dacabdc0-a7a2-483d-b586-9cedab30d89e",
+        "3994647b-a0e4-45da-8f26-6479ff2529a6"
+      ],
+      "collapse": false,
+      "style": null,
+      "blocks": [
+        {
+          "type": "CONTENT",
+          "data": "用法"
+        }
+      ]
+    },
+    {
+      "key": "dacabdc0-a7a2-483d-b586-9cedab30d89e",
+      "parentKey": "cd8c0e1e-356f-4c1e-adda-a49ff2fa4465",
+      "subKeys": [],
+      "collapse": false,
+      "style": null,
+      "blocks": [
+        {
+          "type": "CONTENT",
+          "data": "使用 tap/tapAsync/tapPromise 绑定钩子"
+        }
+      ]
+    },
+    {
+      "key": "7b9019db-6d26-4da0-bf58-b1d5dacbb032",
+      "parentKey": "0fb2dda8-036e-4619-af2c-83d0611db901",
+      "subKeys": [],
+      "collapse": false,
+      "style": null,
+      "blocks": [
+        {
+          "type": "CONTENT",
+          "data": ""
+        }
+      ]
+    },
+    {
+      "key": "3994647b-a0e4-45da-8f26-6479ff2529a6",
+      "parentKey": "cd8c0e1e-356f-4c1e-adda-a49ff2fa4465",
+      "subKeys": [],
+      "collapse": false,
+      "style": null,
+      "blocks": [
+        {
+          "type": "CONTENT",
+          "data": "call/callAsync执行绑定事件"
+        }
+      ]
+    },
+    {
+      "key": "a6acb5f0-6916-410b-b688-6c95cd359c50",
+      "parentKey": "20345a3b-cd7d-48e2-899e-75efebbbb440",
+      "subKeys": [
+        "cd8c0e1e-356f-4c1e-adda-a49ff2fa4465"
+      ],
+      "collapse": false,
+      "style": null,
+      "blocks": [
+        {
+          "type": "CONTENT",
+          "data": "tapable"
+        }
+      ]
+    },
+    {
+      "key": "20345a3b-cd7d-48e2-899e-75efebbbb440",
+      "parentKey": "2321ade1-abe4-4509-bc79-a95a0cd8468e",
+      "subKeys": [
+        "a6acb5f0-6916-410b-b688-6c95cd359c50"
+      ],
+      "collapse": false,
+      "style": null,
+      "blocks": [
+        {
+          "type": "CONTENT",
+          "data": "运行机制"
+        }
+      ]
+    }
+  ],
+  "config": {
+    "readOnly": false,
+    "allowUndo": true,
+    "layoutDir": 2,
+    "theme": {
+      "name": "default",
+      "randomColor": true,
+      "background": "rgb(57,60,65)",
+      "highlightColor": "#50C9CE",
+      "marginH": 60,
+      "marginV": 20,
+      "linkStyle": {
+        "lineRadius": 5,
+        "lineType": "curve",
+        "lineWidth": 3
+      },
+      "rootTopic": {
+        "background": "#ff8200",
+        "fontSize": "34px",
+        "borderRadius": "35px",
+        "padding": "16px 18px 16px 18px",
+        "subLinkStyle": {
+          "lineType": "curve",
+          "lineWidth": 3,
+          "lineColor": "rgb(113, 203, 45)"
+        }
+      },
+      "primaryTopic": {
+        "background": "#e8eaec",
+        "borderWidth": "1px",
+        "borderStyle": "solid",
+        "borderColor": "rgb(187,187,187)",
+        "borderRadius": "20px",
+        "color": "rgb(68,68,68)",
+        "fontSize": "17px",
+        "padding": "10px 15px 10px 15px",
+        "subLinkStyle": {
+          "lineType": "curve",
+          "lineWidth": 3,
+          "lineColor": "rgb(113, 203, 45)"
+        }
+      },
+      "normalTopic": {
+        "background": "#fff",
+        "border": "1px solid #e8eaec",
+        "borderRadius": "20px",
+        "color": "rgb(68,68,68)",
+        "fontSize": "17px",
+        "padding": "4px 10px",
+        "subLinkStyle": {
+          "lineType": "curve",
+          "lineWidth": 3,
+          "lineColor": "white"
+        }
+      }
+    }
+  },
+  "version": "0.0"
+}
