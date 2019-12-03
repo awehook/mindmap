@@ -32,6 +32,35 @@
       ]
     },
     {
+      "key": "80a85c4b-a61f-457e-81e6-4b4ca66a7984",
+      "parentKey": "743bdb1b-657b-4538-92dc-54d0225f7fc1",
+      "subKeys": [
+        "dfd7d2ee-809f-40e9-9307-d034131538fb",
+        "b77051a8-8042-4f14-bc3b-a8ecdd71562b"
+      ],
+      "collapse": false,
+      "style": "{\"contentStyle\":{\"background\":\"#ecad98\",\"color\":\"#d0021b\"}}",
+      "blocks": [
+        {
+          "type": "CONTENT",
+          "data": "compilation 对象代表了一次单一的版本 webpack 构建和生成编译资源的过程。"
+        }
+      ]
+    },
+    {
+      "key": "dfd7d2ee-809f-40e9-9307-d034131538fb",
+      "parentKey": "80a85c4b-a61f-457e-81e6-4b4ca66a7984",
+      "subKeys": [],
+      "collapse": false,
+      "style": "{\"contentStyle\":{\"color\":\"#bd10e0\"}}",
+      "blocks": [
+        {
+          "type": "CONTENT",
+          "data": "当运行 webpack 开发环境中间件时，\n每当检测到一个文件变化，一次新的编译将被创建，\n从而生成一组新的编译资源以及新的 compilation 对象。"
+        }
+      ]
+    },
+    {
       "key": "30b29c82-66a1-405e-b230-4afccbef57c9",
       "parentKey": "a4762742-4e07-4524-9909-c8c5052beedf",
       "subKeys": [],
@@ -76,15 +105,15 @@
       ]
     },
     {
-      "key": "cae4849e-70f1-4e4f-a057-824afd6e4a23",
-      "parentKey": "743bdb1b-657b-4538-92dc-54d0225f7fc1",
+      "key": "e7742721-4cf4-407b-b27d-befe05c57b22",
+      "parentKey": "b77051a8-8042-4f14-bc3b-a8ecdd71562b",
       "subKeys": [],
       "collapse": false,
-      "style": null,
+      "style": "{\"contentStyle\":{\"color\":\"#bd10e0\"}}",
       "blocks": [
         {
           "type": "CONTENT",
-          "data": "chunkTemplate"
+          "data": "以及 被跟踪依赖的状态信息。"
         }
       ]
     },
@@ -102,6 +131,25 @@
         {
           "type": "CONTENT",
           "data": "compilation 过程简介"
+        }
+      ]
+    },
+    {
+      "key": "1474ac7e-d4a1-4926-84c2-5bc13fae28de",
+      "parentKey": "3a3ffd58-5d52-4d65-b32e-8595858f6a36",
+      "subKeys": [
+        "b93c057f-913b-4f63-9938-67d018372995"
+      ],
+      "collapse": false,
+      "style": null,
+      "blocks": [
+        {
+          "type": "CONTENT",
+          "data": "事件钩子"
+        },
+        {
+          "type": "DESC",
+          "data": "Event Hooks\nhttps://zoumiaojiang.com/article/what\\-is\\-real\\-webpack\\-plugin/#compiler\\-1\n| 事件钩子 | 触发时机 | 得到的内容 | 类型 |\n|:--- |:--- |:--- |:--- |\n| entry\\-option | 初始化 option |  |  |\n|  |  |  |  |\n"
         }
       ]
     },
@@ -261,6 +309,36 @@
       ]
     },
     {
+      "key": "b77051a8-8042-4f14-bc3b-a8ecdd71562b",
+      "parentKey": "80a85c4b-a61f-457e-81e6-4b4ca66a7984",
+      "subKeys": [
+        "09fa63e6-119b-48c1-9f70-cbb6c23b86c9",
+        "e7742721-4cf4-407b-b27d-befe05c57b22",
+        "ef8acbed-6a13-4e9f-b828-8a12d4436517"
+      ],
+      "collapse": false,
+      "style": null,
+      "blocks": [
+        {
+          "type": "CONTENT",
+          "data": "一个 compilation 对象包含了 "
+        }
+      ]
+    },
+    {
+      "key": "3772b699-99f2-4de4-a4a0-02cf147e79c9",
+      "parentKey": "743bdb1b-657b-4538-92dc-54d0225f7fc1",
+      "subKeys": [],
+      "collapse": false,
+      "style": null,
+      "blocks": [
+        {
+          "type": "CONTENT",
+          "data": "事件钩子"
+        }
+      ]
+    },
+    {
       "key": "24b51beb-d52f-4dba-bc03-698a2616f5af",
       "parentKey": "a4762742-4e07-4524-9909-c8c5052beedf",
       "subKeys": [],
@@ -276,26 +354,16 @@
     {
       "key": "3a3ffd58-5d52-4d65-b32e-8595858f6a36",
       "parentKey": "9a2d5a77-9c84-4a10-a6b6-7731f187c65c",
-      "subKeys": [],
+      "subKeys": [
+        "b6f24eb8-6460-474b-9163-2f119ec2b3a1",
+        "1474ac7e-d4a1-4926-84c2-5bc13fae28de"
+      ],
       "collapse": false,
       "style": null,
       "blocks": [
         {
           "type": "CONTENT",
-          "data": "Compile 对象：\n负责文件监听和启动编译。Compiler 实例中包含了完整的 webpack 配置，全局只有一个 Compiler 实例。"
-        }
-      ]
-    },
-    {
-      "key": "c5191b90-0aa0-401c-bf7e-ca0aa6dae6ad",
-      "parentKey": "743bdb1b-657b-4538-92dc-54d0225f7fc1",
-      "subKeys": [],
-      "collapse": false,
-      "style": null,
-      "blocks": [
-        {
-          "type": "CONTENT",
-          "data": "mainTemplate"
+          "data": "Compile 对象："
         }
       ]
     },
@@ -393,15 +461,16 @@
       "key": "743bdb1b-657b-4538-92dc-54d0225f7fc1",
       "parentKey": "9a2d5a77-9c84-4a10-a6b6-7731f187c65c",
       "subKeys": [
-        "c5191b90-0aa0-401c-bf7e-ca0aa6dae6ad",
-        "cae4849e-70f1-4e4f-a057-824afd6e4a23"
+        "f5bc4a72-1551-458e-8ff3-0c7400e8bae4",
+        "80a85c4b-a61f-457e-81e6-4b4ca66a7984",
+        "3772b699-99f2-4de4-a4a0-02cf147e79c9"
       ],
       "collapse": false,
       "style": null,
       "blocks": [
         {
           "type": "CONTENT",
-          "data": "compilation 对象：\n当 webpack 以开发模式运行时，每当检测到文件变化，一次新的 Compilation 将被创建。\n一个 Compilation 对象包含了当前的模块资源、编译生成资源、变化的文件等。\nCompilation 对象也提供了很多事件回调供插件做扩展。"
+          "data": "compilation 对象："
         }
       ]
     },
@@ -421,6 +490,32 @@
         {
           "type": "DESC",
           "data": "初始化参数：从配置文件和 Shell 语句中读取与合并参数，得出最终的参数；\n\n开始编译：用上一步得到的参数初始化 Compiler 对象，加载所有配置的插件，执行对象的 run 方法开始执行编译；\n\n确定入口：根据配置中的 entry 找出所有的入口文件\n\n编译模块：从入口文件出发，调用所有配置的 Loader 对模块进行翻译，**再找出该模块依赖的模块**，**再递归本步骤直到所有入口依赖的文件都经过了本步骤的处理；**\n\n完成模块编译：在经过第4步使用 Loader 翻译完所有模块后，**得到了每个模块被翻译后的最终内容以及它们之间的依赖关系；**\n\n输出资源：根据入口和模块之间的依赖关系，**组装成一个个包含多个模块的 Chunk**，**再把每个 Chunk 转换成一个单独的文件加入到输出列表，这步是可以修改输出内容的最后机会；**\n\n输出完成：在确定好输出内容后，根据配置确定输出的路径和文件名，把文件内容写入到文件系统。\n\n在以上过程中，**webpack 会在特定的时间点广播出特定的事件，插件在监听到感兴趣的事件后会执行特定的逻辑**，并且插件可以调用 webpack 提供的 API 改变 webpack 的运行结果。"
+        }
+      ]
+    },
+    {
+      "key": "b93c057f-913b-4f63-9938-67d018372995",
+      "parentKey": "1474ac7e-d4a1-4926-84c2-5bc13fae28de",
+      "subKeys": [],
+      "collapse": false,
+      "style": "{\"contentStyle\":{\"background\":\"#50e3c2\"}}",
+      "blocks": [
+        {
+          "type": "CONTENT",
+          "data": "compiler 的事件钩子是建立在整个编译过程的基础上的，粒度较粗，\n通常对编译的结果要做细粒度的处理的时候，少不了 compilation 对象上定义的事件钩子。"
+        }
+      ]
+    },
+    {
+      "key": "09fa63e6-119b-48c1-9f70-cbb6c23b86c9",
+      "parentKey": "b77051a8-8042-4f14-bc3b-a8ecdd71562b",
+      "subKeys": [],
+      "collapse": false,
+      "style": null,
+      "blocks": [
+        {
+          "type": "CONTENT",
+          "data": "当前的模块资源、编译生成资源、变化的文件、"
         }
       ]
     },
@@ -464,6 +559,45 @@
         {
           "type": "CONTENT",
           "data": "buildModule 使用对应的 Loader 去转换一个模块"
+        }
+      ]
+    },
+    {
+      "key": "ef8acbed-6a13-4e9f-b828-8a12d4436517",
+      "parentKey": "b77051a8-8042-4f14-bc3b-a8ecdd71562b",
+      "subKeys": [],
+      "collapse": false,
+      "style": null,
+      "blocks": [
+        {
+          "type": "CONTENT",
+          "data": "编译对象也提供了很多关键点回调供插件做自定义处理时选择使用"
+        }
+      ]
+    },
+    {
+      "key": "b6f24eb8-6460-474b-9163-2f119ec2b3a1",
+      "parentKey": "3a3ffd58-5d52-4d65-b32e-8595858f6a36",
+      "subKeys": [],
+      "collapse": false,
+      "style": null,
+      "blocks": [
+        {
+          "type": "CONTENT",
+          "data": "负责文件监听和启动编译。Compiler 实例中包含了完整的 webpack 配置，全局只有一个 Compiler 实例。"
+        }
+      ]
+    },
+    {
+      "key": "f5bc4a72-1551-458e-8ff3-0c7400e8bae4",
+      "parentKey": "743bdb1b-657b-4538-92dc-54d0225f7fc1",
+      "subKeys": [],
+      "collapse": false,
+      "style": null,
+      "blocks": [
+        {
+          "type": "CONTENT",
+          "data": "当 webpack 以开发模式运行时，每当检测到文件变化，一次新的 Compilation 将被创建。\n一个 Compilation 对象包含了当前的模块资源、编译生成资源、变化的文件等。\nCompilation 对象也提供了很多事件回调供插件做扩展。"
         }
       ]
     },
