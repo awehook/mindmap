@@ -6,7 +6,7 @@
       "parentKey": "9752c402-4058-4e76-91b7-d10aa7390338",
       "subKeys": [],
       "collapse": false,
-      "style": "{\"background\":\"#b8e986\"}",
+      "style": null,
       "blocks": [
         {
           "type": "CONTENT",
@@ -121,7 +121,7 @@
         "0f57d42e-8a2d-4a20-8931-4a214500df9d"
       ],
       "collapse": false,
-      "style": "{\"borderStyle\":\"dashed\"}",
+      "style": null,
       "blocks": [
         {
           "type": "CONTENT",
@@ -708,7 +708,7 @@
       "parentKey": "30153434-508e-4c54-b679-6327274886ee",
       "subKeys": [],
       "collapse": false,
-      "style": "{\"color\":\"#e44343\",\"lineHeight\":\"1.4\"}",
+      "style": null,
       "blocks": [
         {
           "type": "CONTENT",
@@ -739,7 +739,7 @@
         "037dea20-886d-48dd-b6d5-b27b84f1d64e"
       ],
       "collapse": false,
-      "style": "{\"background\":\"#f3c7a8\"}",
+      "style": null,
       "blocks": [
         {
           "type": "CONTENT",
@@ -920,7 +920,7 @@
       "parentKey": "9752c402-4058-4e76-91b7-d10aa7390338",
       "subKeys": [],
       "collapse": false,
-      "style": "{\"background\":\"#50e3c2\"}",
+      "style": null,
       "blocks": [
         {
           "type": "CONTENT",
@@ -998,7 +998,7 @@
       "parentKey": "0dd2af76-9ca1-4fe2-92b4-46f0e2796af9",
       "subKeys": [],
       "collapse": false,
-      "style": "{\"borderStyle\":\"dashed\",\"background\":\"#f8e71c\"}",
+      "style": null,
       "blocks": [
         {
           "type": "CONTENT",
@@ -1027,7 +1027,7 @@
       "parentKey": "a6bf849c-10df-43a5-96a3-4661d731e992",
       "subKeys": [],
       "collapse": false,
-      "style": "{\"background\":\"#f3c6d8\"}",
+      "style": null,
       "blocks": [
         {
           "type": "CONTENT",
@@ -1042,7 +1042,7 @@
         "e9b956be-d2b3-4764-8682-3f083cc36cef"
       ],
       "collapse": false,
-      "style": "{\"borderStyle\":\"dashed\",\"lineHeight\":\"1.6\",\"background\":\"#fac7e0\"}",
+      "style": null,
       "blocks": [
         {
           "type": "CONTENT",
@@ -1066,15 +1066,20 @@
       "highlightColor": "#50C9CE",
       "marginH": 50,
       "marginV": 20,
+      "contentStyle": {
+        "lineHeight": "1.5"
+      },
       "linkStyle": {
         "lineRadius": 5
       },
       "rootTopic": {
-        "background": "#FF99C8",
-        "color": "#fff",
-        "fontSize": "34px",
-        "borderRadius": "5px",
-        "padding": "16px 18px 16px 18px",
+        "contentStyle": {
+          "background": "#FF99C8",
+          "color": "#fff",
+          "fontSize": "34px",
+          "borderRadius": "5px",
+          "padding": "16px 18px 16px 18px"
+        },
         "subLinkStyle": {
           "lineType": "curve",
           "lineWidth": 2,
@@ -1082,14 +1087,16 @@
         }
       },
       "primaryTopic": {
-        "background": "#FCF6BD",
-        "borderWidth": "1px",
-        "borderStyle": "solid",
-        "borderColor": "#E4C1F9",
-        "borderRadius": "5px",
-        "color": "rgb(103,103,103)",
-        "fontSize": "14px",
-        "padding": "6px 10px 5px 10px",
+        "contentStyle": {
+          "background": "#FCF6BD",
+          "borderWidth": "1px",
+          "borderStyle": "solid",
+          "borderColor": "#E4C1F9",
+          "borderRadius": "5px",
+          "color": "rgb(103,103,103)",
+          "fontSize": "14px",
+          "padding": "6px 10px 5px 10px"
+        },
         "subLinkStyle": {
           "lineType": "curve",
           "lineWidth": 2,
@@ -1097,12 +1104,14 @@
         }
       },
       "normalTopic": {
-        "background": "#E4FDE1",
-        "borderRadius": "5px",
-        "color": "rgb(103,103,103)",
-        "fontSize": "13px",
-        "padding": "3px 9px 4px",
-        "boxShadow": "1px 1px 1px #ccc",
+        "contentStyle": {
+          "background": "#E4FDE1",
+          "borderRadius": "5px",
+          "color": "rgb(103,103,103)",
+          "fontSize": "13px",
+          "padding": "3px 9px 4px",
+          "boxShadow": "1px 1px 1px #ccc"
+        },
         "subLinkStyle": {
           "lineType": "round",
           "lineRadius": 5,

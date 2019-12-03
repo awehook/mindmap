@@ -5,6 +5,7 @@
       "key": "2321ade1-abe4-4509-bc79-a95a0cd8468e",
       "parentKey": "root",
       "subKeys": [
+        "e0b1caec-62fd-4a8c-878a-b68460e8442d",
         "20345a3b-cd7d-48e2-899e-75efebbbb440",
         "0fb2dda8-036e-4619-af2c-83d0611db901"
       ],
@@ -14,6 +15,19 @@
         {
           "type": "CONTENT",
           "data": "plugins"
+        }
+      ]
+    },
+    {
+      "key": "c0d4cda4-1b05-4319-bc51-39f3d2e1e4dd",
+      "parentKey": "36b43c7a-15de-4a5f-a2e2-e53c9ae44998",
+      "subKeys": [],
+      "collapse": false,
+      "style": null,
+      "blocks": [
+        {
+          "type": "CONTENT",
+          "data": "seal 所有模块及其依赖的模块都通过 Loader 转换完成后，根据依赖关系开始生成 Chunk。"
         }
       ]
     },
@@ -40,11 +54,54 @@
         "9a2d5a77-9c84-4a10-a6b6-7731f187c65c"
       ],
       "collapse": false,
-      "style": null,
+      "style": "{\"subLinkStyle\":{\"lineType\":\"curve\"}}",
       "blocks": [
         {
           "type": "CONTENT",
           "data": "webpack"
+        }
+      ]
+    },
+    {
+      "key": "823b4cc5-ff7b-440a-bc86-93a60afb09e2",
+      "parentKey": "36b43c7a-15de-4a5f-a2e2-e53c9ae44998",
+      "subKeys": [],
+      "collapse": false,
+      "style": "{\"contentStyle\":{\"background\":\"#f6cffa\"}}",
+      "blocks": [
+        {
+          "type": "CONTENT",
+          "data": "normalModuleLoader 在用 Loader 对一个模块转换完后，\n使用 acorn 解析转换后的内容，输出对应的抽象语法树（AST），以方便 webpack 后面对代码的分析。"
+        }
+      ]
+    },
+    {
+      "key": "cae4849e-70f1-4e4f-a057-824afd6e4a23",
+      "parentKey": "743bdb1b-657b-4538-92dc-54d0225f7fc1",
+      "subKeys": [],
+      "collapse": false,
+      "style": null,
+      "blocks": [
+        {
+          "type": "CONTENT",
+          "data": "chunkTemplate"
+        }
+      ]
+    },
+    {
+      "key": "36b43c7a-15de-4a5f-a2e2-e53c9ae44998",
+      "parentKey": "b98ead1c-d4a0-4481-adda-8071750c2565",
+      "subKeys": [
+        "42fb5e95-c020-4dd3-80ca-c06f72007ea2",
+        "823b4cc5-ff7b-440a-bc86-93a60afb09e2",
+        "c0d4cda4-1b05-4319-bc51-39f3d2e1e4dd"
+      ],
+      "collapse": false,
+      "style": null,
+      "blocks": [
+        {
+          "type": "CONTENT",
+          "data": "compilation 过程简介"
         }
       ]
     },
@@ -80,7 +137,7 @@
       "subKeys": [
         "55ee15d4-4fab-41ba-a28c-3885939bfbb6"
       ],
-      "collapse": false,
+      "collapse": true,
       "style": null,
       "blocks": [
         {
@@ -142,7 +199,7 @@
         "3994647b-a0e4-45da-8f26-6479ff2529a6",
         "a4762742-4e07-4524-9909-c8c5052beedf"
       ],
-      "collapse": true,
+      "collapse": false,
       "style": null,
       "blocks": [
         {
@@ -165,6 +222,19 @@
       ]
     },
     {
+      "key": "f81c9ef1-b42c-42c3-9228-76b72682b204",
+      "parentKey": "e0b1caec-62fd-4a8c-878a-b68460e8442d",
+      "subKeys": [],
+      "collapse": false,
+      "style": "{\"contentStyle\":{\"borderStyle\":\"dashed\"}}",
+      "blocks": [
+        {
+          "type": "CONTENT",
+          "data": "是一个独立的模块。\n\n模块对外暴露一个 js 函数。\n\n函数的原型 (prototype) 上定义了一个注入 compiler 对象的 apply 方法。\n\napply 函数中需要有通过 compiler 对象挂载的 webpack 事件钩子，\n钩子的回调中能拿到当前编译的 compilation 对象，如果是异步编译插件的话可以拿到回调 callback。\n\n完成自定义子编译流程并处理 complition 对象的内部数据。\n\n如果异步编译插件的话，数据处理完成后执行 callback 回调"
+        }
+      ]
+    },
+    {
       "key": "dacabdc0-a7a2-483d-b586-9cedab30d89e",
       "parentKey": "cd8c0e1e-356f-4c1e-adda-a49ff2fa4465",
       "subKeys": [],
@@ -174,6 +244,19 @@
         {
           "type": "CONTENT",
           "data": "使用 tap/tapAsync/tapPromise 绑定钩子"
+        }
+      ]
+    },
+    {
+      "key": "29586dc7-ba87-4424-8ef8-d10502139c64",
+      "parentKey": "7b9019db-6d26-4da0-bf58-b1d5dacbb032",
+      "subKeys": [],
+      "collapse": false,
+      "style": null,
+      "blocks": [
+        {
+          "type": "CONTENT",
+          "data": "terser"
         }
       ]
     },
@@ -204,6 +287,19 @@
       ]
     },
     {
+      "key": "c5191b90-0aa0-401c-bf7e-ca0aa6dae6ad",
+      "parentKey": "743bdb1b-657b-4538-92dc-54d0225f7fc1",
+      "subKeys": [],
+      "collapse": false,
+      "style": null,
+      "blocks": [
+        {
+          "type": "CONTENT",
+          "data": "mainTemplate"
+        }
+      ]
+    },
+    {
       "key": "a4762742-4e07-4524-9909-c8c5052beedf",
       "parentKey": "cd8c0e1e-356f-4c1e-adda-a49ff2fa4465",
       "subKeys": [
@@ -215,7 +311,7 @@
         "30b29c82-66a1-405e-b230-4afccbef57c9",
         "9b595adf-4448-4a98-b0ac-9dd195f26f59"
       ],
-      "collapse": false,
+      "collapse": true,
       "style": null,
       "blocks": [
         {
@@ -229,7 +325,7 @@
       "parentKey": "c4a9d6c5-2960-42ce-a040-e58caf5f9bb1",
       "subKeys": [],
       "collapse": false,
-      "style": null,
+      "style": "{\"contentStyle\":{\"borderStyle\":\"dashed\",\"borderWidth\":\"3px\"}}",
       "blocks": [
         {
           "type": "CONTENT",
@@ -253,13 +349,15 @@
     {
       "key": "7b9019db-6d26-4da0-bf58-b1d5dacbb032",
       "parentKey": "0fb2dda8-036e-4619-af2c-83d0611db901",
-      "subKeys": [],
+      "subKeys": [
+        "29586dc7-ba87-4424-8ef8-d10502139c64"
+      ],
       "collapse": false,
       "style": null,
       "blocks": [
         {
           "type": "CONTENT",
-          "data": ""
+          "data": "示例"
         }
       ]
     },
@@ -294,9 +392,12 @@
     {
       "key": "743bdb1b-657b-4538-92dc-54d0225f7fc1",
       "parentKey": "9a2d5a77-9c84-4a10-a6b6-7731f187c65c",
-      "subKeys": [],
+      "subKeys": [
+        "c5191b90-0aa0-401c-bf7e-ca0aa6dae6ad",
+        "cae4849e-70f1-4e4f-a057-824afd6e4a23"
+      ],
       "collapse": false,
-      "style": "{\"lineHeight\":\"1.5\"}",
+      "style": null,
       "blocks": [
         {
           "type": "CONTENT",
@@ -307,7 +408,9 @@
     {
       "key": "b98ead1c-d4a0-4481-adda-8071750c2565",
       "parentKey": "root",
-      "subKeys": [],
+      "subKeys": [
+        "36b43c7a-15de-4a5f-a2e2-e53c9ae44998"
+      ],
       "collapse": false,
       "style": null,
       "blocks": [
@@ -337,6 +440,34 @@
       ]
     },
     {
+      "key": "e0b1caec-62fd-4a8c-878a-b68460e8442d",
+      "parentKey": "2321ade1-abe4-4509-bc79-a95a0cd8468e",
+      "subKeys": [
+        "f81c9ef1-b42c-42c3-9228-76b72682b204"
+      ],
+      "collapse": false,
+      "style": null,
+      "blocks": [
+        {
+          "type": "CONTENT",
+          "data": "特征"
+        }
+      ]
+    },
+    {
+      "key": "42fb5e95-c020-4dd3-80ca-c06f72007ea2",
+      "parentKey": "36b43c7a-15de-4a5f-a2e2-e53c9ae44998",
+      "subKeys": [],
+      "collapse": false,
+      "style": null,
+      "blocks": [
+        {
+          "type": "CONTENT",
+          "data": "buildModule 使用对应的 Loader 去转换一个模块"
+        }
+      ]
+    },
+    {
       "key": "2af835b4-d431-4076-86d5-01665dc81c0e",
       "parentKey": "a4762742-4e07-4524-9909-c8c5052beedf",
       "subKeys": [],
@@ -355,54 +486,63 @@
     "allowUndo": true,
     "layoutDir": 0,
     "theme": {
-      "name": "default",
-      "randomColor": true,
-      "background": "rgb(57,60,65)",
+      "name": "theme3",
+      "randomColor": false,
+      "background": "#A9DEF9",
       "highlightColor": "#50C9CE",
-      "marginH": 60,
+      "marginH": 50,
       "marginV": 20,
+      "contentStyle": {
+        "lineHeight": "1.5"
+      },
       "linkStyle": {
-        "lineRadius": 5,
-        "lineType": "curve",
-        "lineWidth": 3
+        "lineRadius": 5
       },
       "rootTopic": {
-        "background": "#ff8200",
-        "fontSize": "34px",
-        "borderRadius": "35px",
-        "padding": "16px 18px 16px 18px",
+        "contentStyle": {
+          "background": "#FF99C8",
+          "color": "#fff",
+          "fontSize": "34px",
+          "borderRadius": "5px",
+          "padding": "16px 18px 16px 18px"
+        },
         "subLinkStyle": {
           "lineType": "curve",
-          "lineWidth": 3,
-          "lineColor": "rgb(113, 203, 45)"
+          "lineWidth": 2,
+          "lineColor": "#43a9ff"
         }
       },
       "primaryTopic": {
-        "background": "#e8eaec",
-        "borderWidth": "1px",
-        "borderStyle": "solid",
-        "borderColor": "rgb(187,187,187)",
-        "borderRadius": "20px",
-        "color": "rgb(68,68,68)",
-        "fontSize": "17px",
-        "padding": "10px 15px 10px 15px",
+        "contentStyle": {
+          "background": "#FCF6BD",
+          "borderWidth": "1px",
+          "borderStyle": "solid",
+          "borderColor": "#E4C1F9",
+          "borderRadius": "5px",
+          "color": "rgb(103,103,103)",
+          "fontSize": "14px",
+          "padding": "6px 10px 5px 10px"
+        },
         "subLinkStyle": {
           "lineType": "curve",
-          "lineWidth": 3,
-          "lineColor": "rgb(113, 203, 45)"
+          "lineWidth": 2,
+          "lineColor": "#43a9ff"
         }
       },
       "normalTopic": {
-        "background": "#fff",
-        "border": "1px solid #e8eaec",
-        "borderRadius": "20px",
-        "color": "rgb(68,68,68)",
-        "fontSize": "17px",
-        "padding": "4px 10px",
+        "contentStyle": {
+          "background": "#E4FDE1",
+          "borderRadius": "5px",
+          "color": "rgb(103,103,103)",
+          "fontSize": "13px",
+          "padding": "3px 9px 4px",
+          "boxShadow": "1px 1px 1px #ccc"
+        },
         "subLinkStyle": {
-          "lineType": "curve",
-          "lineWidth": 3,
-          "lineColor": "white"
+          "lineType": "round",
+          "lineRadius": 5,
+          "lineWidth": 1,
+          "lineColor": "#43a9ff"
         }
       }
     }

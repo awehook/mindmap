@@ -68,55 +68,63 @@
     "allowUndo": true,
     "layoutDir": 0,
     "theme": {
-      "name": "theme3",
-      "randomColor": false,
-      "background": "#A9DEF9",
+      "name": "default",
+      "randomColor": true,
+      "background": "rgb(57,60,65)",
       "highlightColor": "#50C9CE",
-      "marginH": 50,
+      "marginH": 60,
       "marginV": 20,
-      "fontFamily": "",
-      "bold": false,
-      "italic": false,
-      "textAlign": "left",
+      "contentStyle": {
+        "lineHeight": "1.5"
+      },
+      "linkStyle": {
+        "lineRadius": 5,
+        "lineType": "curve",
+        "lineWidth": 3
+      },
       "rootTopic": {
-        "background": "#FF99C8",
-        "color": "#fff",
-        "fontSize": "34px",
-        "borderRadius": "5px",
-        "padding": "16px 18px 16px 18px",
-        "linkStyle": {
+        "contentStyle": {
+          "background": "#ff8200",
+          "fontSize": "34px",
+          "borderRadius": "35px",
+          "padding": "16px 18px 16px 18px"
+        },
+        "subLinkStyle": {
           "lineType": "curve",
-          "lineWidth": 2,
+          "lineWidth": 3,
           "lineColor": "rgb(113, 203, 45)"
         }
       },
       "primaryTopic": {
-        "background": "#FCF6BD",
-        "borderWidth": "1px",
-        "borderStyle": "solid",
-        "borderColor": "#E4C1F9",
-        "borderRadius": "5px",
-        "color": "rgb(103,103,103)",
-        "fontSize": "14px",
-        "padding": "6px 10px 5px 10px",
-        "linkStyle": {
+        "contentStyle": {
+          "background": "#e8eaec",
+          "borderWidth": "1px",
+          "borderStyle": "solid",
+          "borderColor": "rgb(187,187,187)",
+          "borderRadius": "20px",
+          "color": "rgb(68,68,68)",
+          "fontSize": "17px",
+          "padding": "10px 15px 10px 15px"
+        },
+        "subLinkStyle": {
           "lineType": "curve",
-          "lineWidth": 2,
-          "lineColor": "#43a9ff"
+          "lineWidth": 3,
+          "lineColor": "rgb(113, 203, 45)"
         }
       },
       "normalTopic": {
-        "background": "#E4FDE1",
-        "borderRadius": "5px",
-        "color": "rgb(103,103,103)",
-        "fontSize": "13px",
-        "padding": "3px 9px 4px",
-        "boxShadow": "1px 1px 1px #ccc",
-        "linkStyle": {
-          "lineType": "round",
-          "lineRadius": 5,
-          "lineWidth": 1,
-          "lineColor": "#43a9ff"
+        "contentStyle": {
+          "background": "#fff",
+          "border": "1px solid #e8eaec",
+          "borderRadius": "20px",
+          "color": "rgb(68,68,68)",
+          "fontSize": "17px",
+          "padding": "4px 10px"
+        },
+        "subLinkStyle": {
+          "lineType": "curve",
+          "lineWidth": 3,
+          "lineColor": "white"
         }
       }
     }
