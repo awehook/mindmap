@@ -19,6 +19,19 @@
       ]
     },
     {
+      "key": "27609918-2601-4191-bf0f-e24a94b2e86b",
+      "parentKey": "5ed0566f-b33a-4e1a-aa03-10c8cfcab41a",
+      "subKeys": [],
+      "collapse": false,
+      "style": null,
+      "blocks": [
+        {
+          "type": "CONTENT",
+          "data": "普通模块 loader，\n真实地一个一个加载模块图(分析之后的所有模块一种数据结构)中所有的模块的函数。"
+        }
+      ]
+    },
+    {
       "key": "c0d4cda4-1b05-4319-bc51-39f3d2e1e4dd",
       "parentKey": "36b43c7a-15de-4a5f-a2e2-e53c9ae44998",
       "subKeys": [],
@@ -88,6 +101,21 @@
         {
           "type": "CONTENT",
           "data": "webpack"
+        }
+      ]
+    },
+    {
+      "key": "5ed0566f-b33a-4e1a-aa03-10c8cfcab41a",
+      "parentKey": "3772b699-99f2-4de4-a4a0-02cf147e79c9",
+      "subKeys": [
+        "27609918-2601-4191-bf0f-e24a94b2e86b"
+      ],
+      "collapse": false,
+      "style": null,
+      "blocks": [
+        {
+          "type": "CONTENT",
+          "data": "normal-module-loader"
         }
       ]
     },
@@ -239,6 +267,19 @@
       ]
     },
     {
+      "key": "75606fe5-2280-4864-80cd-238b2079f949",
+      "parentKey": "f30a4eef-8703-44d6-8778-4f1de942b3f9",
+      "subKeys": [],
+      "collapse": false,
+      "style": null,
+      "blocks": [
+        {
+          "type": "CONTENT",
+          "data": ""
+        }
+      ]
+    },
+    {
       "key": "cd8c0e1e-356f-4c1e-adda-a49ff2fa4465",
       "parentKey": "a6acb5f0-6916-410b-b688-6c95cd359c50",
       "subKeys": [
@@ -328,7 +369,13 @@
     {
       "key": "3772b699-99f2-4de4-a4a0-02cf147e79c9",
       "parentKey": "743bdb1b-657b-4538-92dc-54d0225f7fc1",
-      "subKeys": [],
+      "subKeys": [
+        "5ed0566f-b33a-4e1a-aa03-10c8cfcab41a",
+        "b04e4f36-8f69-409c-a04b-d815319ef4a8",
+        "cff66752-ad5b-4a99-8c2b-5399fd6136c2",
+        "f30a4eef-8703-44d6-8778-4f1de942b3f9",
+        "ee4f13c3-ce4a-4ae0-8113-2d368702143c"
+      ],
       "collapse": false,
       "style": null,
       "blocks": [
@@ -368,6 +415,21 @@
       ]
     },
     {
+      "key": "b04e4f36-8f69-409c-a04b-d815319ef4a8",
+      "parentKey": "3772b699-99f2-4de4-a4a0-02cf147e79c9",
+      "subKeys": [
+        "74bc1c7b-41de-4323-aa46-ebdf16c5206f"
+      ],
+      "collapse": false,
+      "style": null,
+      "blocks": [
+        {
+          "type": "CONTENT",
+          "data": "seal"
+        }
+      ]
+    },
+    {
       "key": "a4762742-4e07-4524-9909-c8c5052beedf",
       "parentKey": "cd8c0e1e-356f-4c1e-adda-a49ff2fa4465",
       "subKeys": [
@@ -385,6 +447,21 @@
         {
           "type": "CONTENT",
           "data": "其他"
+        }
+      ]
+    },
+    {
+      "key": "d0e9d4e3-2c59-4235-a445-c3246cb1cce8",
+      "parentKey": "cff66752-ad5b-4a99-8c2b-5399fd6136c2",
+      "subKeys": [
+        "2a1fa415-90f9-4f5a-a8a7-5f0e89549c05"
+      ],
+      "collapse": false,
+      "style": null,
+      "blocks": [
+        {
+          "type": "CONTENT",
+          "data": "优化编译，这个事件钩子特别重要，\n很多插件的优化工作都是基于这个事件钩子，表示 webpack 已经进入优化阶段。"
         }
       ]
     },
@@ -411,6 +488,19 @@
         {
           "type": "CONTENT",
           "data": "Hook\n所有钩子的后缀"
+        }
+      ]
+    },
+    {
+      "key": "2a1fa415-90f9-4f5a-a8a7-5f0e89549c05",
+      "parentKey": "d0e9d4e3-2c59-4235-a445-c3246cb1cce8",
+      "subKeys": [],
+      "collapse": false,
+      "style": "{\"contentStyle\":{\"borderStyle\":\"dashed\"}}",
+      "blocks": [
+        {
+          "type": "CONTENT",
+          "data": "compilation.plugin('optimize', function () {\n    // webpack 已经进入优化阶段\n    // 回调没有参数\n});"
         }
       ]
     },
@@ -550,6 +640,35 @@
       ]
     },
     {
+      "key": "f30a4eef-8703-44d6-8778-4f1de942b3f9",
+      "parentKey": "3772b699-99f2-4de4-a4a0-02cf147e79c9",
+      "subKeys": [
+        "400b882c-bcf6-4210-b2e6-98e7937153b2",
+        "75606fe5-2280-4864-80cd-238b2079f949"
+      ],
+      "collapse": false,
+      "style": null,
+      "blocks": [
+        {
+          "type": "CONTENT",
+          "data": "optimize-modules"
+        }
+      ]
+    },
+    {
+      "key": "ee4f13c3-ce4a-4ae0-8113-2d368702143c",
+      "parentKey": "3772b699-99f2-4de4-a4a0-02cf147e79c9",
+      "subKeys": [],
+      "collapse": false,
+      "style": null,
+      "blocks": [
+        {
+          "type": "CONTENT",
+          "data": "optimize-chunks"
+        }
+      ]
+    },
+    {
       "key": "42fb5e95-c020-4dd3-80ca-c06f72007ea2",
       "parentKey": "36b43c7a-15de-4a5f-a2e2-e53c9ae44998",
       "subKeys": [],
@@ -589,6 +708,21 @@
       ]
     },
     {
+      "key": "cff66752-ad5b-4a99-8c2b-5399fd6136c2",
+      "parentKey": "3772b699-99f2-4de4-a4a0-02cf147e79c9",
+      "subKeys": [
+        "d0e9d4e3-2c59-4235-a445-c3246cb1cce8"
+      ],
+      "collapse": false,
+      "style": null,
+      "blocks": [
+        {
+          "type": "CONTENT",
+          "data": "optimize"
+        }
+      ]
+    },
+    {
       "key": "f5bc4a72-1551-458e-8ff3-0c7400e8bae4",
       "parentKey": "743bdb1b-657b-4538-92dc-54d0225f7fc1",
       "subKeys": [],
@@ -598,6 +732,32 @@
         {
           "type": "CONTENT",
           "data": "当 webpack 以开发模式运行时，每当检测到文件变化，一次新的 Compilation 将被创建。\n一个 Compilation 对象包含了当前的模块资源、编译生成资源、变化的文件等。\nCompilation 对象也提供了很多事件回调供插件做扩展。"
+        }
+      ]
+    },
+    {
+      "key": "400b882c-bcf6-4210-b2e6-98e7937153b2",
+      "parentKey": "f30a4eef-8703-44d6-8778-4f1de942b3f9",
+      "subKeys": [],
+      "collapse": false,
+      "style": null,
+      "blocks": [
+        {
+          "type": "CONTENT",
+          "data": "模块的优化"
+        }
+      ]
+    },
+    {
+      "key": "74bc1c7b-41de-4323-aa46-ebdf16c5206f",
+      "parentKey": "b04e4f36-8f69-409c-a04b-d815319ef4a8",
+      "subKeys": [],
+      "collapse": false,
+      "style": null,
+      "blocks": [
+        {
+          "type": "CONTENT",
+          "data": "编译的封闭已经开始，\n这个时候再也收不到任何的模块了，进入编译封闭阶段（参考 webpack 流程图）。"
         }
       ]
     },
