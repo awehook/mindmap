@@ -9,7 +9,7 @@
         "20345a3b-cd7d-48e2-899e-75efebbbb440",
         "0fb2dda8-036e-4619-af2c-83d0611db901"
       ],
-      "collapse": false,
+      "collapse": true,
       "style": null,
       "blocks": [
         {
@@ -32,6 +32,38 @@
       ]
     },
     {
+      "key": "64ad5fea-cc17-4924-ac41-72535234160d",
+      "parentKey": "bb19bc0c-7601-4478-9eb4-37cf80c1d1bd",
+      "subKeys": [
+        "798aa4d8-35f4-4357-9f30-4d5ab59a0531",
+        "47bbee31-6af7-4318-9261-df0a2504d9e7"
+      ],
+      "collapse": false,
+      "style": null,
+      "blocks": [
+        {
+          "type": "CONTENT",
+          "data": "runLoaders(options, callback)"
+        }
+      ]
+    },
+    {
+      "key": "bee8b5ea-729e-440f-bdbf-228e7630846d",
+      "parentKey": "c692e26f-0df9-487e-8c32-9ae0cd3dacc9",
+      "subKeys": [
+        "2d2e0db8-164d-4c5c-8135-64aabad71142",
+        "2b0ad7bf-4c99-4f1a-a88d-c451d50bcfec"
+      ],
+      "collapse": false,
+      "style": null,
+      "blocks": [
+        {
+          "type": "CONTENT",
+          "data": "属性"
+        }
+      ]
+    },
+    {
       "key": "c0d4cda4-1b05-4319-bc51-39f3d2e1e4dd",
       "parentKey": "36b43c7a-15de-4a5f-a2e2-e53c9ae44998",
       "subKeys": [],
@@ -41,6 +73,19 @@
         {
           "type": "CONTENT",
           "data": "seal 所有模块及其依赖的模块都通过 Loader 转换完成后，根据依赖关系开始生成 Chunk。"
+        }
+      ]
+    },
+    {
+      "key": "56032c2a-ca08-4ca0-8fcd-dae752a563a8",
+      "parentKey": "c692e26f-0df9-487e-8c32-9ae0cd3dacc9",
+      "subKeys": [],
+      "collapse": false,
+      "style": null,
+      "blocks": [
+        {
+          "type": "CONTENT",
+          "data": "loaders"
         }
       ]
     },
@@ -70,6 +115,38 @@
         {
           "type": "CONTENT",
           "data": "当运行 webpack 开发环境中间件时，\n每当检测到一个文件变化，一次新的编译将被创建，\n从而生成一组新的编译资源以及新的 compilation 对象。"
+        }
+      ]
+    },
+    {
+      "key": "d6c1631b-e146-41c7-a6a2-79c72b4dc4e4",
+      "parentKey": "798aa4d8-35f4-4357-9f30-4d5ab59a0531",
+      "subKeys": [
+        "dc5ce3c5-6c0e-4edb-b2ea-47aba12496b1"
+      ],
+      "collapse": false,
+      "style": null,
+      "blocks": [
+        {
+          "type": "CONTENT",
+          "data": "code"
+        },
+        {
+          "type": "DESC",
+          "data": "code\n```\nfunction iteratePitchingLoaders(options, loaderContext, callback) {\n\t// abort after last loader\n\tif(loaderContext.loaderIndex >= loaderContext.loaders.length)\n\t\treturn processResource(options, loaderContext, callback);\n\n\tvar currentLoaderObject = loaderContext.loaders[loaderContext.loaderIndex];\n\n\t// iterate\n\tif(currentLoaderObject.pitchExecuted) {\n\t\tloaderContext.loaderIndex++;\n\t\treturn iteratePitchingLoaders(options, loaderContext, callback);\n\t}\n\n\t// load loader module\n\tloadLoader(currentLoaderObject, function(err) {\n\t\tif(err) {\n\t\t\tloaderContext.cacheable(false);\n\t\t\treturn callback(err);\n\t\t}\n\t\tvar fn = currentLoaderObject.pitch;\n\t\tcurrentLoaderObject.pitchExecuted = true;\n\t\tif(!fn) return iteratePitchingLoaders(options, loaderContext, callback);\n\n\t\trunSyncOrAsync(\n\t\t\tfn,\n\t\t\tloaderContext, [loaderContext.remainingRequest, loaderContext.previousRequest, currentLoaderObject.data = {}],\n\t\t\tfunction(err) {\n\t\t\t\tif(err) return callback(err);\n\t\t\t\tvar args = Array.prototype.slice.call(arguments, 1);\n\t\t\t\t// Determine whether to continue the pitching process based on\n\t\t\t\t// argument values (as opposed to argument presence) in order\n\t\t\t\t// to support synchronous and asynchronous usages.\n\t\t\t\tvar hasArg = args.some(function(value) {\n\t\t\t\t\treturn value !== undefined;\n\t\t\t\t});\n\t\t\t\tif(hasArg) {\n\t\t\t\t\tloaderContext.loaderIndex--;\n\t\t\t\t\titerateNormalLoaders(options, loaderContext, args, callback);\n\t\t\t\t} else {\n\t\t\t\t\titeratePitchingLoaders(options, loaderContext, callback);\n\t\t\t\t}\n\t\t\t}\n\t\t);\n\t});\n}\n\n```\n"
+        }
+      ]
+    },
+    {
+      "key": "55cfd97c-49e6-42e4-92a6-b31b9d309ccc",
+      "parentKey": "2d2e0db8-164d-4c5c-8135-64aabad71142",
+      "subKeys": [],
+      "collapse": false,
+      "style": "{\"contentStyle\":{\"background\":\"#fde1fa\"}}",
+      "blocks": [
+        {
+          "type": "CONTENT",
+          "data": "将剩余的loader 转换成inline-loader的request"
         }
       ]
     },
@@ -146,6 +223,19 @@
       ]
     },
     {
+      "key": "332f785f-956f-4264-b841-a30394163b97",
+      "parentKey": "c692e26f-0df9-487e-8c32-9ae0cd3dacc9",
+      "subKeys": [],
+      "collapse": false,
+      "style": null,
+      "blocks": [
+        {
+          "type": "CONTENT",
+          "data": "loaderIndex"
+        }
+      ]
+    },
+    {
       "key": "36b43c7a-15de-4a5f-a2e2-e53c9ae44998",
       "parentKey": "b98ead1c-d4a0-4481-adda-8071750c2565",
       "subKeys": [
@@ -153,7 +243,7 @@
         "823b4cc5-ff7b-440a-bc86-93a60afb09e2",
         "c0d4cda4-1b05-4319-bc51-39f3d2e1e4dd"
       ],
-      "collapse": false,
+      "collapse": true,
       "style": null,
       "blocks": [
         {
@@ -182,6 +272,24 @@
       ]
     },
     {
+      "key": "c692e26f-0df9-487e-8c32-9ae0cd3dacc9",
+      "parentKey": "798aa4d8-35f4-4357-9f30-4d5ab59a0531",
+      "subKeys": [
+        "332f785f-956f-4264-b841-a30394163b97",
+        "56032c2a-ca08-4ca0-8fcd-dae752a563a8",
+        "11f074c5-fba2-4182-b639-c8522252da08",
+        "bee8b5ea-729e-440f-bdbf-228e7630846d"
+      ],
+      "collapse": false,
+      "style": null,
+      "blocks": [
+        {
+          "type": "CONTENT",
+          "data": "loaderContext包含哪些数据"
+        }
+      ]
+    },
+    {
       "key": "9b595adf-4448-4a98-b0ac-9dd195f26f59",
       "parentKey": "a4762742-4e07-4524-9909-c8c5052beedf",
       "subKeys": [],
@@ -191,6 +299,22 @@
         {
           "type": "CONTENT",
           "data": "AsyncParallel\n异步并行执行钩子"
+        }
+      ]
+    },
+    {
+      "key": "d57bbc73-6075-4d3c-891e-7bf7f78f8669",
+      "parentKey": "b98ead1c-d4a0-4481-adda-8071750c2565",
+      "subKeys": [
+        "bb19bc0c-7601-4478-9eb4-37cf80c1d1bd",
+        "225e079d-dbda-4d0a-b228-b8bccdca1e4c"
+      ],
+      "collapse": false,
+      "style": null,
+      "blocks": [
+        {
+          "type": "CONTENT",
+          "data": "loader运行"
         }
       ]
     },
@@ -223,6 +347,25 @@
       ]
     },
     {
+      "key": "2d2e0db8-164d-4c5c-8135-64aabad71142",
+      "parentKey": "bee8b5ea-729e-440f-bdbf-228e7630846d",
+      "subKeys": [
+        "55cfd97c-49e6-42e4-92a6-b31b9d309ccc"
+      ],
+      "collapse": false,
+      "style": null,
+      "blocks": [
+        {
+          "type": "CONTENT",
+          "data": "remainingRequest"
+        },
+        {
+          "type": "DESC",
+          "data": "code\n```\n\tObject.defineProperty(loaderContext, \"remainingRequest\", {\n\t\tenumerable: true,\n\t\tget: function() {\n\t\t\tif(loaderContext.loaderIndex >= loaderContext.loaders.length - 1 && !loaderContext.resource)\n\t\t\t\treturn \"\";\n\t\t\treturn loaderContext.loaders.slice(loaderContext.loaderIndex + 1).map(function(o) {\n\t\t\t\treturn o.request;\n\t\t\t}).concat(loaderContext.resource || \"\").join(\"!\");\n\t\t}\n\t});\n\n```\n"
+        }
+      ]
+    },
+    {
       "key": "756db21e-dc84-48a0-9cab-617740d71137",
       "parentKey": "cd8c0e1e-356f-4c1e-adda-a49ff2fa4465",
       "subKeys": [],
@@ -232,6 +375,32 @@
         {
           "type": "CONTENT",
           "data": "new Hook新建钩子"
+        }
+      ]
+    },
+    {
+      "key": "225e079d-dbda-4d0a-b228-b8bccdca1e4c",
+      "parentKey": "d57bbc73-6075-4d3c-891e-7bf7f78f8669",
+      "subKeys": [],
+      "collapse": false,
+      "style": null,
+      "blocks": [
+        {
+          "type": "CONTENT",
+          "data": "loaderLoader"
+        }
+      ]
+    },
+    {
+      "key": "1dd2c8b9-3a29-45b0-bcdc-a3cac8589842",
+      "parentKey": "2b0ad7bf-4c99-4f1a-a88d-c451d50bcfec",
+      "subKeys": [],
+      "collapse": false,
+      "style": null,
+      "blocks": [
+        {
+          "type": "CONTENT",
+          "data": "将之前的loaders 转换成inline-loader的request"
         }
       ]
     },
@@ -337,6 +506,40 @@
       ]
     },
     {
+      "key": "9424bdc1-ff14-4414-a98a-c16a4c5d72b3",
+      "parentKey": "798aa4d8-35f4-4357-9f30-4d5ab59a0531",
+      "subKeys": [
+        "a5a997bf-12d9-47ea-8a45-12440b22bb5f",
+        "ae5b85dc-d6a0-4c5a-b155-1c87d60a2a31",
+        "cd81a687-3faa-42c7-bd02-332a362344ab"
+      ],
+      "collapse": false,
+      "style": null,
+      "blocks": [
+        {
+          "type": "CONTENT",
+          "data": "loaderObject"
+        }
+      ]
+    },
+    {
+      "key": "5e4f6180-810c-4a30-a007-85d92d0aaf91",
+      "parentKey": "798aa4d8-35f4-4357-9f30-4d5ab59a0531",
+      "subKeys": [],
+      "collapse": false,
+      "style": null,
+      "blocks": [
+        {
+          "type": "CONTENT",
+          "data": "callback"
+        },
+        {
+          "type": "DESC",
+          "data": "code\n```\nfunction(err, result) {\n\t\tif(err) {\n\t\t\treturn callback(err, {\n\t\t\t\tcacheable: requestCacheable,\n\t\t\t\tfileDependencies: fileDependencies,\n\t\t\t\tcontextDependencies: contextDependencies,\n\t\t\t\tmissingDependencies: missingDependencies\n\t\t\t});\n\t\t}\n\t\tcallback(null, {\n\t\t\tresult: result,\n\t\t\tresourceBuffer: processOptions.resourceBuffer,\n\t\t\tcacheable: requestCacheable,\n\t\t\tfileDependencies: fileDependencies,\n\t\t\tcontextDependencies: contextDependencies,\n\t\t\tmissingDependencies: missingDependencies\n\t\t});\n\t}\n\n```\n"
+        }
+      ]
+    },
+    {
       "key": "29586dc7-ba87-4424-8ef8-d10502139c64",
       "parentKey": "7b9019db-6d26-4da0-bf58-b1d5dacbb032",
       "subKeys": [],
@@ -363,6 +566,32 @@
         {
           "type": "CONTENT",
           "data": "一个 compilation 对象包含了 "
+        }
+      ]
+    },
+    {
+      "key": "dc5ce3c5-6c0e-4edb-b2ea-47aba12496b1",
+      "parentKey": "d6c1631b-e146-41c7-a6a2-79c72b4dc4e4",
+      "subKeys": [],
+      "collapse": false,
+      "style": "{\"contentStyle\":{\"borderStyle\":\"dashed\",\"borderColor\":\"#ad7a9e\",\"background\":\"#f9e1fd\"}}",
+      "blocks": [
+        {
+          "type": "CONTENT",
+          "data": "function runSyncOrAsync(fn, context, args, callback) // 函数声明\n// fn 是pitch 函数\n\t\t\nrunSyncOrAsync(\n\t\t\tfn,\n\t\t\tloaderContext, [loaderContext.remainingRequest, loaderContext.previousRequest, currentLoaderObject.data = {}],\n\t\t\tfunction(err) {\n\t\t\t\tif(err) return callback(err);\n\t\t\t\tvar args = Array.prototype.slice.call(arguments, 1);\n\t\t\t\tvar hasArg = args.some(function(value) {\n\t\t\t\t\treturn value !== undefined;\n\t\t\t\t});\n\t\t\t\tif(hasArg) {\n\t\t\t\t\tloaderContext.loaderIndex--;\n\t\t\t\t\titerateNormalLoaders(options, loaderContext, args, callback);\n\t\t\t\t} else {\n\t\t\t\t\titeratePitchingLoaders(options, loaderContext, callback);\n\t\t\t\t}\n\t\t\t}\n\t\t);"
+        }
+      ]
+    },
+    {
+      "key": "a5a997bf-12d9-47ea-8a45-12440b22bb5f",
+      "parentKey": "9424bdc1-ff14-4414-a98a-c16a4c5d72b3",
+      "subKeys": [],
+      "collapse": false,
+      "style": null,
+      "blocks": [
+        {
+          "type": "CONTENT",
+          "data": "通过loaderContext.loader[index] 获取"
         }
       ]
     },
@@ -405,7 +634,7 @@
         "b6f24eb8-6460-474b-9163-2f119ec2b3a1",
         "1474ac7e-d4a1-4926-84c2-5bc13fae28de"
       ],
-      "collapse": false,
+      "collapse": true,
       "style": null,
       "blocks": [
         {
@@ -426,6 +655,28 @@
         {
           "type": "CONTENT",
           "data": "seal"
+        }
+      ]
+    },
+    {
+      "key": "798aa4d8-35f4-4357-9f30-4d5ab59a0531",
+      "parentKey": "64ad5fea-cc17-4924-ac41-72535234160d",
+      "subKeys": [
+        "d6c1631b-e146-41c7-a6a2-79c72b4dc4e4",
+        "5e4f6180-810c-4a30-a007-85d92d0aaf91",
+        "c692e26f-0df9-487e-8c32-9ae0cd3dacc9",
+        "9424bdc1-ff14-4414-a98a-c16a4c5d72b3"
+      ],
+      "collapse": false,
+      "style": null,
+      "blocks": [
+        {
+          "type": "CONTENT",
+          "data": "iteratePitchingLoaders(options, loaderContext, callback)"
+        },
+        {
+          "type": "DESC",
+          "data": "code\n```\niteratePitchingLoaders(processOptions, loaderContext, function(err, result) {\n\t\tif(err) {\n\t\t\treturn callback(err, {\n\t\t\t\tcacheable: requestCacheable,\n\t\t\t\tfileDependencies: fileDependencies,\n\t\t\t\tcontextDependencies: contextDependencies,\n\t\t\t\tmissingDependencies: missingDependencies\n\t\t\t});\n\t\t}\n\t\tcallback(null, {\n\t\t\tresult: result,\n\t\t\tresourceBuffer: processOptions.resourceBuffer,\n\t\t\tcacheable: requestCacheable,\n\t\t\tfileDependencies: fileDependencies,\n\t\t\tcontextDependencies: contextDependencies,\n\t\t\tmissingDependencies: missingDependencies\n\t\t});\n\t});\n\n```\n"
         }
       ]
     },
@@ -555,7 +806,7 @@
         "80a85c4b-a61f-457e-81e6-4b4ca66a7984",
         "3772b699-99f2-4de4-a4a0-02cf147e79c9"
       ],
-      "collapse": false,
+      "collapse": true,
       "style": null,
       "blocks": [
         {
@@ -565,10 +816,28 @@
       ]
     },
     {
+      "key": "47bbee31-6af7-4318-9261-df0a2504d9e7",
+      "parentKey": "64ad5fea-cc17-4924-ac41-72535234160d",
+      "subKeys": [],
+      "collapse": false,
+      "style": null,
+      "blocks": [
+        {
+          "type": "CONTENT",
+          "data": "callback是什么"
+        },
+        {
+          "type": "DESC",
+          "data": "code\n```\n(err, result) => {\n\t\t\t\tif (result) {\n\t\t\t\t\tthis.buildInfo.cacheable = result.cacheable;\n\t\t\t\t\tthis.buildInfo.fileDependencies = new Set(result.fileDependencies);\n\t\t\t\t\tthis.buildInfo.contextDependencies = new Set(\n\t\t\t\t\t\tresult.contextDependencies\n\t\t\t\t\t);\n\t\t\t\t}\n\n\t\t\t\tif (err) {\n\t\t\t\t\tif (!(err instanceof Error)) {\n\t\t\t\t\t\terr = new NonErrorEmittedError(err);\n\t\t\t\t\t}\n\t\t\t\t\tconst currentLoader = this.getCurrentLoader(loaderContext);\n\t\t\t\t\tconst error = new ModuleBuildError(this, err, {\n\t\t\t\t\t\tfrom:\n\t\t\t\t\t\t\tcurrentLoader &&\n\t\t\t\t\t\t\tcompilation.runtimeTemplate.requestShortener.shorten(\n\t\t\t\t\t\t\t\tcurrentLoader.loader\n\t\t\t\t\t\t\t)\n\t\t\t\t\t});\n\t\t\t\t\treturn callback(error);\n\t\t\t\t}\n\n\t\t\t\tconst resourceBuffer = result.resourceBuffer;\n\t\t\t\tconst source = result.result[0];\n\t\t\t\tconst sourceMap = result.result.length >= 1 ? result.result[1] : null;\n\t\t\t\tconst extraInfo = result.result.length >= 2 ? result.result[2] : null;\n\n\t\t\t\tif (!Buffer.isBuffer(source) && typeof source !== \"string\") {\n\t\t\t\t\tconst currentLoader = this.getCurrentLoader(loaderContext, 0);\n\t\t\t\t\tconst err = new Error(\n\t\t\t\t\t\t`Final loader (${\n\t\t\t\t\t\t\tcurrentLoader\n\t\t\t\t\t\t\t\t? compilation.runtimeTemplate.requestShortener.shorten(\n\t\t\t\t\t\t\t\t\t\tcurrentLoader.loader\n\t\t\t\t\t\t\t\t  )\n\t\t\t\t\t\t\t\t: \"unknown\"\n\t\t\t\t\t\t}) didn't return a Buffer or String`\n\t\t\t\t\t);\n\t\t\t\t\tconst error = new ModuleBuildError(this, err);\n\t\t\t\t\treturn callback(error);\n\t\t\t\t}\n\n\t\t\t\tthis._source = this.createSource(\n\t\t\t\t\tthis.binary ? asBuffer(source) : asString(source),\n\t\t\t\t\tresourceBuffer,\n\t\t\t\t\tsourceMap\n\t\t\t\t);\n\t\t\t\tthis._sourceSize = null;\n\t\t\t\tthis._ast =\n\t\t\t\t\ttypeof extraInfo === \"object\" &&\n\t\t\t\t\textraInfo !== null &&\n\t\t\t\t\textraInfo.webpackAST !== undefined\n\t\t\t\t\t\t? extraInfo.webpackAST\n\t\t\t\t\t\t: null;\n\t\t\t\treturn callback();\n\t\t\t}\n\n```\n"
+        }
+      ]
+    },
+    {
       "key": "b98ead1c-d4a0-4481-adda-8071750c2565",
       "parentKey": "root",
       "subKeys": [
-        "36b43c7a-15de-4a5f-a2e2-e53c9ae44998"
+        "36b43c7a-15de-4a5f-a2e2-e53c9ae44998",
+        "d57bbc73-6075-4d3c-891e-7bf7f78f8669"
       ],
       "collapse": false,
       "style": null,
@@ -580,6 +849,34 @@
         {
           "type": "DESC",
           "data": "初始化参数：从配置文件和 Shell 语句中读取与合并参数，得出最终的参数；\n\n开始编译：用上一步得到的参数初始化 Compiler 对象，加载所有配置的插件，执行对象的 run 方法开始执行编译；\n\n确定入口：根据配置中的 entry 找出所有的入口文件\n\n编译模块：从入口文件出发，调用所有配置的 Loader 对模块进行翻译，**再找出该模块依赖的模块**，**再递归本步骤直到所有入口依赖的文件都经过了本步骤的处理；**\n\n完成模块编译：在经过第4步使用 Loader 翻译完所有模块后，**得到了每个模块被翻译后的最终内容以及它们之间的依赖关系；**\n\n输出资源：根据入口和模块之间的依赖关系，**组装成一个个包含多个模块的 Chunk**，**再把每个 Chunk 转换成一个单独的文件加入到输出列表，这步是可以修改输出内容的最后机会；**\n\n输出完成：在确定好输出内容后，根据配置确定输出的路径和文件名，把文件内容写入到文件系统。\n\n在以上过程中，**webpack 会在特定的时间点广播出特定的事件，插件在监听到感兴趣的事件后会执行特定的逻辑**，并且插件可以调用 webpack 提供的 API 改变 webpack 的运行结果。"
+        }
+      ]
+    },
+    {
+      "key": "2b0ad7bf-4c99-4f1a-a88d-c451d50bcfec",
+      "parentKey": "bee8b5ea-729e-440f-bdbf-228e7630846d",
+      "subKeys": [
+        "1dd2c8b9-3a29-45b0-bcdc-a3cac8589842"
+      ],
+      "collapse": false,
+      "style": null,
+      "blocks": [
+        {
+          "type": "CONTENT",
+          "data": "previousRequest"
+        }
+      ]
+    },
+    {
+      "key": "ae5b85dc-d6a0-4c5a-b155-1c87d60a2a31",
+      "parentKey": "9424bdc1-ff14-4414-a98a-c16a4c5d72b3",
+      "subKeys": [],
+      "collapse": false,
+      "style": null,
+      "blocks": [
+        {
+          "type": "CONTENT",
+          "data": "pitchExecuted"
         }
       ]
     },
@@ -695,6 +992,21 @@
       ]
     },
     {
+      "key": "bb19bc0c-7601-4478-9eb4-37cf80c1d1bd",
+      "parentKey": "d57bbc73-6075-4d3c-891e-7bf7f78f8669",
+      "subKeys": [
+        "64ad5fea-cc17-4924-ac41-72535234160d"
+      ],
+      "collapse": false,
+      "style": null,
+      "blocks": [
+        {
+          "type": "CONTENT",
+          "data": "loaderRunner"
+        }
+      ]
+    },
+    {
       "key": "b6f24eb8-6460-474b-9163-2f119ec2b3a1",
       "parentKey": "3a3ffd58-5d52-4d65-b32e-8595858f6a36",
       "subKeys": [],
@@ -745,6 +1057,32 @@
         {
           "type": "CONTENT",
           "data": "模块的优化"
+        }
+      ]
+    },
+    {
+      "key": "cd81a687-3faa-42c7-bd02-332a362344ab",
+      "parentKey": "9424bdc1-ff14-4414-a98a-c16a4c5d72b3",
+      "subKeys": [],
+      "collapse": false,
+      "style": null,
+      "blocks": [
+        {
+          "type": "CONTENT",
+          "data": "data"
+        }
+      ]
+    },
+    {
+      "key": "11f074c5-fba2-4182-b639-c8522252da08",
+      "parentKey": "c692e26f-0df9-487e-8c32-9ae0cd3dacc9",
+      "subKeys": [],
+      "collapse": false,
+      "style": null,
+      "blocks": [
+        {
+          "type": "CONTENT",
+          "data": "resourcePath"
         }
       ]
     },
