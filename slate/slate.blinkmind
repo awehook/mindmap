@@ -1,0 +1,222 @@
+{
+  "rootTopicKey": "root",
+  "topics": [
+    {
+      "key": "root",
+      "parentKey": null,
+      "subKeys": [
+        "1371268c-61a9-489e-a716-a39c9487dc70"
+      ],
+      "collapse": false,
+      "style": null,
+      "blocks": [
+        {
+          "type": "CONTENT",
+          "data": "slate"
+        }
+      ]
+    },
+    {
+      "key": "a9947c22-1b11-41f2-b792-61d78bf49fd5",
+      "parentKey": "a949e185-5d98-45b6-bfe1-603efa7eab69",
+      "subKeys": [],
+      "collapse": false,
+      "style": null,
+      "blocks": [
+        {
+          "type": "CONTENT",
+          "data": "above"
+        },
+        {
+          "type": "DESC",
+          "data": "code\n```\n  above<T extends Ancestor>(\n    editor: Editor,\n    options: {\n      at?: Location\n      match?: NodeMatch<T>\n      mode?: 'highest' | 'lowest'\n      voids?: boolean\n    } = {}\n  ): NodeEntry<T> | undefined {\n    const {\n      voids = false,\n      mode = 'lowest',\n      at = editor.selection,\n      match,\n    } = options\n\n    if (!at) {\n      return\n    }\n\n    const path = Editor.path(editor, at)\n    const reverse = mode === 'lowest'\n\n    for (const [n, p] of Editor.levels(editor, {\n      at: path,\n      voids,\n      match,\n      reverse,\n    })) {\n      if (!Text.isText(n) && !Path.equals(path, p)) {\n        return [n, p]\n      }\n    }\n  },\n\n```\n"
+        }
+      ]
+    },
+    {
+      "key": "52881a36-fbd1-461c-9331-91e36970ee8d",
+      "parentKey": "8d8f99b4-c253-4dd7-bd5a-a2b34a2fe0e7",
+      "subKeys": [
+        "50af2c33-32b9-461f-9952-cf3899a45c77"
+      ],
+      "collapse": false,
+      "style": null,
+      "blocks": [
+        {
+          "type": "CONTENT",
+          "data": "  在createEditor里\nisVoid: () => false,"
+        }
+      ]
+    },
+    {
+      "key": "8d8f99b4-c253-4dd7-bd5a-a2b34a2fe0e7",
+      "parentKey": "9afd3bfc-e20a-4634-a221-e769f91fa006",
+      "subKeys": [
+        "52881a36-fbd1-461c-9331-91e36970ee8d"
+      ],
+      "collapse": false,
+      "style": "{\"contentStyle\":{\"lineHeight\":\"1.5\",\"background\":\"#f0e1e0\",\"borderRadius\":\"5px\",\"color\":\"#082968\",\"fontSize\":\"13px\",\"padding\":\"3px 9px 4px\",\"boxShadow\":\"1px 1px 1px #ccc\",\"borderStyle\":\"dashed\"},\"linkStyle\":{\"lineRadius\":5,\"lineType\":\"round\",\"lineWidth\":1,\"lineColor\":\"#43a9ff\"},\"subLinkStyle\":{\"lineRadius\":5,\"lineType\":\"round\",\"lineWidth\":1,\"lineColor\":\"#43a9ff\"}}",
+      "blocks": [
+        {
+          "type": "CONTENT",
+          "data": "  isVoid(editor: Editor, value: any): value is Element {\n    return Element.isElement(value) && editor.isVoid(value)\n  },"
+        }
+      ]
+    },
+    {
+      "key": "a949e185-5d98-45b6-bfe1-603efa7eab69",
+      "parentKey": "1371268c-61a9-489e-a716-a39c9487dc70",
+      "subKeys": [
+        "a9947c22-1b11-41f2-b792-61d78bf49fd5",
+        "9afd3bfc-e20a-4634-a221-e769f91fa006",
+        "b2ed5392-c835-4e24-b97a-d160c596a4e4"
+      ],
+      "collapse": false,
+      "style": null,
+      "blocks": [
+        {
+          "type": "CONTENT",
+          "data": "Editor"
+        }
+      ]
+    },
+    {
+      "key": "b2ed5392-c835-4e24-b97a-d160c596a4e4",
+      "parentKey": "a949e185-5d98-45b6-bfe1-603efa7eab69",
+      "subKeys": [
+        "722b5bb7-12fd-4bb8-ad03-8238b3cc44da"
+      ],
+      "collapse": false,
+      "style": null,
+      "blocks": [
+        {
+          "type": "CONTENT",
+          "data": "void"
+        }
+      ]
+    },
+    {
+      "key": "9afd3bfc-e20a-4634-a221-e769f91fa006",
+      "parentKey": "a949e185-5d98-45b6-bfe1-603efa7eab69",
+      "subKeys": [
+        "8d8f99b4-c253-4dd7-bd5a-a2b34a2fe0e7"
+      ],
+      "collapse": false,
+      "style": null,
+      "blocks": [
+        {
+          "type": "CONTENT",
+          "data": "isVoid"
+        }
+      ]
+    },
+    {
+      "key": "722b5bb7-12fd-4bb8-ad03-8238b3cc44da",
+      "parentKey": "b2ed5392-c835-4e24-b97a-d160c596a4e4",
+      "subKeys": [],
+      "collapse": false,
+      "style": "{\"contentStyle\":{\"borderStyle\":\"dashed\",\"background\":\"#f0e1e0\",\"color\":\"#082968\"}}",
+      "blocks": [
+        {
+          "type": "CONTENT",
+          "data": "  void(\n    editor: Editor,\n    options: {\n      at?: Location\n      mode?: 'highest' | 'lowest'\n      voids?: boolean\n    } = {}\n  ): NodeEntry<Element> | undefined {\n    return Editor.above(editor, {\n      ...options,\n      match: n => Editor.isVoid(editor, n),\n    })\n  },"
+        }
+      ]
+    },
+    {
+      "key": "1371268c-61a9-489e-a716-a39c9487dc70",
+      "parentKey": "root",
+      "subKeys": [
+        "a949e185-5d98-45b6-bfe1-603efa7eab69"
+      ],
+      "collapse": false,
+      "style": null,
+      "blocks": [
+        {
+          "type": "CONTENT",
+          "data": "interface"
+        }
+      ]
+    },
+    {
+      "key": "50af2c33-32b9-461f-9952-cf3899a45c77",
+      "parentKey": "52881a36-fbd1-461c-9331-91e36970ee8d",
+      "subKeys": [],
+      "collapse": false,
+      "style": "{\"contentStyle\":{\"lineHeight\":\"1.5\",\"background\":\"#f0e1e0\",\"borderRadius\":\"5px\",\"color\":\"#082968\",\"fontSize\":\"13px\",\"padding\":\"3px 9px 4px\",\"boxShadow\":\"1px 1px 1px #ccc\",\"borderStyle\":\"dashed\"},\"linkStyle\":{\"lineRadius\":5,\"lineType\":\"round\",\"lineWidth\":1,\"lineColor\":\"#43a9ff\"},\"subLinkStyle\":{\"lineRadius\":5,\"lineType\":\"round\",\"lineWidth\":1,\"lineColor\":\"#43a9ff\"}}",
+      "blocks": [
+        {
+          "type": "CONTENT",
+          "data": "export const createEditor = (): Editor => {\n  const editor: Editor = {\n    children: [],\n    operations: [],\n    selection: null,\n    marks: null,\n    isInline: () => false,\n    isVoid: () => false,\n    onChange: () => {},"
+        }
+      ]
+    }
+  ],
+  "config": {
+    "readOnly": false,
+    "allowUndo": true,
+    "layoutDir": 2,
+    "theme": {
+      "name": "theme3",
+      "randomColor": false,
+      "background": "#A9DEF9",
+      "highlightColor": "#50C9CE",
+      "marginH": 50,
+      "marginV": 20,
+      "contentStyle": {
+        "lineHeight": "1.5"
+      },
+      "linkStyle": {
+        "lineRadius": 5
+      },
+      "rootTopic": {
+        "contentStyle": {
+          "background": "#FF99C8",
+          "color": "#fff",
+          "fontSize": "34px",
+          "borderRadius": "5px",
+          "padding": "16px 18px 16px 18px"
+        },
+        "subLinkStyle": {
+          "lineType": "curve",
+          "lineWidth": 2,
+          "lineColor": "#43a9ff"
+        }
+      },
+      "primaryTopic": {
+        "contentStyle": {
+          "background": "#FCF6BD",
+          "borderWidth": "1px",
+          "borderStyle": "solid",
+          "borderColor": "#E4C1F9",
+          "borderRadius": "5px",
+          "color": "rgb(103,103,103)",
+          "fontSize": "14px",
+          "padding": "6px 10px 5px 10px"
+        },
+        "subLinkStyle": {
+          "lineType": "curve",
+          "lineWidth": 2,
+          "lineColor": "#43a9ff"
+        }
+      },
+      "normalTopic": {
+        "contentStyle": {
+          "background": "#E4FDE1",
+          "borderRadius": "5px",
+          "color": "rgb(103,103,103)",
+          "fontSize": "13px",
+          "padding": "3px 9px 4px",
+          "boxShadow": "1px 1px 1px #ccc"
+        },
+        "subLinkStyle": {
+          "lineType": "round",
+          "lineRadius": 5,
+          "lineWidth": 1,
+          "lineColor": "#43a9ff"
+        }
+      }
+    }
+  },
+  "formatVersion": "0.0"
+}
