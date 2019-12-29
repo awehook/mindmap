@@ -2,10 +2,23 @@
   "rootTopicKey": "root",
   "topics": [
     {
+      "key": "694a7c45-d1a6-4255-b3ed-806af05b77fc",
+      "parentKey": "cf208465-baed-4063-b850-c4d0939cdc6a",
+      "subKeys": [],
+      "collapse": false,
+      "style": "{\"contentStyle\":{\"borderStyle\":\"dashed\",\"background\":\"#fde5e1\"}}",
+      "blocks": [
+        {
+          "type": "CONTENT",
+          "data": "export function createFiberRoot(\n  containerInfo: any,\n  tag: RootTag,\n  hydrate: boolean,\n  hydrationCallbacks: null | SuspenseHydrationCallbacks,\n): FiberRoot"
+        }
+      ]
+    },
+    {
       "key": "037dea20-886d-48dd-b6d5-b27b84f1d64e",
       "parentKey": "9752c402-4058-4e76-91b7-d10aa7390338",
       "subKeys": [],
-      "collapse": false,
+      "collapse": true,
       "style": null,
       "blocks": [
         {
@@ -21,7 +34,7 @@
         "8bd666d3-4712-40d4-9c09-84931f3e55c9",
         "f274f3bd-2cbb-4b65-ab4d-2e9939c099c8"
       ],
-      "collapse": false,
+      "collapse": true,
       "style": null,
       "blocks": [
         {
@@ -34,7 +47,7 @@
       "key": "f47cf03a-bb08-4f8d-9e62-78518d7c2729",
       "parentKey": "3de11b2b-8a45-4976-92c5-31b2900b46ad",
       "subKeys": [],
-      "collapse": false,
+      "collapse": true,
       "style": null,
       "blocks": [
         {
@@ -68,7 +81,8 @@
       "parentKey": null,
       "subKeys": [
         "74bd8420-a4b6-40e0-94b5-8eecd0c254d9",
-        "5a83bd5f-f8d4-4f0e-aa1d-e3af4246f71d"
+        "5a83bd5f-f8d4-4f0e-aa1d-e3af4246f71d",
+        "73903487-2a54-4cfc-aae2-583f972d85e0"
       ],
       "collapse": false,
       "style": null,
@@ -86,7 +100,7 @@
         "a6bf849c-10df-43a5-96a3-4661d731e992",
         "29424156-84fe-4633-9275-5dbb6322e53c"
       ],
-      "collapse": false,
+      "collapse": true,
       "style": null,
       "blocks": [
         {
@@ -105,7 +119,7 @@
       "subKeys": [
         "dba5dd82-b4c5-4cf0-92fb-614fef637d3b"
       ],
-      "collapse": false,
+      "collapse": true,
       "style": null,
       "blocks": [
         {
@@ -120,7 +134,7 @@
       "subKeys": [
         "0f57d42e-8a2d-4a20-8931-4a214500df9d"
       ],
-      "collapse": false,
+      "collapse": true,
       "style": null,
       "blocks": [
         {
@@ -133,7 +147,7 @@
       "key": "7f923598-27eb-4277-ade3-c062c395e0a0",
       "parentKey": "0dd2af76-9ca1-4fe2-92b4-46f0e2796af9",
       "subKeys": [],
-      "collapse": false,
+      "collapse": true,
       "style": null,
       "blocks": [
         {
@@ -150,7 +164,7 @@
       "key": "60627455-24a7-4d69-8c43-f4d7aec3d262",
       "parentKey": "f452b17d-41dc-45c7-9fe9-cc73fb1d6b61",
       "subKeys": [],
-      "collapse": false,
+      "collapse": true,
       "style": null,
       "blocks": [
         {
@@ -165,7 +179,7 @@
       "subKeys": [
         "4c70a702-63c8-4f35-a4b6-6c926d8a0278"
       ],
-      "collapse": false,
+      "collapse": true,
       "style": null,
       "blocks": [
         {
@@ -178,7 +192,7 @@
       "key": "5a83bd5f-f8d4-4f0e-aa1d-e3af4246f71d",
       "parentKey": "root",
       "subKeys": [],
-      "collapse": false,
+      "collapse": true,
       "style": null,
       "blocks": [
         {
@@ -210,7 +224,7 @@
       "key": "aa0d448d-2dcd-407d-ae45-75d87c12176d",
       "parentKey": "b6d23e74-780a-435f-a8ab-6fabf2f293c6",
       "subKeys": [],
-      "collapse": false,
+      "collapse": true,
       "style": null,
       "blocks": [
         {
@@ -223,7 +237,7 @@
       "key": "2c838cb2-03ea-472a-a672-bd92043ea4a8",
       "parentKey": "a6bf849c-10df-43a5-96a3-4661d731e992",
       "subKeys": [],
-      "collapse": false,
+      "collapse": true,
       "style": null,
       "blocks": [
         {
@@ -236,7 +250,7 @@
       "key": "ee5d6464-a001-46ed-9825-13a5e4417cda",
       "parentKey": "f274f3bd-2cbb-4b65-ab4d-2e9939c099c8",
       "subKeys": [],
-      "collapse": false,
+      "collapse": true,
       "style": null,
       "blocks": [
         {
@@ -265,7 +279,7 @@
       "key": "0f57d42e-8a2d-4a20-8931-4a214500df9d",
       "parentKey": "e9b956be-d2b3-4764-8682-3f083cc36cef",
       "subKeys": [],
-      "collapse": false,
+      "collapse": true,
       "style": null,
       "blocks": [
         {
@@ -282,7 +296,7 @@
       "key": "ab5ea53e-96fa-4844-ba11-bb8fd00dae4d",
       "parentKey": "a63e09e6-e03b-466c-9f47-326288ca7933",
       "subKeys": [],
-      "collapse": false,
+      "collapse": true,
       "style": null,
       "blocks": [
         {
@@ -295,7 +309,7 @@
       "key": "201fb0fe-047a-4d77-890b-0ba871c679ba",
       "parentKey": "5f68f911-c965-4469-b100-14ab9632a21c",
       "subKeys": [],
-      "collapse": false,
+      "collapse": true,
       "style": null,
       "blocks": [
         {
@@ -308,7 +322,7 @@
       "key": "56f8badf-2fa8-4291-a141-e8843cce0d99",
       "parentKey": "dffe006e-64bf-4aec-87cb-ba419f5ae1f2",
       "subKeys": [],
-      "collapse": false,
+      "collapse": true,
       "style": null,
       "blocks": [
         {
@@ -327,7 +341,7 @@
       "subKeys": [
         "201fb0fe-047a-4d77-890b-0ba871c679ba"
       ],
-      "collapse": false,
+      "collapse": true,
       "style": null,
       "blocks": [
         {
@@ -340,7 +354,7 @@
       "key": "cebbef61-0d48-4f0a-a70f-073552b725f3",
       "parentKey": "f452b17d-41dc-45c7-9fe9-cc73fb1d6b61",
       "subKeys": [],
-      "collapse": false,
+      "collapse": true,
       "style": null,
       "blocks": [
         {
@@ -353,7 +367,7 @@
       "key": "3f206992-bee4-47ca-9c7a-aff13a0a70a9",
       "parentKey": "f274f3bd-2cbb-4b65-ab4d-2e9939c099c8",
       "subKeys": [],
-      "collapse": false,
+      "collapse": true,
       "style": null,
       "blocks": [
         {
@@ -370,7 +384,7 @@
       "key": "0dd597a9-6bf7-4417-b359-a3efd96c1ba4",
       "parentKey": "36769b8c-3aaf-4d05-8a2b-b05eb4ce5995",
       "subKeys": [],
-      "collapse": false,
+      "collapse": true,
       "style": null,
       "blocks": [
         {
@@ -387,7 +401,7 @@
         "8c2effde-bce0-42e4-9dbf-ca02a39a4c4c",
         "56f8badf-2fa8-4291-a141-e8843cce0d99"
       ],
-      "collapse": false,
+      "collapse": true,
       "style": null,
       "blocks": [
         {
@@ -402,7 +416,7 @@
       "subKeys": [
         "1e67dae5-fa6a-4369-ae42-68b2b6f03995"
       ],
-      "collapse": false,
+      "collapse": true,
       "style": null,
       "blocks": [
         {
@@ -418,7 +432,7 @@
         "30153434-508e-4c54-b679-6327274886ee",
         "ebc6473a-a9f4-43fc-b1c2-d3df3fab894a"
       ],
-      "collapse": false,
+      "collapse": true,
       "style": null,
       "blocks": [
         {
@@ -431,7 +445,7 @@
       "key": "4936055c-d549-4552-93b2-a06b373325d2",
       "parentKey": "1e67dae5-fa6a-4369-ae42-68b2b6f03995",
       "subKeys": [],
-      "collapse": false,
+      "collapse": true,
       "style": null,
       "blocks": [
         {
@@ -447,7 +461,7 @@
         "3336e836-0cc7-4616-a1c2-a61624db00b0",
         "09746a55-26cb-458b-b965-2405af486de6"
       ],
-      "collapse": false,
+      "collapse": true,
       "style": null,
       "blocks": [
         {
@@ -496,7 +510,7 @@
       "key": "791b8198-06d8-404e-938a-e781623f143e",
       "parentKey": "d04c7552-ba75-41cb-b9e2-f28ce1d71e1a",
       "subKeys": [],
-      "collapse": false,
+      "collapse": true,
       "style": null,
       "blocks": [
         {
@@ -511,7 +525,7 @@
       "subKeys": [
         "791b8198-06d8-404e-938a-e781623f143e"
       ],
-      "collapse": false,
+      "collapse": true,
       "style": null,
       "blocks": [
         {
@@ -524,7 +538,7 @@
       "key": "ebc6473a-a9f4-43fc-b1c2-d3df3fab894a",
       "parentKey": "0d825785-e958-44de-8c24-006c48c7282f",
       "subKeys": [],
-      "collapse": false,
+      "collapse": true,
       "style": null,
       "blocks": [
         {
@@ -537,7 +551,7 @@
       "key": "6e9a6997-af84-4a72-8f9c-76e703ce006f",
       "parentKey": "36769b8c-3aaf-4d05-8a2b-b05eb4ce5995",
       "subKeys": [],
-      "collapse": false,
+      "collapse": true,
       "style": null,
       "blocks": [
         {
@@ -550,7 +564,7 @@
       "key": "0246e7ca-d3b5-44c5-969e-c97119aa76fa",
       "parentKey": "8bd666d3-4712-40d4-9c09-84931f3e55c9",
       "subKeys": [],
-      "collapse": false,
+      "collapse": true,
       "style": null,
       "blocks": [
         {
@@ -584,7 +598,7 @@
       "key": "fbf45a81-17e9-40ae-8153-1b30e52213e4",
       "parentKey": "0b388ac3-edf9-47bd-95db-0e5262d37181",
       "subKeys": [],
-      "collapse": false,
+      "collapse": true,
       "style": null,
       "blocks": [
         {
@@ -605,7 +619,7 @@
         "1104de5d-c83b-48ef-ac0d-a6ab42fd3917",
         "4936055c-d549-4552-93b2-a06b373325d2"
       ],
-      "collapse": false,
+      "collapse": true,
       "style": null,
       "blocks": [
         {
@@ -618,12 +632,40 @@
       "key": "1599ad15-c98d-4d51-8a3d-f10afa4750fe",
       "parentKey": "a63e09e6-e03b-466c-9f47-326288ca7933",
       "subKeys": [],
-      "collapse": false,
+      "collapse": true,
       "style": null,
       "blocks": [
         {
           "type": "CONTENT",
           "data": "普通的ref无法获取FunctionalComponent的实例"
+        }
+      ]
+    },
+    {
+      "key": "cf208465-baed-4063-b850-c4d0939cdc6a",
+      "parentKey": "73903487-2a54-4cfc-aae2-583f972d85e0",
+      "subKeys": [
+        "694a7c45-d1a6-4255-b3ed-806af05b77fc"
+      ],
+      "collapse": false,
+      "style": null,
+      "blocks": [
+        {
+          "type": "CONTENT",
+          "data": "createContainer"
+        },
+        {
+          "type": "TOPOLOGY",
+          "key": null,
+          "data": {
+            "nodes": [],
+            "lines": [],
+            "lineName": "curve",
+            "fromArrowType": "",
+            "toArrowType": "triangleSolid",
+            "scale": 1,
+            "locked": 0
+          }
         }
       ]
     },
@@ -635,7 +677,7 @@
         "cebbef61-0d48-4f0a-a70f-073552b725f3",
         "e9606cb2-ff04-45a9-a779-84a7b175fab9"
       ],
-      "collapse": false,
+      "collapse": true,
       "style": null,
       "blocks": [
         {
@@ -651,7 +693,7 @@
         "0dd597a9-6bf7-4417-b359-a3efd96c1ba4",
         "6e9a6997-af84-4a72-8f9c-76e703ce006f"
       ],
-      "collapse": false,
+      "collapse": true,
       "style": null,
       "blocks": [
         {
@@ -666,7 +708,7 @@
       "subKeys": [
         "9752c402-4058-4e76-91b7-d10aa7390338"
       ],
-      "collapse": false,
+      "collapse": true,
       "style": null,
       "blocks": [
         {
@@ -676,10 +718,25 @@
       ]
     },
     {
+      "key": "73903487-2a54-4cfc-aae2-583f972d85e0",
+      "parentKey": "root",
+      "subKeys": [
+        "cf208465-baed-4063-b850-c4d0939cdc6a"
+      ],
+      "collapse": false,
+      "style": null,
+      "blocks": [
+        {
+          "type": "CONTENT",
+          "data": "react-reconciler"
+        }
+      ]
+    },
+    {
       "key": "09746a55-26cb-458b-b965-2405af486de6",
       "parentKey": "814475e8-b0f9-402b-86ef-f31ff8e4974f",
       "subKeys": [],
-      "collapse": false,
+      "collapse": true,
       "style": null,
       "blocks": [
         {
@@ -694,7 +751,7 @@
       "subKeys": [
         "0246e7ca-d3b5-44c5-969e-c97119aa76fa"
       ],
-      "collapse": false,
+      "collapse": true,
       "style": null,
       "blocks": [
         {
@@ -707,7 +764,7 @@
       "key": "b6673ee0-ce79-4453-a3b3-603aa0719db0",
       "parentKey": "30153434-508e-4c54-b679-6327274886ee",
       "subKeys": [],
-      "collapse": false,
+      "collapse": true,
       "style": null,
       "blocks": [
         {
@@ -722,7 +779,7 @@
       "subKeys": [
         "8c5a5208-7da2-43bc-a4d4-39a16b955c72"
       ],
-      "collapse": false,
+      "collapse": true,
       "style": null,
       "blocks": [
         {
@@ -738,7 +795,7 @@
         "5e08fcae-aca5-44fe-a905-f7fc13af4f6f",
         "037dea20-886d-48dd-b6d5-b27b84f1d64e"
       ],
-      "collapse": false,
+      "collapse": true,
       "style": null,
       "blocks": [
         {
@@ -751,7 +808,7 @@
       "key": "c18d69b2-cd9c-4ac1-949c-037ad9f27ead",
       "parentKey": "a6bf849c-10df-43a5-96a3-4661d731e992",
       "subKeys": [],
-      "collapse": false,
+      "collapse": true,
       "style": null,
       "blocks": [
         {
@@ -783,7 +840,7 @@
         "d04c7552-ba75-41cb-b9e2-f28ce1d71e1a",
         "fbf45a81-17e9-40ae-8153-1b30e52213e4"
       ],
-      "collapse": false,
+      "collapse": true,
       "style": null,
       "blocks": [
         {
@@ -799,7 +856,7 @@
         "7f923598-27eb-4277-ade3-c062c395e0a0",
         "47d3713d-edb1-4df0-b3ce-21cc592e157e"
       ],
-      "collapse": false,
+      "collapse": true,
       "style": null,
       "blocks": [
         {
@@ -812,7 +869,7 @@
       "key": "e9606cb2-ff04-45a9-a779-84a7b175fab9",
       "parentKey": "f452b17d-41dc-45c7-9fe9-cc73fb1d6b61",
       "subKeys": [],
-      "collapse": false,
+      "collapse": true,
       "style": null,
       "blocks": [
         {
@@ -825,7 +882,7 @@
       "key": "0c94d4df-1923-4cc5-9a69-e87660b4d4bb",
       "parentKey": "76a27722-368e-4c81-a341-a2f370265618",
       "subKeys": [],
-      "collapse": false,
+      "collapse": true,
       "style": null,
       "blocks": [
         {
@@ -854,7 +911,7 @@
       "key": "2929ea22-866a-418f-bc52-4ce7b41f4e0d",
       "parentKey": "a68f04d6-1d14-4634-8717-0bfb6fc15e11",
       "subKeys": [],
-      "collapse": false,
+      "collapse": true,
       "style": null,
       "blocks": [
         {
@@ -871,7 +928,7 @@
       "key": "4c70a702-63c8-4f35-a4b6-6c926d8a0278",
       "parentKey": "dc01f459-7e89-49a7-9c37-d3fac29c243a",
       "subKeys": [],
-      "collapse": false,
+      "collapse": true,
       "style": null,
       "blocks": [
         {
@@ -891,7 +948,7 @@
         "f452b17d-41dc-45c7-9fe9-cc73fb1d6b61",
         "814475e8-b0f9-402b-86ef-f31ff8e4974f"
       ],
-      "collapse": false,
+      "collapse": true,
       "style": null,
       "blocks": [
         {
@@ -906,7 +963,7 @@
       "subKeys": [
         "b6673ee0-ce79-4453-a3b3-603aa0719db0"
       ],
-      "collapse": false,
+      "collapse": true,
       "style": null,
       "blocks": [
         {
@@ -919,7 +976,7 @@
       "key": "5e08fcae-aca5-44fe-a905-f7fc13af4f6f",
       "parentKey": "9752c402-4058-4e76-91b7-d10aa7390338",
       "subKeys": [],
-      "collapse": false,
+      "collapse": true,
       "style": null,
       "blocks": [
         {
@@ -935,7 +992,7 @@
         "a68f04d6-1d14-4634-8717-0bfb6fc15e11",
         "0c94d4df-1923-4cc5-9a69-e87660b4d4bb"
       ],
-      "collapse": false,
+      "collapse": true,
       "style": null,
       "blocks": [
         {
@@ -952,7 +1009,7 @@
         "c18d69b2-cd9c-4ac1-949c-037ad9f27ead",
         "851f3a71-0421-4f49-b904-d79493bfa28f"
       ],
-      "collapse": false,
+      "collapse": true,
       "style": null,
       "blocks": [
         {
@@ -967,7 +1024,7 @@
       "subKeys": [
         "2929ea22-866a-418f-bc52-4ce7b41f4e0d"
       ],
-      "collapse": false,
+      "collapse": true,
       "style": null,
       "blocks": [
         {
@@ -984,7 +1041,7 @@
       "key": "1104de5d-c83b-48ef-ac0d-a6ab42fd3917",
       "parentKey": "1e67dae5-fa6a-4369-ae42-68b2b6f03995",
       "subKeys": [],
-      "collapse": false,
+      "collapse": true,
       "style": null,
       "blocks": [
         {
@@ -997,7 +1054,7 @@
       "key": "47d3713d-edb1-4df0-b3ce-21cc592e157e",
       "parentKey": "0dd2af76-9ca1-4fe2-92b4-46f0e2796af9",
       "subKeys": [],
-      "collapse": false,
+      "collapse": true,
       "style": null,
       "blocks": [
         {
@@ -1013,7 +1070,7 @@
         "ee5d6464-a001-46ed-9825-13a5e4417cda",
         "3f206992-bee4-47ca-9c7a-aff13a0a70a9"
       ],
-      "collapse": false,
+      "collapse": true,
       "style": null,
       "blocks": [
         {
@@ -1026,7 +1083,7 @@
       "key": "851f3a71-0421-4f49-b904-d79493bfa28f",
       "parentKey": "a6bf849c-10df-43a5-96a3-4661d731e992",
       "subKeys": [],
-      "collapse": false,
+      "collapse": true,
       "style": null,
       "blocks": [
         {
@@ -1041,7 +1098,7 @@
       "subKeys": [
         "e9b956be-d2b3-4764-8682-3f083cc36cef"
       ],
-      "collapse": false,
+      "collapse": true,
       "style": null,
       "blocks": [
         {
@@ -1121,5 +1178,5 @@
       }
     }
   },
-  "version": "0.0"
+  "formatVersion": "0.0"
 }
