@@ -2,10 +2,43 @@
   "rootTopicKey": "root",
   "topics": [
     {
+      "key": "e632e074-9447-47bd-88cb-5a1969935fec",
+      "parentKey": "2068cf62-3494-46bc-a1e9-013ed9b1e98a",
+      "subKeys": [
+        "427e465c-77e8-46d6-8f61-d8c446bbebc1"
+      ],
+      "collapse": false,
+      "style": null,
+      "blocks": [
+        {
+          "type": "CONTENT",
+          "data": "insertBreak"
+        }
+      ]
+    },
+    {
+      "key": "a24a6345-43db-44bd-89f4-5c9b1dd2083b",
+      "parentKey": "9414b3ce-08f8-4c47-9b37-54171015c5ae",
+      "subKeys": [
+        "7c16975c-e873-4e8d-8e81-6e169f2f5de1",
+        "b2f8400e-869a-4591-be59-b0aef49433fe"
+      ],
+      "collapse": false,
+      "style": null,
+      "blocks": [
+        {
+          "type": "CONTENT",
+          "data": "NodeTransform"
+        }
+      ]
+    },
+    {
       "key": "root",
       "parentKey": null,
       "subKeys": [
-        "1371268c-61a9-489e-a716-a39c9487dc70"
+        "1371268c-61a9-489e-a716-a39c9487dc70",
+        "0f3181c4-3c5c-4003-825c-691ebbe78edf",
+        "7d26f93a-6482-42ca-b7ec-416be094acee"
       ],
       "collapse": false,
       "style": null,
@@ -17,10 +50,139 @@
       ]
     },
     {
-      "key": "a9947c22-1b11-41f2-b792-61d78bf49fd5",
+      "key": "3fb284ed-08c3-45df-81ec-c5a5e8d39908",
+      "parentKey": "3d088f95-f9f3-43ce-8bd3-8b83884e7a4c",
+      "subKeys": [],
+      "collapse": false,
+      "style": "{\"contentStyle\":{\"lineHeight\":\"1.5\",\"background\":\"#f0e1e0\",\"borderRadius\":\"5px\",\"color\":\"#082968\",\"fontSize\":\"13px\",\"padding\":\"3px 9px 4px\",\"boxShadow\":\"1px 1px 1px #ccc\",\"borderStyle\":\"dashed\"},\"linkStyle\":{\"lineRadius\":5,\"lineType\":\"round\",\"lineWidth\":1,\"lineColor\":\"#43a9ff\"},\"subLinkStyle\":{\"lineRadius\":5,\"lineType\":\"round\",\"lineWidth\":1,\"lineColor\":\"#43a9ff\"}}",
+      "blocks": [
+        {
+          "type": "CONTENT",
+          "data": "默认实现\n\n    isInline: () => false,\n    isVoid: () => false,\n    onChange: () => {},"
+        }
+      ]
+    },
+    {
+      "key": "924323bb-a306-4b0d-a83f-ad5bc560fa1d",
+      "parentKey": "2754bd4f-65a7-4d66-b9ec-29ced56f81d4",
+      "subKeys": [
+        "3d088f95-f9f3-43ce-8bd3-8b83884e7a4c"
+      ],
+      "collapse": false,
+      "style": null,
+      "blocks": [
+        {
+          "type": "CONTENT",
+          "data": "Schema-specific"
+        }
+      ]
+    },
+    {
+      "key": "767971fd-0351-4bee-bc26-b52da7291560",
+      "parentKey": "9d8392f1-14ac-41fd-8bb3-1b48fd63c876",
+      "subKeys": [],
+      "collapse": false,
+      "style": null,
+      "blocks": [
+        {
+          "type": "CONTENT",
+          "data": "export interface PointRef {\n  current: Point | null\n  affinity: 'forward' | 'backward' | null\n  unref(): Point | null\n}"
+        }
+      ]
+    },
+    {
+      "key": "bca19b31-aac0-4081-b824-90362145ab35",
+      "parentKey": "a949e185-5d98-45b6-bfe1-603efa7eab69",
+      "subKeys": [
+        "9afd3bfc-e20a-4634-a221-e769f91fa006",
+        "44fa267b-ca3e-4419-866d-dbf15963c013"
+      ],
+      "collapse": true,
+      "style": null,
+      "blocks": [
+        {
+          "type": "CONTENT",
+          "data": "is"
+        }
+      ]
+    },
+    {
+      "key": "427e465c-77e8-46d6-8f61-d8c446bbebc1",
+      "parentKey": "e632e074-9447-47bd-88cb-5a1969935fec",
+      "subKeys": [
+        "fde21f47-7f59-4b67-b313-493312d19024"
+      ],
+      "collapse": false,
+      "style": null,
+      "blocks": [
+        {
+          "type": "CONTENT",
+          "data": "  insertBreak(editor: Editor): void {\n    editor.insertBreak()\n  },"
+        }
+      ]
+    },
+    {
+      "key": "0892b5bb-0027-4c0d-b9af-655ad66dd60d",
+      "parentKey": "a949e185-5d98-45b6-bfe1-603efa7eab69",
+      "subKeys": [
+        "9028539e-fe60-4869-8398-c580aadcb144"
+      ],
+      "collapse": false,
+      "style": null,
+      "blocks": [
+        {
+          "type": "CONTENT",
+          "data": "ref相关"
+        }
+      ]
+    },
+    {
+      "key": "3bbaa100-744f-4f61-aff6-d3fb9990eb35",
+      "parentKey": "44fa267b-ca3e-4419-866d-dbf15963c013",
+      "subKeys": [],
+      "collapse": false,
+      "style": "{\"contentStyle\":{\"lineHeight\":\"1.5\",\"background\":\"#f0e1e0\",\"borderRadius\":\"5px\",\"color\":\"#082968\",\"fontSize\":\"13px\",\"padding\":\"3px 9px 4px\",\"boxShadow\":\"1px 1px 1px #ccc\",\"borderStyle\":\"dashed\"},\"linkStyle\":{\"lineRadius\":5,\"lineType\":\"round\",\"lineWidth\":1,\"lineColor\":\"#43a9ff\"},\"subLinkStyle\":{\"lineRadius\":5,\"lineType\":\"round\",\"lineWidth\":1,\"lineColor\":\"#43a9ff\"}}",
+      "blocks": [
+        {
+          "type": "CONTENT",
+          "data": "  isBlock(editor: Editor, value: any): value is Element {\n    return Element.isElement(value) && !editor.isInline(value)\n  },"
+        }
+      ]
+    },
+    {
+      "key": "9d8392f1-14ac-41fd-8bb3-1b48fd63c876",
+      "parentKey": "1371268c-61a9-489e-a716-a39c9487dc70",
+      "subKeys": [
+        "767971fd-0351-4bee-bc26-b52da7291560",
+        "4f024a67-2596-4939-a06b-ced5366f5ed9"
+      ],
+      "collapse": false,
+      "style": null,
+      "blocks": [
+        {
+          "type": "CONTENT",
+          "data": "PointRef"
+        }
+      ]
+    },
+    {
+      "key": "f91a14ec-f986-430b-b652-dbb276f16742",
       "parentKey": "a949e185-5d98-45b6-bfe1-603efa7eab69",
       "subKeys": [],
       "collapse": false,
+      "style": null,
+      "blocks": [
+        {
+          "type": "CONTENT",
+          "data": "withoutNormalizing"
+        }
+      ]
+    },
+    {
+      "key": "a9947c22-1b11-41f2-b792-61d78bf49fd5",
+      "parentKey": "2860baf7-6dd8-4ab7-827f-d8bde03baebc",
+      "subKeys": [],
+      "collapse": true,
       "style": null,
       "blocks": [
         {
@@ -29,7 +191,52 @@
         },
         {
           "type": "DESC",
-          "data": "code\n```\n  above<T extends Ancestor>(\n    editor: Editor,\n    options: {\n      at?: Location\n      match?: NodeMatch<T>\n      mode?: 'highest' | 'lowest'\n      voids?: boolean\n    } = {}\n  ): NodeEntry<T> | undefined {\n    const {\n      voids = false,\n      mode = 'lowest',\n      at = editor.selection,\n      match,\n    } = options\n\n    if (!at) {\n      return\n    }\n\n    const path = Editor.path(editor, at)\n    const reverse = mode === 'lowest'\n\n    for (const [n, p] of Editor.levels(editor, {\n      at: path,\n      voids,\n      match,\n      reverse,\n    })) {\n      if (!Text.isText(n) && !Path.equals(path, p)) {\n        return [n, p]\n      }\n    }\n  },\n\n```\n"
+          "data": "code\n```typescript\n  above<T extends Ancestor>(\n    editor: Editor,\n    options: {\n      at?: Location\n      match?: NodeMatch<T>\n      mode?: 'highest' | 'lowest'\n      voids?: boolean\n    } = {}\n  ): NodeEntry<T> | undefined {\n    const {\n      voids = false,\n      mode = 'lowest',\n      at = editor.selection,\n      match,\n    } = options\n\n    if (!at) {\n      return\n    }\n\n    const path = Editor.path(editor, at)\n    const reverse = mode === 'lowest'\n    //默认reverse为true\n    for (const [n, p] of Editor.levels(editor, {\n      at: path,\n      voids,\n      match,\n      reverse,\n    })) {\n      if (!Text.isText(n) && !Path.equals(path, p)) {\n        return [n, p]\n      }\n    }\n  },\n\n```\n"
+        }
+      ]
+    },
+    {
+      "key": "44fa267b-ca3e-4419-866d-dbf15963c013",
+      "parentKey": "bca19b31-aac0-4081-b824-90362145ab35",
+      "subKeys": [
+        "3bbaa100-744f-4f61-aff6-d3fb9990eb35"
+      ],
+      "collapse": false,
+      "style": null,
+      "blocks": [
+        {
+          "type": "CONTENT",
+          "data": "isBlock"
+        }
+      ]
+    },
+    {
+      "key": "0f3181c4-3c5c-4003-825c-691ebbe78edf",
+      "parentKey": "root",
+      "subKeys": [
+        "c0476030-24fe-4ca6-8e9d-83fde7f7ffe3"
+      ],
+      "collapse": false,
+      "style": null,
+      "blocks": [
+        {
+          "type": "CONTENT",
+          "data": "疑惑"
+        }
+      ]
+    },
+    {
+      "key": "2754bd4f-65a7-4d66-b9ec-29ced56f81d4",
+      "parentKey": "7d26f93a-6482-42ca-b7ec-416be094acee",
+      "subKeys": [
+        "924323bb-a306-4b0d-a83f-ad5bc560fa1d"
+      ],
+      "collapse": false,
+      "style": null,
+      "blocks": [
+        {
+          "type": "CONTENT",
+          "data": "createEditor"
         }
       ]
     },
@@ -39,7 +246,7 @@
       "subKeys": [
         "50af2c33-32b9-461f-9952-cf3899a45c77"
       ],
-      "collapse": false,
+      "collapse": true,
       "style": null,
       "blocks": [
         {
@@ -49,12 +256,81 @@
       ]
     },
     {
+      "key": "515ff1fd-81fa-4711-9028-f652e51d9058",
+      "parentKey": "b2f8400e-869a-4591-be59-b0aef49433fe",
+      "subKeys": [],
+      "collapse": false,
+      "style": null,
+      "blocks": [
+        {
+          "type": "CONTENT",
+          "data": "const deleteRange = (editor: Editor, range: Range): Point | null "
+        }
+      ]
+    },
+    {
+      "key": "c287c550-979a-4d22-89fa-d7defe5634d8",
+      "parentKey": "5a039d48-37b9-4b2d-9e67-02a568f5064e",
+      "subKeys": [],
+      "collapse": true,
+      "style": null,
+      "blocks": [
+        {
+          "type": "CONTENT",
+          "data": "  path(\n    editor: Editor,\n    at: Location,\n    options: {\n      depth?: number\n      edge?: 'start' | 'end'\n    } = {}\n  ): Path"
+        }
+      ]
+    },
+    {
+      "key": "9028539e-fe60-4869-8398-c580aadcb144",
+      "parentKey": "0892b5bb-0027-4c0d-b9af-655ad66dd60d",
+      "subKeys": [],
+      "collapse": false,
+      "style": null,
+      "blocks": [
+        {
+          "type": "CONTENT",
+          "data": "pointRef"
+        }
+      ]
+    },
+    {
+      "key": "5a039d48-37b9-4b2d-9e67-02a568f5064e",
+      "parentKey": "2860baf7-6dd8-4ab7-827f-d8bde03baebc",
+      "subKeys": [
+        "c287c550-979a-4d22-89fa-d7defe5634d8"
+      ],
+      "collapse": true,
+      "style": null,
+      "blocks": [
+        {
+          "type": "CONTENT",
+          "data": "path"
+        }
+      ]
+    },
+    {
+      "key": "7d26f93a-6482-42ca-b7ec-416be094acee",
+      "parentKey": "root",
+      "subKeys": [
+        "2754bd4f-65a7-4d66-b9ec-29ced56f81d4"
+      ],
+      "collapse": false,
+      "style": null,
+      "blocks": [
+        {
+          "type": "CONTENT",
+          "data": "slate-react"
+        }
+      ]
+    },
+    {
       "key": "8d8f99b4-c253-4dd7-bd5a-a2b34a2fe0e7",
       "parentKey": "9afd3bfc-e20a-4634-a221-e769f91fa006",
       "subKeys": [
         "52881a36-fbd1-461c-9331-91e36970ee8d"
       ],
-      "collapse": false,
+      "collapse": true,
       "style": "{\"contentStyle\":{\"lineHeight\":\"1.5\",\"background\":\"#f0e1e0\",\"borderRadius\":\"5px\",\"color\":\"#082968\",\"fontSize\":\"13px\",\"padding\":\"3px 9px 4px\",\"boxShadow\":\"1px 1px 1px #ccc\",\"borderStyle\":\"dashed\"},\"linkStyle\":{\"lineRadius\":5,\"lineType\":\"round\",\"lineWidth\":1,\"lineColor\":\"#43a9ff\"},\"subLinkStyle\":{\"lineRadius\":5,\"lineType\":\"round\",\"lineWidth\":1,\"lineColor\":\"#43a9ff\"}}",
       "blocks": [
         {
@@ -64,12 +340,46 @@
       ]
     },
     {
+      "key": "7c16975c-e873-4e8d-8e81-6e169f2f5de1",
+      "parentKey": "a24a6345-43db-44bd-89f4-5c9b1dd2083b",
+      "subKeys": [],
+      "collapse": false,
+      "style": null,
+      "blocks": [
+        {
+          "type": "CONTENT",
+          "data": "splitNodes"
+        },
+        {
+          "type": "DESC",
+          "data": "code\n```\n  splitNodes(\n    editor: Editor,\n    options: {\n      at?: Location\n      match?: (node: Node) => boolean\n      mode?: 'highest' | 'lowest'\n      always?: boolean\n      height?: number\n      voids?: boolean\n    } = {}\n  ) {\n    Editor.withoutNormalizing(editor, () => {\n      const { mode = 'lowest', voids = false } = options\n      let { match, at = editor.selection, height = 0, always = false } = options\n\n      if (match == null) {\n        match = n => Editor.isBlock(editor, n)\n      }\n      //\n      if (Range.isRange(at)) {\n        at = deleteRange(editor, at)\n      }\n\n      // If the target is a path, the default height-skipping and position\n      // counters need to account for us potentially splitting at a non-leaf.\n      if (Path.isPath(at)) {\n        const path = at\n        const point = Editor.point(editor, path)\n        const [parent] = Editor.parent(editor, path)\n        match = n => n === parent\n        height = point.path.length - path.length + 1\n        at = point\n        always = true\n      }\n\n      if (!at) {\n        return\n      }\n\n      const beforeRef = Editor.pointRef(editor, at, {\n        affinity: 'backward',\n      })\n      const [highest] = Editor.nodes(editor, { at, match, mode, voids })\n\n      if (!highest) {\n        return\n      }\n\n      const voidMatch = Editor.void(editor, { at, mode: 'highest' })\n      const nudge = 0\n\n      if (!voids && voidMatch) {\n        const [voidNode, voidPath] = voidMatch\n\n        if (Element.isElement(voidNode) && editor.isInline(voidNode)) {\n          let after = Editor.after(editor, voidPath)\n\n          if (!after) {\n            const text = { text: '' }\n            const afterPath = Path.next(voidPath)\n            Transforms.insertNodes(editor, text, { at: afterPath, voids })\n            after = Editor.point(editor, afterPath)!\n          }\n\n          at = after\n          always = true\n        }\n\n        const siblingHeight = at.path.length - voidPath.length\n        height = siblingHeight + 1\n        always = true\n      }\n\n      const afterRef = Editor.pointRef(editor, at)\n      const depth = at.path.length - height\n      const [, highestPath] = highest\n      const lowestPath = at.path.slice(0, depth)\n      let position = height === 0 ? at.offset : at.path[depth] + nudge\n      let target: number | null = null\n\n      for (const [node, path] of Editor.levels(editor, {\n        at: lowestPath,\n        reverse: true,\n        voids,\n      })) {\n        let split = false\n\n        if (\n          path.length < highestPath.length ||\n          path.length === 0 ||\n          (!voids && Editor.isVoid(editor, node))\n        ) {\n          break\n        }\n\n        const point = beforeRef.current!\n        const isEnd = Editor.isEnd(editor, point, path)\n\n        if (always || !beforeRef || !Editor.isEdge(editor, point, path)) {\n          split = true\n          const { text, children, ...properties } = node\n          editor.apply({\n            type: 'split_node',\n            path,\n            position,\n            target,\n            properties,\n          })\n        }\n\n        target = position\n        position = path[path.length - 1] + (split || isEnd ? 1 : 0)\n      }\n\n      if (options.at == null) {\n        const point = afterRef.current || Editor.end(editor, [])\n        Transforms.select(editor, point)\n      }\n\n      beforeRef.unref()\n      afterRef.unref()\n    })\n  },\n\n```\n"
+        }
+      ]
+    },
+    {
+      "key": "2068cf62-3494-46bc-a1e9-013ed9b1e98a",
+      "parentKey": "a949e185-5d98-45b6-bfe1-603efa7eab69",
+      "subKeys": [
+        "e632e074-9447-47bd-88cb-5a1969935fec"
+      ],
+      "collapse": false,
+      "style": null,
+      "blocks": [
+        {
+          "type": "CONTENT",
+          "data": "编辑"
+        }
+      ]
+    },
+    {
       "key": "a949e185-5d98-45b6-bfe1-603efa7eab69",
       "parentKey": "1371268c-61a9-489e-a716-a39c9487dc70",
       "subKeys": [
-        "a9947c22-1b11-41f2-b792-61d78bf49fd5",
-        "9afd3bfc-e20a-4634-a221-e769f91fa006",
-        "b2ed5392-c835-4e24-b97a-d160c596a4e4"
+        "bca19b31-aac0-4081-b824-90362145ab35",
+        "0892b5bb-0027-4c0d-b9af-655ad66dd60d",
+        "2860baf7-6dd8-4ab7-827f-d8bde03baebc",
+        "f91a14ec-f986-430b-b652-dbb276f16742",
+        "2068cf62-3494-46bc-a1e9-013ed9b1e98a"
       ],
       "collapse": false,
       "style": null,
@@ -81,12 +391,57 @@
       ]
     },
     {
+      "key": "546db78b-a29a-4394-b659-3448471138d9",
+      "parentKey": "2860baf7-6dd8-4ab7-827f-d8bde03baebc",
+      "subKeys": [],
+      "collapse": false,
+      "style": null,
+      "blocks": [
+        {
+          "type": "CONTENT",
+          "data": "levels"
+        },
+        {
+          "type": "DESC",
+          "data": "code\n```\n  *levels<T extends Node>(\n    editor: Editor,\n    options: {\n      at?: Location\n      match?: NodeMatch<T>\n      reverse?: boolean\n      voids?: boolean\n    } = {}\n  ): Iterable<NodeEntry<T>> {\n    const { at = editor.selection, reverse = false, voids = false } = options\n    let { match } = options\n\n    if (match == null) {\n      match = () => true\n    }\n\n    if (!at) {\n      return\n    }\n\n    const levels: NodeEntry<T>[] = []\n    const path = Editor.path(editor, at)\n\n    for (const [n, p] of Node.levels(editor, path)) {\n      if (!match(n)) {\n        continue\n      }\n\n      levels.push([n, p])\n\n      if (!voids && Editor.isVoid(editor, n)) {\n        break\n      }\n    }\n\n    if (reverse) {\n      levels.reverse()\n    }\n\n    yield* levels\n  },\n\n```\n"
+        }
+      ]
+    },
+    {
+      "key": "fde21f47-7f59-4b67-b313-493312d19024",
+      "parentKey": "427e465c-77e8-46d6-8f61-d8c446bbebc1",
+      "subKeys": [],
+      "collapse": false,
+      "style": null,
+      "blocks": [
+        {
+          "type": "CONTENT",
+          "data": "    insertBreak: () => {\n      Transforms.splitNodes(editor, { always: true })\n    },"
+        }
+      ]
+    },
+    {
+      "key": "b2f8400e-869a-4591-be59-b0aef49433fe",
+      "parentKey": "a24a6345-43db-44bd-89f4-5c9b1dd2083b",
+      "subKeys": [
+        "515ff1fd-81fa-4711-9028-f652e51d9058"
+      ],
+      "collapse": false,
+      "style": null,
+      "blocks": [
+        {
+          "type": "CONTENT",
+          "data": "工具函数"
+        }
+      ]
+    },
+    {
       "key": "b2ed5392-c835-4e24-b97a-d160c596a4e4",
-      "parentKey": "a949e185-5d98-45b6-bfe1-603efa7eab69",
+      "parentKey": "2860baf7-6dd8-4ab7-827f-d8bde03baebc",
       "subKeys": [
         "722b5bb7-12fd-4bb8-ad03-8238b3cc44da"
       ],
-      "collapse": false,
+      "collapse": true,
       "style": null,
       "blocks": [
         {
@@ -97,11 +452,11 @@
     },
     {
       "key": "9afd3bfc-e20a-4634-a221-e769f91fa006",
-      "parentKey": "a949e185-5d98-45b6-bfe1-603efa7eab69",
+      "parentKey": "bca19b31-aac0-4081-b824-90362145ab35",
       "subKeys": [
         "8d8f99b4-c253-4dd7-bd5a-a2b34a2fe0e7"
       ],
-      "collapse": false,
+      "collapse": true,
       "style": null,
       "blocks": [
         {
@@ -114,7 +469,7 @@
       "key": "722b5bb7-12fd-4bb8-ad03-8238b3cc44da",
       "parentKey": "b2ed5392-c835-4e24-b97a-d160c596a4e4",
       "subKeys": [],
-      "collapse": false,
+      "collapse": true,
       "style": "{\"contentStyle\":{\"borderStyle\":\"dashed\",\"background\":\"#f0e1e0\",\"color\":\"#082968\"}}",
       "blocks": [
         {
@@ -124,10 +479,42 @@
       ]
     },
     {
+      "key": "9414b3ce-08f8-4c47-9b37-54171015c5ae",
+      "parentKey": "1371268c-61a9-489e-a716-a39c9487dc70",
+      "subKeys": [
+        "a24a6345-43db-44bd-89f4-5c9b1dd2083b"
+      ],
+      "collapse": false,
+      "style": null,
+      "blocks": [
+        {
+          "type": "CONTENT",
+          "data": "Transforms"
+        }
+      ]
+    },
+    {
+      "key": "3d088f95-f9f3-43ce-8bd3-8b83884e7a4c",
+      "parentKey": "924323bb-a306-4b0d-a83f-ad5bc560fa1d",
+      "subKeys": [
+        "3fb284ed-08c3-45df-81ec-c5a5e8d39908"
+      ],
+      "collapse": false,
+      "style": "{\"contentStyle\":{\"lineHeight\":\"1.5\",\"background\":\"#f0e1e0\",\"borderRadius\":\"5px\",\"color\":\"#082968\",\"fontSize\":\"13px\",\"padding\":\"3px 9px 4px\",\"boxShadow\":\"1px 1px 1px #ccc\",\"borderStyle\":\"dashed\"},\"linkStyle\":{\"lineRadius\":5,\"lineType\":\"round\",\"lineWidth\":1,\"lineColor\":\"#43a9ff\"},\"subLinkStyle\":{\"lineRadius\":5,\"lineType\":\"round\",\"lineWidth\":1,\"lineColor\":\"#43a9ff\"}}",
+      "blocks": [
+        {
+          "type": "CONTENT",
+          "data": "  isInline: (element: Element) => boolean\n  isVoid: (element: Element) => boolean\n  normalizeNode: (entry: NodeEntry) => void\n  onChange: () => void"
+        }
+      ]
+    },
+    {
       "key": "1371268c-61a9-489e-a716-a39c9487dc70",
       "parentKey": "root",
       "subKeys": [
-        "a949e185-5d98-45b6-bfe1-603efa7eab69"
+        "9d8392f1-14ac-41fd-8bb3-1b48fd63c876",
+        "a949e185-5d98-45b6-bfe1-603efa7eab69",
+        "9414b3ce-08f8-4c47-9b37-54171015c5ae"
       ],
       "collapse": false,
       "style": null,
@@ -139,10 +526,54 @@
       ]
     },
     {
+      "key": "2860baf7-6dd8-4ab7-827f-d8bde03baebc",
+      "parentKey": "a949e185-5d98-45b6-bfe1-603efa7eab69",
+      "subKeys": [
+        "a9947c22-1b11-41f2-b792-61d78bf49fd5",
+        "b2ed5392-c835-4e24-b97a-d160c596a4e4",
+        "5a039d48-37b9-4b2d-9e67-02a568f5064e",
+        "546db78b-a29a-4394-b659-3448471138d9"
+      ],
+      "collapse": true,
+      "style": null,
+      "blocks": [
+        {
+          "type": "CONTENT",
+          "data": "工具函数"
+        }
+      ]
+    },
+    {
+      "key": "c0476030-24fe-4ca6-8e9d-83fde7f7ffe3",
+      "parentKey": "0f3181c4-3c5c-4003-825c-691ebbe78edf",
+      "subKeys": [],
+      "collapse": false,
+      "style": null,
+      "blocks": [
+        {
+          "type": "CONTENT",
+          "data": "dirtyPath"
+        }
+      ]
+    },
+    {
+      "key": "4f024a67-2596-4939-a06b-ced5366f5ed9",
+      "parentKey": "9d8392f1-14ac-41fd-8bb3-1b48fd63c876",
+      "subKeys": [],
+      "collapse": false,
+      "style": null,
+      "blocks": [
+        {
+          "type": "CONTENT",
+          "data": "Editor.pointRef返回一个PointRef对象"
+        }
+      ]
+    },
+    {
       "key": "50af2c33-32b9-461f-9952-cf3899a45c77",
       "parentKey": "52881a36-fbd1-461c-9331-91e36970ee8d",
       "subKeys": [],
-      "collapse": false,
+      "collapse": true,
       "style": "{\"contentStyle\":{\"lineHeight\":\"1.5\",\"background\":\"#f0e1e0\",\"borderRadius\":\"5px\",\"color\":\"#082968\",\"fontSize\":\"13px\",\"padding\":\"3px 9px 4px\",\"boxShadow\":\"1px 1px 1px #ccc\",\"borderStyle\":\"dashed\"},\"linkStyle\":{\"lineRadius\":5,\"lineType\":\"round\",\"lineWidth\":1,\"lineColor\":\"#43a9ff\"},\"subLinkStyle\":{\"lineRadius\":5,\"lineType\":\"round\",\"lineWidth\":1,\"lineColor\":\"#43a9ff\"}}",
       "blocks": [
         {
@@ -155,7 +586,7 @@
   "config": {
     "readOnly": false,
     "allowUndo": true,
-    "layoutDir": 2,
+    "layoutDir": 0,
     "theme": {
       "name": "theme3",
       "randomColor": false,
