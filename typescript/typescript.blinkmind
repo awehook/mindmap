@@ -1,0 +1,334 @@
+{
+  "rootTopicKey": "root",
+  "extData": {},
+  "topics": [
+    {
+      "key": "root",
+      "parentKey": null,
+      "subKeys": [
+        "3f9a5d49-fbdc-4a8f-831e-9cf105ab5bf2"
+      ],
+      "collapse": false,
+      "style": null,
+      "blocks": [
+        {
+          "type": "CONTENT",
+          "data": "typescript"
+        }
+      ]
+    },
+    {
+      "key": "b3a9b0ac-a211-40ae-8cd7-b46d4cafdd04",
+      "parentKey": "92c5a70a-7da0-4cff-9c4f-ba11ce681603",
+      "subKeys": [],
+      "collapse": false,
+      "style": null,
+      "blocks": [
+        {
+          "type": "CONTENT",
+          "data": ""
+        }
+      ]
+    },
+    {
+      "key": "84d3fdf7-e727-4e03-8b84-b5fe4faf46e0",
+      "parentKey": "5b4cdc18-4419-427f-9eff-3708d998ae1a",
+      "subKeys": [],
+      "collapse": false,
+      "style": null,
+      "blocks": [
+        {
+          "type": "CONTENT",
+          "data": "interface Itest{\n  webName:string;\n  age:number;\n  address:string\n}\ntype ant=keyof Itest;\n=================================\ntype ant = \"webname\"|\"age\"|\"address\""
+        }
+      ]
+    },
+    {
+      "key": "15e27382-a067-49b5-825f-b62814b93ecc",
+      "parentKey": "f8eecee3-c060-4c15-9b8e-dd5ea6c41ee6",
+      "subKeys": [
+        "c88f555f-d468-4974-88e9-cd03a74099f4"
+      ],
+      "collapse": false,
+      "style": null,
+      "blocks": [
+        {
+          "type": "CONTENT",
+          "data": "Required"
+        }
+      ]
+    },
+    {
+      "key": "bf93da1b-d220-4bd0-9f37-bb0929adf863",
+      "parentKey": "ef780d1a-f88a-4514-b894-2d0b35b0ad55",
+      "subKeys": [],
+      "collapse": false,
+      "style": null,
+      "blocks": [
+        {
+          "type": "CONTENT",
+          "data": "type Partial<T> = {\n    [P in keyof T]?: T[P];\n};"
+        }
+      ]
+    },
+    {
+      "key": "08e2eb0a-e632-455f-88cd-a14c30a59af6",
+      "parentKey": "92c5a70a-7da0-4cff-9c4f-ba11ce681603",
+      "subKeys": [],
+      "collapse": false,
+      "style": null,
+      "blocks": [
+        {
+          "type": "CONTENT",
+          "data": "索引类型查询操作符"
+        }
+      ]
+    },
+    {
+      "key": "5b4cdc18-4419-427f-9eff-3708d998ae1a",
+      "parentKey": "92c5a70a-7da0-4cff-9c4f-ba11ce681603",
+      "subKeys": [
+        "84d3fdf7-e727-4e03-8b84-b5fe4faf46e0"
+      ],
+      "collapse": false,
+      "style": null,
+      "blocks": [
+        {
+          "type": "CONTENT",
+          "data": "假设T是一个类型，\n那么keyof T产生的类型是\nT的属性名称字符串字面量类型构成的联合类型"
+        }
+      ]
+    },
+    {
+      "key": "5a96d75a-4892-4d7f-a2fb-eee58417e21e",
+      "parentKey": "7ed7005a-452e-4a0c-ae9f-9afdad580079",
+      "subKeys": [],
+      "collapse": false,
+      "style": null,
+      "blocks": [
+        {
+          "type": "CONTENT",
+          "data": "https://www.typescriptlang.org/docs/handbook/advanced-types.html#mapped-types"
+        }
+      ]
+    },
+    {
+      "key": "202eee8e-4cbb-427a-b9f9-8bb3915d5579",
+      "parentKey": "3f9a5d49-fbdc-4a8f-831e-9cf105ab5bf2",
+      "subKeys": [
+        "92c5a70a-7da0-4cff-9c4f-ba11ce681603"
+      ],
+      "collapse": true,
+      "style": null,
+      "blocks": [
+        {
+          "type": "CONTENT",
+          "data": "操作符"
+        }
+      ]
+    },
+    {
+      "key": "f8eecee3-c060-4c15-9b8e-dd5ea6c41ee6",
+      "parentKey": "7ed7005a-452e-4a0c-ae9f-9afdad580079",
+      "subKeys": [
+        "ef780d1a-f88a-4514-b894-2d0b35b0ad55",
+        "15e27382-a067-49b5-825f-b62814b93ecc",
+        "a14b7385-c874-4cac-88f6-26f752f57df0"
+      ],
+      "collapse": false,
+      "style": null,
+      "blocks": [
+        {
+          "type": "CONTENT",
+          "data": "有意思的"
+        }
+      ]
+    },
+    {
+      "key": "92c5a70a-7da0-4cff-9c4f-ba11ce681603",
+      "parentKey": "202eee8e-4cbb-427a-b9f9-8bb3915d5579",
+      "subKeys": [
+        "08e2eb0a-e632-455f-88cd-a14c30a59af6",
+        "5b4cdc18-4419-427f-9eff-3708d998ae1a",
+        "b3a9b0ac-a211-40ae-8cd7-b46d4cafdd04"
+      ],
+      "collapse": false,
+      "style": null,
+      "blocks": [
+        {
+          "type": "CONTENT",
+          "data": "keyof"
+        }
+      ]
+    },
+    {
+      "key": "3f9a5d49-fbdc-4a8f-831e-9cf105ab5bf2",
+      "parentKey": "root",
+      "subKeys": [
+        "202eee8e-4cbb-427a-b9f9-8bb3915d5579",
+        "264a09ac-c490-4f86-9bd0-8e87bbbd56a9"
+      ],
+      "collapse": false,
+      "style": null,
+      "blocks": [
+        {
+          "type": "CONTENT",
+          "data": "类型定义"
+        }
+      ]
+    },
+    {
+      "key": "c88f555f-d468-4974-88e9-cd03a74099f4",
+      "parentKey": "15e27382-a067-49b5-825f-b62814b93ecc",
+      "subKeys": [],
+      "collapse": false,
+      "style": null,
+      "blocks": [
+        {
+          "type": "CONTENT",
+          "data": "type Required<T> = {\n    [P in keyof T]-?: T[P];\n};"
+        }
+      ]
+    },
+    {
+      "key": "ef780d1a-f88a-4514-b894-2d0b35b0ad55",
+      "parentKey": "f8eecee3-c060-4c15-9b8e-dd5ea6c41ee6",
+      "subKeys": [
+        "bf93da1b-d220-4bd0-9f37-bb0929adf863"
+      ],
+      "collapse": false,
+      "style": null,
+      "blocks": [
+        {
+          "type": "CONTENT",
+          "data": "Partial"
+        }
+      ]
+    },
+    {
+      "key": "264a09ac-c490-4f86-9bd0-8e87bbbd56a9",
+      "parentKey": "3f9a5d49-fbdc-4a8f-831e-9cf105ab5bf2",
+      "subKeys": [
+        "7ed7005a-452e-4a0c-ae9f-9afdad580079"
+      ],
+      "collapse": false,
+      "style": null,
+      "blocks": [
+        {
+          "type": "CONTENT",
+          "data": "类型分类"
+        }
+      ]
+    },
+    {
+      "key": "7ed7005a-452e-4a0c-ae9f-9afdad580079",
+      "parentKey": "264a09ac-c490-4f86-9bd0-8e87bbbd56a9",
+      "subKeys": [
+        "1c5f39c6-2964-4138-aaca-f8bcea98bc0c",
+        "5a96d75a-4892-4d7f-a2fb-eee58417e21e",
+        "f8eecee3-c060-4c15-9b8e-dd5ea6c41ee6"
+      ],
+      "collapse": false,
+      "style": null,
+      "blocks": [
+        {
+          "type": "CONTENT",
+          "data": "Mapped Types"
+        }
+      ]
+    },
+    {
+      "key": "1c5f39c6-2964-4138-aaca-f8bcea98bc0c",
+      "parentKey": "7ed7005a-452e-4a0c-ae9f-9afdad580079",
+      "subKeys": [],
+      "collapse": false,
+      "style": null,
+      "blocks": [
+        {
+          "type": "CONTENT",
+          "data": "TypeScript provides a way to create new types based on old types\n — mapped types. "
+        }
+      ]
+    },
+    {
+      "key": "a14b7385-c874-4cac-88f6-26f752f57df0",
+      "parentKey": "f8eecee3-c060-4c15-9b8e-dd5ea6c41ee6",
+      "subKeys": [
+        "8b2dcd88-8cb8-419b-b2fe-f796a454308f"
+      ],
+      "collapse": false,
+      "style": null,
+      "blocks": [
+        {
+          "type": "CONTENT",
+          "data": "Pick"
+        }
+      ]
+    },
+    {
+      "key": "8b2dcd88-8cb8-419b-b2fe-f796a454308f",
+      "parentKey": "a14b7385-c874-4cac-88f6-26f752f57df0",
+      "subKeys": [],
+      "collapse": false,
+      "style": null,
+      "blocks": [
+        {
+          "type": "CONTENT",
+          "data": ""
+        }
+      ]
+    }
+  ],
+  "config": {
+    "readOnly": false,
+    "allowUndo": true,
+    "layoutDir": 2,
+    "theme": {
+      "name": "default",
+      "randomColor": true,
+      "background": "rgb(57,60,65)",
+      "highlightColor": "#50C9CE",
+      "marginH": 60,
+      "marginV": 20,
+      "fontFamily": "",
+      "bold": false,
+      "italic": false,
+      "textAlign": "left",
+      "rootTopic": {
+        "background": "#ff8200",
+        "fontSize": "34px",
+        "borderRadius": "35px",
+        "padding": "16px 18px 16px 18px"
+      },
+      "primaryTopic": {
+        "background": "#e8eaec",
+        "borderWidth": "1px",
+        "borderStyle": "solid",
+        "borderColor": "rgb(187,187,187)",
+        "borderRadius": "20px",
+        "color": "rgb(68,68,68)",
+        "fontSize": "17px",
+        "padding": "10px 15px 10px 15px",
+        "linkStyle": {
+          "lineType": "curve",
+          "lineWidth": 3,
+          "lineColor": "rgb(113, 203, 45)"
+        }
+      },
+      "normalTopic": {
+        "background": "#fff",
+        "border": "1px solid #e8eaec",
+        "borderRadius": "20px",
+        "color": "rgb(68,68,68)",
+        "fontSize": "17px",
+        "padding": "4px 10px",
+        "linkStyle": {
+          "lineType": "curve",
+          "lineWidth": 3,
+          "lineColor": "white"
+        }
+      }
+    }
+  },
+  "formatVersion": "0.0"
+}

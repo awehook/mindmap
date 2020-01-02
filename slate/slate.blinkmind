@@ -1,5 +1,24 @@
 {
   "rootTopicKey": "root",
+  "extData": {
+    "TOPIC_REFERENCE": {
+      "reference": {
+        "9028539e-fe60-4869-8398-c580aadcb144": {
+          "keyList": [
+            "9d8392f1-14ac-41fd-8bb3-1b48fd63c876"
+          ],
+          "dataMap": {}
+        },
+        "3bbaa100-744f-4f61-aff6-d3fb9990eb35": {
+          "keyList": [
+            "ee63e812-0e55-4990-a946-8f5bef4b6b18",
+            "3d088f95-f9f3-43ce-8bd3-8b83884e7a4c"
+          ],
+          "dataMap": {}
+        }
+      }
+    }
+  },
   "topics": [
     {
       "key": "e632e074-9447-47bd-88cb-5a1969935fec",
@@ -23,7 +42,7 @@
         "7c16975c-e873-4e8d-8e81-6e169f2f5de1",
         "b2f8400e-869a-4591-be59-b0aef49433fe"
       ],
-      "collapse": false,
+      "collapse": true,
       "style": null,
       "blocks": [
         {
@@ -53,7 +72,7 @@
       "key": "3fb284ed-08c3-45df-81ec-c5a5e8d39908",
       "parentKey": "3d088f95-f9f3-43ce-8bd3-8b83884e7a4c",
       "subKeys": [],
-      "collapse": false,
+      "collapse": true,
       "style": "{\"contentStyle\":{\"lineHeight\":\"1.5\",\"background\":\"#f0e1e0\",\"borderRadius\":\"5px\",\"color\":\"#082968\",\"fontSize\":\"13px\",\"padding\":\"3px 9px 4px\",\"boxShadow\":\"1px 1px 1px #ccc\",\"borderStyle\":\"dashed\"},\"linkStyle\":{\"lineRadius\":5,\"lineType\":\"round\",\"lineWidth\":1,\"lineColor\":\"#43a9ff\"},\"subLinkStyle\":{\"lineRadius\":5,\"lineType\":\"round\",\"lineWidth\":1,\"lineColor\":\"#43a9ff\"}}",
       "blocks": [
         {
@@ -81,12 +100,25 @@
       "key": "767971fd-0351-4bee-bc26-b52da7291560",
       "parentKey": "9d8392f1-14ac-41fd-8bb3-1b48fd63c876",
       "subKeys": [],
-      "collapse": false,
+      "collapse": true,
       "style": null,
       "blocks": [
         {
           "type": "CONTENT",
           "data": "export interface PointRef {\n  current: Point | null\n  affinity: 'forward' | 'backward' | null\n  unref(): Point | null\n}"
+        }
+      ]
+    },
+    {
+      "key": "42042add-3264-4a66-92c3-b7f64506acec",
+      "parentKey": "ee63e812-0e55-4990-a946-8f5bef4b6b18",
+      "subKeys": [],
+      "collapse": false,
+      "style": "{\"contentStyle\":{\"lineHeight\":\"1.5\",\"background\":\"#f0e1e0\",\"borderRadius\":\"5px\",\"color\":\"#082968\",\"fontSize\":\"13px\",\"padding\":\"3px 9px 4px\",\"boxShadow\":\"1px 1px 1px #ccc\",\"borderStyle\":\"dashed\"},\"linkStyle\":{\"lineRadius\":5,\"lineType\":\"round\",\"lineWidth\":1,\"lineColor\":\"#43a9ff\"},\"subLinkStyle\":{\"lineRadius\":5,\"lineType\":\"round\",\"lineWidth\":1,\"lineColor\":\"#43a9ff\"}}",
+      "blocks": [
+        {
+          "type": "CONTENT",
+          "data": "  isElement(value: any): value is Element {\n    return (\n      isPlainObject(value) &&\n      Node.isNodeList(value.children) &&\n      !Editor.isEditor(value)\n    )\n  },"
         }
       ]
     },
@@ -97,7 +129,7 @@
         "9afd3bfc-e20a-4634-a221-e769f91fa006",
         "44fa267b-ca3e-4419-866d-dbf15963c013"
       ],
-      "collapse": true,
+      "collapse": false,
       "style": null,
       "blocks": [
         {
@@ -112,7 +144,7 @@
       "subKeys": [
         "fde21f47-7f59-4b67-b313-493312d19024"
       ],
-      "collapse": false,
+      "collapse": true,
       "style": null,
       "blocks": [
         {
@@ -140,7 +172,7 @@
       "key": "3bbaa100-744f-4f61-aff6-d3fb9990eb35",
       "parentKey": "44fa267b-ca3e-4419-866d-dbf15963c013",
       "subKeys": [],
-      "collapse": false,
+      "collapse": true,
       "style": "{\"contentStyle\":{\"lineHeight\":\"1.5\",\"background\":\"#f0e1e0\",\"borderRadius\":\"5px\",\"color\":\"#082968\",\"fontSize\":\"13px\",\"padding\":\"3px 9px 4px\",\"boxShadow\":\"1px 1px 1px #ccc\",\"borderStyle\":\"dashed\"},\"linkStyle\":{\"lineRadius\":5,\"lineType\":\"round\",\"lineWidth\":1,\"lineColor\":\"#43a9ff\"},\"subLinkStyle\":{\"lineRadius\":5,\"lineType\":\"round\",\"lineWidth\":1,\"lineColor\":\"#43a9ff\"}}",
       "blocks": [
         {
@@ -169,7 +201,7 @@
       "key": "f91a14ec-f986-430b-b652-dbb276f16742",
       "parentKey": "a949e185-5d98-45b6-bfe1-603efa7eab69",
       "subKeys": [],
-      "collapse": false,
+      "collapse": true,
       "style": null,
       "blocks": [
         {
@@ -216,7 +248,7 @@
       "subKeys": [
         "c0476030-24fe-4ca6-8e9d-83fde7f7ffe3"
       ],
-      "collapse": false,
+      "collapse": true,
       "style": null,
       "blocks": [
         {
@@ -246,7 +278,7 @@
       "subKeys": [
         "50af2c33-32b9-461f-9952-cf3899a45c77"
       ],
-      "collapse": true,
+      "collapse": false,
       "style": null,
       "blocks": [
         {
@@ -259,7 +291,7 @@
       "key": "515ff1fd-81fa-4711-9028-f652e51d9058",
       "parentKey": "b2f8400e-869a-4591-be59-b0aef49433fe",
       "subKeys": [],
-      "collapse": false,
+      "collapse": true,
       "style": null,
       "blocks": [
         {
@@ -285,7 +317,7 @@
       "key": "9028539e-fe60-4869-8398-c580aadcb144",
       "parentKey": "0892b5bb-0027-4c0d-b9af-655ad66dd60d",
       "subKeys": [],
-      "collapse": false,
+      "collapse": true,
       "style": null,
       "blocks": [
         {
@@ -343,7 +375,7 @@
       "key": "7c16975c-e873-4e8d-8e81-6e169f2f5de1",
       "parentKey": "a24a6345-43db-44bd-89f4-5c9b1dd2083b",
       "subKeys": [],
-      "collapse": false,
+      "collapse": true,
       "style": null,
       "blocks": [
         {
@@ -362,7 +394,7 @@
       "subKeys": [
         "e632e074-9447-47bd-88cb-5a1969935fec"
       ],
-      "collapse": false,
+      "collapse": true,
       "style": null,
       "blocks": [
         {
@@ -394,7 +426,7 @@
       "key": "546db78b-a29a-4394-b659-3448471138d9",
       "parentKey": "2860baf7-6dd8-4ab7-827f-d8bde03baebc",
       "subKeys": [],
-      "collapse": false,
+      "collapse": true,
       "style": null,
       "blocks": [
         {
@@ -408,10 +440,23 @@
       ]
     },
     {
+      "key": "b0ae46bc-3236-478a-95fc-5b388662c95d",
+      "parentKey": "d16d0213-82c0-4b70-b824-49292ab94a2f",
+      "subKeys": [],
+      "collapse": false,
+      "style": null,
+      "blocks": [
+        {
+          "type": "CONTENT",
+          "data": "isElementList"
+        }
+      ]
+    },
+    {
       "key": "fde21f47-7f59-4b67-b313-493312d19024",
       "parentKey": "427e465c-77e8-46d6-8f61-d8c446bbebc1",
       "subKeys": [],
-      "collapse": false,
+      "collapse": true,
       "style": null,
       "blocks": [
         {
@@ -426,7 +471,7 @@
       "subKeys": [
         "515ff1fd-81fa-4711-9028-f652e51d9058"
       ],
-      "collapse": false,
+      "collapse": true,
       "style": null,
       "blocks": [
         {
@@ -484,7 +529,7 @@
       "subKeys": [
         "a24a6345-43db-44bd-89f4-5c9b1dd2083b"
       ],
-      "collapse": false,
+      "collapse": true,
       "style": null,
       "blocks": [
         {
@@ -494,12 +539,28 @@
       ]
     },
     {
+      "key": "d16d0213-82c0-4b70-b824-49292ab94a2f",
+      "parentKey": "1371268c-61a9-489e-a716-a39c9487dc70",
+      "subKeys": [
+        "ee63e812-0e55-4990-a946-8f5bef4b6b18",
+        "b0ae46bc-3236-478a-95fc-5b388662c95d"
+      ],
+      "collapse": false,
+      "style": null,
+      "blocks": [
+        {
+          "type": "CONTENT",
+          "data": "Element"
+        }
+      ]
+    },
+    {
       "key": "3d088f95-f9f3-43ce-8bd3-8b83884e7a4c",
       "parentKey": "924323bb-a306-4b0d-a83f-ad5bc560fa1d",
       "subKeys": [
         "3fb284ed-08c3-45df-81ec-c5a5e8d39908"
       ],
-      "collapse": false,
+      "collapse": true,
       "style": "{\"contentStyle\":{\"lineHeight\":\"1.5\",\"background\":\"#f0e1e0\",\"borderRadius\":\"5px\",\"color\":\"#082968\",\"fontSize\":\"13px\",\"padding\":\"3px 9px 4px\",\"boxShadow\":\"1px 1px 1px #ccc\",\"borderStyle\":\"dashed\"},\"linkStyle\":{\"lineRadius\":5,\"lineType\":\"round\",\"lineWidth\":1,\"lineColor\":\"#43a9ff\"},\"subLinkStyle\":{\"lineRadius\":5,\"lineType\":\"round\",\"lineWidth\":1,\"lineColor\":\"#43a9ff\"}}",
       "blocks": [
         {
@@ -513,6 +574,7 @@
       "parentKey": "root",
       "subKeys": [
         "9d8392f1-14ac-41fd-8bb3-1b48fd63c876",
+        "d16d0213-82c0-4b70-b824-49292ab94a2f",
         "a949e185-5d98-45b6-bfe1-603efa7eab69",
         "9414b3ce-08f8-4c47-9b37-54171015c5ae"
       ],
@@ -522,6 +584,25 @@
         {
           "type": "CONTENT",
           "data": "interface"
+        }
+      ]
+    },
+    {
+      "key": "ee63e812-0e55-4990-a946-8f5bef4b6b18",
+      "parentKey": "d16d0213-82c0-4b70-b824-49292ab94a2f",
+      "subKeys": [
+        "42042add-3264-4a66-92c3-b7f64506acec"
+      ],
+      "collapse": true,
+      "style": null,
+      "blocks": [
+        {
+          "type": "CONTENT",
+          "data": "isElement\n是NodeList并且不是Editor"
+        },
+        {
+          "type": "DESC",
+          "data": "code\n```\n  isElement(value: any): value is Element {\n    return (\n      isPlainObject(value) &&\n      Node.isNodeList(value.children) &&\n      !Editor.isEditor(value)\n    )\n  },\n\n```\n"
         }
       ]
     },
@@ -547,7 +628,7 @@
       "key": "c0476030-24fe-4ca6-8e9d-83fde7f7ffe3",
       "parentKey": "0f3181c4-3c5c-4003-825c-691ebbe78edf",
       "subKeys": [],
-      "collapse": false,
+      "collapse": true,
       "style": null,
       "blocks": [
         {
@@ -560,7 +641,7 @@
       "key": "4f024a67-2596-4939-a06b-ced5366f5ed9",
       "parentKey": "9d8392f1-14ac-41fd-8bb3-1b48fd63c876",
       "subKeys": [],
-      "collapse": false,
+      "collapse": true,
       "style": null,
       "blocks": [
         {

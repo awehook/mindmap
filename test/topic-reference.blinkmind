@@ -1,0 +1,203 @@
+{
+  "rootTopicKey": "229f3433-5818-49ae-8e35-8e1b54a0986a",
+  "extData": {},
+  "topics": [
+    {
+      "key": "ba7cdc82-1764-449d-9fbd-528754d20162",
+      "parentKey": "229f3433-5818-49ae-8e35-8e1b54a0986a",
+      "subKeys": [
+        "ebde4713-4243-4b70-99f2-5a9fd8764231"
+      ],
+      "collapse": false,
+      "style": null,
+      "blocks": [
+        {
+          "type": "CONTENT",
+          "data": "3"
+        }
+      ]
+    },
+    {
+      "key": "1587d2cc-c490-41b4-9f40-aa8339283b87",
+      "parentKey": "a479a2db-0b1f-4982-8ed4-c7ffd5a896e4",
+      "subKeys": [],
+      "collapse": false,
+      "style": null,
+      "blocks": [
+        {
+          "type": "CONTENT",
+          "data": "4"
+        }
+      ]
+    },
+    {
+      "key": "a479a2db-0b1f-4982-8ed4-c7ffd5a896e4",
+      "parentKey": "229f3433-5818-49ae-8e35-8e1b54a0986a",
+      "subKeys": [
+        "1587d2cc-c490-41b4-9f40-aa8339283b87"
+      ],
+      "collapse": false,
+      "style": null,
+      "blocks": [
+        {
+          "type": "CONTENT",
+          "data": "4"
+        }
+      ]
+    },
+    {
+      "key": "ebde4713-4243-4b70-99f2-5a9fd8764231",
+      "parentKey": "ba7cdc82-1764-449d-9fbd-528754d20162",
+      "subKeys": [],
+      "collapse": false,
+      "style": null,
+      "blocks": [
+        {
+          "type": "CONTENT",
+          "data": "3"
+        }
+      ]
+    },
+    {
+      "key": "b7c90654-8103-49cc-aa4a-5eb7ff763ee3",
+      "parentKey": "d46c00d2-ba0f-41ff-a9b0-698cbcada0c3",
+      "subKeys": [],
+      "collapse": false,
+      "style": null,
+      "blocks": [
+        {
+          "type": "CONTENT",
+          "data": "1"
+        }
+      ]
+    },
+    {
+      "key": "229f3433-5818-49ae-8e35-8e1b54a0986a",
+      "parentKey": null,
+      "subKeys": [
+        "d46c00d2-ba0f-41ff-a9b0-698cbcada0c3",
+        "e4903e01-be9f-4e46-b72b-6c60e3dcbe9b",
+        "ba7cdc82-1764-449d-9fbd-528754d20162",
+        "a479a2db-0b1f-4982-8ed4-c7ffd5a896e4"
+      ],
+      "collapse": false,
+      "style": null,
+      "blocks": [
+        {
+          "type": "CONTENT",
+          "data": "MainTopic"
+        }
+      ]
+    },
+    {
+      "key": "e4903e01-be9f-4e46-b72b-6c60e3dcbe9b",
+      "parentKey": "229f3433-5818-49ae-8e35-8e1b54a0986a",
+      "subKeys": [
+        "1fcd4ece-a845-4944-b868-f7c5775443ea"
+      ],
+      "collapse": false,
+      "style": null,
+      "blocks": [
+        {
+          "type": "CONTENT",
+          "data": "2"
+        }
+      ]
+    },
+    {
+      "key": "1fcd4ece-a845-4944-b868-f7c5775443ea",
+      "parentKey": "e4903e01-be9f-4e46-b72b-6c60e3dcbe9b",
+      "subKeys": [],
+      "collapse": false,
+      "style": null,
+      "blocks": [
+        {
+          "type": "CONTENT",
+          "data": "2"
+        }
+      ]
+    },
+    {
+      "key": "d46c00d2-ba0f-41ff-a9b0-698cbcada0c3",
+      "parentKey": "229f3433-5818-49ae-8e35-8e1b54a0986a",
+      "subKeys": [
+        "b7c90654-8103-49cc-aa4a-5eb7ff763ee3"
+      ],
+      "collapse": false,
+      "style": null,
+      "blocks": [
+        {
+          "type": "CONTENT",
+          "data": "1"
+        }
+      ]
+    }
+  ],
+  "config": {
+    "readOnly": false,
+    "allowUndo": true,
+    "layoutDir": 0,
+    "theme": {
+      "name": "theme3",
+      "randomColor": false,
+      "background": "#A9DEF9",
+      "highlightColor": "#50C9CE",
+      "marginH": 50,
+      "marginV": 20,
+      "contentStyle": {
+        "lineHeight": "1.5"
+      },
+      "linkStyle": {
+        "lineRadius": 5
+      },
+      "rootTopic": {
+        "contentStyle": {
+          "background": "#FF99C8",
+          "color": "#fff",
+          "fontSize": "34px",
+          "borderRadius": "5px",
+          "padding": "16px 18px 16px 18px"
+        },
+        "subLinkStyle": {
+          "lineType": "curve",
+          "lineWidth": 2,
+          "lineColor": "#43a9ff"
+        }
+      },
+      "primaryTopic": {
+        "contentStyle": {
+          "background": "#FCF6BD",
+          "borderWidth": "1px",
+          "borderStyle": "solid",
+          "borderColor": "#E4C1F9",
+          "borderRadius": "5px",
+          "color": "rgb(103,103,103)",
+          "fontSize": "14px",
+          "padding": "6px 10px 5px 10px"
+        },
+        "subLinkStyle": {
+          "lineType": "curve",
+          "lineWidth": 2,
+          "lineColor": "#43a9ff"
+        }
+      },
+      "normalTopic": {
+        "contentStyle": {
+          "background": "#E4FDE1",
+          "borderRadius": "5px",
+          "color": "rgb(103,103,103)",
+          "fontSize": "13px",
+          "padding": "3px 9px 4px",
+          "boxShadow": "1px 1px 1px #ccc"
+        },
+        "subLinkStyle": {
+          "lineType": "round",
+          "lineRadius": 5,
+          "lineWidth": 1,
+          "lineColor": "#43a9ff"
+        }
+      }
+    }
+  },
+  "formatVersion": "0.0"
+}
